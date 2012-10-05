@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028F1C0C161F66FD002FE46D /* CRLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C0B161F66FD002FE46D /* CRLevelView.m */; };
 		0291C461161B67990085AB91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291C460161B67990085AB91 /* QuartzCore.framework */; };
 		0291C463161B67990085AB91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291C462161B67990085AB91 /* OpenGL.framework */; };
 		0291C465161B67990085AB91 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291C464161B67990085AB91 /* OpenAL.framework */; };
@@ -122,11 +123,13 @@
 		0291C5D8161B679B0085AB91 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5D7161B679B0085AB91 /* vec4.c */; };
 		0291C5DD161B679B0085AB91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DC161B679B0085AB91 /* main.m */; };
 		0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DF161B679B0085AB91 /* AppDelegate.m */; };
-		0291C5E3161B679B0085AB91 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* HelloWorldLayer.m */; };
+		0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */; };
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		028F1C0A161F66FD002FE46D /* CRLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLevelView.h; sourceTree = "<group>"; };
+		028F1C0B161F66FD002FE46D /* CRLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLevelView.m; sourceTree = "<group>"; };
 		0291C45C161B67990085AB91 /* TrainsOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainsOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0291C460161B67990085AB91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0291C462161B67990085AB91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -378,8 +381,8 @@
 		0291C5DC161B679B0085AB91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0291C5DE161B679B0085AB91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0291C5DF161B679B0085AB91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0291C5E1161B679B0085AB91 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		0291C5E2161B679B0085AB91 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CETextureBackgroundLayer.h; sourceTree = "<group>"; };
+		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -400,6 +403,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		028F1C07161F6522002FE46D /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				0291C5E9161B680C0085AB91 /* Grass.png */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+		028F1C09161F660E002FE46D /* CocosEx */ = {
+			isa = PBXGroup;
+			children = (
+				0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */,
+				0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */,
+			);
+			name = CocosEx;
+			sourceTree = "<group>";
+		};
+		028F1C0D161F6704002FE46D /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				028F1C0A161F66FD002FE46D /* CRLevelView.h */,
+				028F1C0B161F66FD002FE46D /* CRLevelView.m */,
+			);
+			name = Level;
+			sourceTree = "<group>";
+		};
 		0291C451161B67990085AB91 = {
 			isa = PBXGroup;
 			children = (
@@ -433,10 +462,10 @@
 		0291C46C161B67990085AB91 /* TrainsOSX */ = {
 			isa = PBXGroup;
 			children = (
+				028F1C09161F660E002FE46D /* CocosEx */,
+				028F1C0D161F6704002FE46D /* Level */,
 				0291C5DE161B679B0085AB91 /* AppDelegate.h */,
 				0291C5DF161B679B0085AB91 /* AppDelegate.m */,
-				0291C5E1161B679B0085AB91 /* HelloWorldLayer.h */,
-				0291C5E2161B679B0085AB91 /* HelloWorldLayer.m */,
 				0291C46D161B67990085AB91 /* Resources */,
 				0291C47A161B67990085AB91 /* libs */,
 				0291C5DA161B679B0085AB91 /* Supporting Files */,
@@ -447,7 +476,7 @@
 		0291C46D161B67990085AB91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0291C5E9161B680C0085AB91 /* Grass.png */,
+				028F1C07161F6522002FE46D /* Textures */,
 				0291C475161B67990085AB91 /* fps_images.png */,
 				0291C477161B67990085AB91 /* icon.icns */,
 				0291C479161B67990085AB91 /* Info.plist */,
@@ -991,7 +1020,8 @@
 				0291C5D8161B679B0085AB91 /* vec4.c in Sources */,
 				0291C5DD161B679B0085AB91 /* main.m in Sources */,
 				0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */,
-				0291C5E3161B679B0085AB91 /* HelloWorldLayer.m in Sources */,
+				0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */,
+				028F1C0C161F66FD002FE46D /* CRLevelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1145,7 @@
 				0291C5E8161B679B0085AB91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

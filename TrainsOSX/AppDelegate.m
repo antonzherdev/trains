@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HelloWorldLayer.h"
+#import "CETextureBackgroundLayer.h"
+#import "CRLevelView.h"
 
 @implementation TrainsOSXAppDelegate
 @synthesize window=window_, glView=glView_;
@@ -34,8 +35,8 @@
 	// Center main window
 	//[window_ center];
     [self toggleFullScreen:nil];
-	
-	[director runWithScene:[HelloWorldLayer scene]];
+
+	[director runWithScene:[CRLevelView scene]];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication
