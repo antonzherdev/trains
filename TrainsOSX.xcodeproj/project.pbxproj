@@ -123,6 +123,7 @@
 		0291C5DD161B679B0085AB91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DC161B679B0085AB91 /* main.m */; };
 		0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DF161B679B0085AB91 /* AppDelegate.m */; };
 		0291C5E3161B679B0085AB91 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* HelloWorldLayer.m */; };
+		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -379,6 +380,7 @@
 		0291C5DF161B679B0085AB91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0291C5E1161B679B0085AB91 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		0291C5E2161B679B0085AB91 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +447,7 @@
 		0291C46D161B67990085AB91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0291C5E9161B680C0085AB91 /* Grass.png */,
 				0291C475161B67990085AB91 /* fps_images.png */,
 				0291C477161B67990085AB91 /* icon.icns */,
 				0291C479161B67990085AB91 /* Info.plist */,
@@ -873,6 +876,7 @@
 				0291C476161B67990085AB91 /* fps_images.png in Resources */,
 				0291C478161B67990085AB91 /* icon.icns in Resources */,
 				0291C5BE161B679B0085AB91 /* ChangeLog in Resources */,
+				0291C5EA161B680C0085AB91 /* Grass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,18 +34,18 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init]) ) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
-
-		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
-	
+        
+        CCSprite *sprite = [CCSprite spriteWithFile:@"Grass.png" rect:CGRectMake(0, 0, size.width, size.height)];
+        
+        ccTexParams params = {GL_LINEAR,GL_LINEAR,GL_REPEAT,GL_REPEAT};
+        [sprite.texture setTexParameters: &params];
+    
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+		sprite.position =  ccp( size.width /2 , size.height/2 );
 		
 		// add the label as a child to this Layer
-		[self addChild: label];
+		[self addChild: sprite];
 	}
 	return self;
 }

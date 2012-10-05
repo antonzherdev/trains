@@ -28,10 +28,12 @@
 	[director setResizeMode:kCCDirectorResize_AutoScale];
 	
 	// Enable "moving" mouse event. Default no.
-	[window_ setAcceptsMouseMovedEvents:NO];
+	[window_ setAcceptsMouseMovedEvents:YES];
 	
+    
 	// Center main window
-	[window_ center];
+	//[window_ center];
+    [self toggleFullScreen:nil];
 	
 	[director runWithScene:[HelloWorldLayer scene]];
 }
