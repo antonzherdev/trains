@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CETextureBackgroundLayer.h"
-#import "CRLevelView.h"
+#import "CRLevel.h"
 
 @implementation TrainsOSXAppDelegate
 @synthesize window=window_, glView=glView_;
@@ -36,7 +35,7 @@
 	//[window_ center];
     [self toggleFullScreen:nil];
 
-	[director runWithScene:[CRLevelView scene]];
+    [director runWithScene:[CRLevel levelWithNumber:0]];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication
