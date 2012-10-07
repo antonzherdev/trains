@@ -125,6 +125,7 @@
 		0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DF161B679B0085AB91 /* AppDelegate.m */; };
 		0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */; };
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
+		6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,6 +385,9 @@
 		0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CETextureBackgroundLayer.h; sourceTree = "<group>"; };
 		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
+		6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+SpriteEx.h"; sourceTree = "<group>"; };
+		6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+SpriteEx.m"; sourceTree = "<group>"; };
+		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +418,9 @@
 		028F1C09161F660E002FE46D /* CocosEx */ = {
 			isa = PBXGroup;
 			children = (
+				6F3DFC598C88B627956EA049 /* cocos2d-ex.h */,
+				6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */,
+				6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */,
 				0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */,
 				0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */,
 			);
@@ -464,11 +471,7 @@
 			children = (
 				028F1C09161F660E002FE46D /* CocosEx */,
 				028F1C0D161F6704002FE46D /* Level */,
-				0291C5DE161B679B0085AB91 /* AppDelegate.h */,
-				0291C5DF161B679B0085AB91 /* AppDelegate.m */,
-				0291C46D161B67990085AB91 /* Resources */,
-				0291C47A161B67990085AB91 /* libs */,
-				0291C5DA161B679B0085AB91 /* Supporting Files */,
+				6F3DFC19C5BA368F7C4EE43B /* Base */,
 			);
 			path = TrainsOSX;
 			sourceTree = "<group>";
@@ -849,6 +852,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F3DFC19C5BA368F7C4EE43B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0291C5DF161B679B0085AB91 /* AppDelegate.m */,
+				0291C5DE161B679B0085AB91 /* AppDelegate.h */,
+				0291C5DA161B679B0085AB91 /* Supporting Files */,
+				0291C46D161B67990085AB91 /* Resources */,
+				0291C47A161B67990085AB91 /* libs */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1022,6 +1037,7 @@
 				0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */,
 				0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */,
 				028F1C0C161F66FD002FE46D /* CRLevelView.m in Sources */,
+				6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
