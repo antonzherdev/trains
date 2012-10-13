@@ -3,7 +3,7 @@
 
 
 @implementation CRRail {
-    id<CRRailFormDescription> _railFormDescription;
+    CRRailForm _form;
 }
 
 + (id)railWithForm:(CRRailForm)form tile:(CGPoint)tile {
@@ -12,14 +12,11 @@
 
 
 - (id)initWithForm:(CRRailForm)form tile:(CGPoint)tile {
-    id<CRRailFormDescription> description = [CRRailFormDescriptionFactory descriptionForForm:form];
-    NSString *file = [description file];
-
-    self = [super initWithFile:file];
+    self = [CRRailFormObject initSprite:self forForm:form];
     if (self) {
-        _railFormDescription = description;
+        _form = form;
         self.anchorPoint = ccp(0, 0);
-        self.position = ccpAdd([CRRailroad positionForTile:tile], [description spritePosition]);
+        self.position = [CRRailroad positionForTile:tile];
     }
 
     return self;

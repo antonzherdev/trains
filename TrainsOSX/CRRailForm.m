@@ -1,29 +1,25 @@
 #import "CRRailForm.h"
 
-@interface CRRailFormHorizontal : NSObject <CRRailFormDescription>
-@end
+@implementation CRRailFormObject
 
-@implementation CRRailFormHorizontal
-- (NSString *)file {
-    return @"RailHorizontal.png";
-}
++ (id)initSprite:(CCSprite *)sprite forForm:(CRRailForm)railForm {
+    NSString *filename = (railForm == crRailFormHorizontal || railForm == crRailFormVertical)
+            ? @"StraightRail.png" : @"";
 
-- (CGPoint)spritePosition {
-    return ccp(0, 0);
-}
-@end
+    CCTexture2D *texture = [[CCTextureCache sharedTextureCache] addImage: filename];
+    if(!texture) return nil;
 
-@implementation CRRailFormDescriptionFactory
-static CRRailFormHorizontal *horizontal;
-
-+ (id <CRRailFormDescription>)descriptionForForm:(CRRailForm)form {
-    switch (form) {
-        case crRailFormHorizontal:
-            if(!horizontal) horizontal = [[CRRailFormHorizontal alloc] init];
-            return horizontal;
+    CGRect rect = CGRectZero;
+    if(railForm == crRailFormVertical) {
+        rect.size.width = texture.contentSize.height;
+        rect.size.height = texture.contentSize.width;
+    } else {
+        rect.size = texture.contentSize;
     }
-    return nil;
+
+    return [sprite initWithTexture:texture rect:rect rotated:railForm == crRailFormVertical];
 }
+
 
 @end
 

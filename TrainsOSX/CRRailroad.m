@@ -19,6 +19,7 @@
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(5, 4)]];
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(6, 4)]];
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(7, 4)]];
+        [self addChild:[CRRail railWithForm:crRailFormVertical tile:ccp(5, 4)]];
     }
 
     return self;

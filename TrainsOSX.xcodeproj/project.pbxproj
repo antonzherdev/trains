@@ -128,7 +128,7 @@
 		6F3DF1B86E8F7DEEE22B29BC /* CRRailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5D9D7037ABCBACB16B6 /* CRRailForm.m */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
-		6F3DF81598A711DEEF8B65CF /* RailHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFBEE31D88799FF00024A /* RailHorizontal.png */; };
+		6F3DF81598A711DEEF8B65CF /* StraightRail.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFBEE31D88799FF00024A /* StraightRail.png */; };
 		6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */; };
 /* End PBXBuildFile section */
 
@@ -397,7 +397,7 @@
 		6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+SpriteEx.m"; sourceTree = "<group>"; };
 		6F3DFA2DC032C06E82B4EBAC /* CRRailForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailForm.h; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
-		6F3DFBEE31D88799FF00024A /* RailHorizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RailHorizontal.png; path = Resources/RailHorizontal.png; sourceTree = "<group>"; };
+		6F3DFBEE31D88799FF00024A /* StraightRail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StraightRail.png; path = Resources/StraightRail.png; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -421,7 +421,7 @@
 		028F1C07161F6522002FE46D /* Textures */ = {
 			isa = PBXGroup;
 			children = (
-				6F3DFBEE31D88799FF00024A /* RailHorizontal.png */,
+				6F3DFBEE31D88799FF00024A /* StraightRail.png */,
 				0291C5E9161B680C0085AB91 /* Grass.png */,
 			);
 			name = Textures;
@@ -963,7 +963,7 @@
 				0291C478161B67990085AB91 /* icon.icns in Resources */,
 				0291C5BE161B679B0085AB91 /* ChangeLog in Resources */,
 				0291C5EA161B680C0085AB91 /* Grass.png in Resources */,
-				6F3DF81598A711DEEF8B65CF /* RailHorizontal.png in Resources */,
+				6F3DF81598A711DEEF8B65CF /* StraightRail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

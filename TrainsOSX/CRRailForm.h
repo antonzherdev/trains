@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d-ex.h"
 
+@class CRRail;
+
 typedef enum {
     crRailFormHorizontal,
     crRailFormVertical,
@@ -10,13 +12,8 @@ typedef enum {
     crRailFormVerticalTurnLeft
 } CRRailForm;
 
-@protocol CRRailFormDescription
-- (NSString *) file;
-
-- (CGPoint)spritePosition;
+@interface CRRailFormObject : NSObject
++ (id)initSprite:(CCSprite *)sprite forForm:(CRRailForm)railForm;
 @end
 
-@interface CRRailFormDescriptionFactory : NSObject
-+ (id <CRRailFormDescription>) descriptionForForm:(CRRailForm)form;
-@end
 
