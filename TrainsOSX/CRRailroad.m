@@ -19,7 +19,10 @@
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(5, 4)]];
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(6, 4)]];
         [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(7, 4)]];
-        [self addChild:[CRRail railWithForm:crRailFormVertical tile:ccp(5, 4)]];
+        [self addChild:[CRRail railWithForm:crRailFormTurn4 tile:ccp(8, 4)]];
+        [self addChild:[CRRail railWithForm:crRailFormVertical tile:ccp(8, 5)]];
+        [self addChild:[CRRail railWithForm:crRailFormTurn1 tile:ccp(8, 6)]];
+        [self addChild:[CRRail railWithForm:crRailFormHorizontal tile:ccp(7, 6)]];
     }
 
     return self;

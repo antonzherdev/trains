@@ -128,8 +128,8 @@
 		6F3DF1B86E8F7DEEE22B29BC /* CRRailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5D9D7037ABCBACB16B6 /* CRRailForm.m */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
-		6F3DF81598A711DEEF8B65CF /* StraightRail.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFBEE31D88799FF00024A /* StraightRail.png */; };
 		6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */; };
+		6F3DFEBA61E5AEC1E81B042E /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF9316DB7586786CD302F /* Rails.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,10 +394,10 @@
 		6F3DF5D9D7037ABCBACB16B6 /* CRRailForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailForm.m; sourceTree = "<group>"; };
 		6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+SpriteEx.h"; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroad.h; sourceTree = "<group>"; };
+		6F3DF9316DB7586786CD302F /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rails.png; sourceTree = "<group>"; };
 		6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+SpriteEx.m"; sourceTree = "<group>"; };
 		6F3DFA2DC032C06E82B4EBAC /* CRRailForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailForm.h; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
-		6F3DFBEE31D88799FF00024A /* StraightRail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StraightRail.png; path = Resources/StraightRail.png; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -421,7 +421,7 @@
 		028F1C07161F6522002FE46D /* Textures */ = {
 			isa = PBXGroup;
 			children = (
-				6F3DFBEE31D88799FF00024A /* StraightRail.png */,
+				6F3DF9316DB7586786CD302F /* Rails.png */,
 				0291C5E9161B680C0085AB91 /* Grass.png */,
 			);
 			name = Textures;
@@ -963,7 +963,7 @@
 				0291C478161B67990085AB91 /* icon.icns in Resources */,
 				0291C5BE161B679B0085AB91 /* ChangeLog in Resources */,
 				0291C5EA161B680C0085AB91 /* Grass.png in Resources */,
-				6F3DF81598A711DEEF8B65CF /* StraightRail.png in Resources */,
+				6F3DFEBA61E5AEC1E81B042E /* Rails.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

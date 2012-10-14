@@ -6,14 +6,14 @@
 typedef enum {
     crRailFormHorizontal,
     crRailFormVertical,
-    crRailFormHorizontalTurnRight,
-    crRailFormHorizontalTurnLeft,
-    crRailFormVerticalTurnRight,
-    crRailFormVerticalTurnLeft
+    crRailFormTurn1,
+    crRailFormTurn2,
+    crRailFormTurn3,
+    crRailFormTurn4
 } CRRailForm;
 
 @interface CRRailFormObject : NSObject
-+ (id)initSprite:(CCSprite *)sprite forForm:(CRRailForm)railForm;
++ (id)initSprite:(CCSprite *)sprite forForm:(CRRailForm)form;
 @end
 
 
