@@ -4,30 +4,35 @@
 
 + (id)initSprite:(CCSprite *)sprite forForm:(CRRailForm)form {
     CGRect rect;
+    if(form == crRailFormVertical || form == crRailFormHorizontal) {
+        rect = CGRectMake(0, 0, 192, 96);
+    } else {
+        rect = CGRectMake(0, 96, 192, 96);
+    }
+    CCSprite *ret = [sprite initWithFile:@"Rails.png" rect:rect];
     switch (form) {
         case crRailFormHorizontal:
-            rect = CGRectMake(0, 0, 160, 25);
             break;
         case crRailFormVertical:
-            rect = CGRectMake(357, 0, 37, 100);
+            [ret setFlipX:YES];
             break;
         case crRailFormTurn1:
-            rect = CGRectMake(160, 25, 197, 125);
             break;
         case crRailFormTurn2:
-            rect = CGRectMake(0, 25, 160, 125);
+            [ret setFlipX:YES];;
             break;
         case crRailFormTurn3:
-            rect = CGRectMake(0, 150, 160, 100);
+            [ret setFlipX:YES];
+            [ret setFlipY:YES];
             break;
         case crRailFormTurn4:
-            rect = CGRectMake(160, 150, 197, 100);
+            [ret setFlipY:YES];
             break;
         default:
             @throw @"Unknown form";
     }
 
-    return [sprite initWithFile:@"Rails.png" rect:rect];
+    return ret;
 }
 
 
