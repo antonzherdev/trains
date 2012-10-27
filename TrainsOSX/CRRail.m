@@ -5,7 +5,10 @@
 @implementation CRRail {
     CRRailForm _form;
     CRRailroad *_railroad;
+    CGPoint _tile;
 }
+@synthesize tile = _tile;
+
 
 + (id)railInRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile {
     return [[[CRRail alloc] initWithRailroad:railroad form:form tile:tile] autorelease];
@@ -28,7 +31,7 @@
         if(form == crRailFormY || form == crRailFormTurn3) {
             [self setFlipX:YES];
         }
-
+        _tile = tile;
         _form = form;
         _railroad = railroad;
         self.anchorPoint = ccp(0, 0);

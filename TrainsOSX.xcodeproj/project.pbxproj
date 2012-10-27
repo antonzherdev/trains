@@ -127,6 +127,8 @@
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
+		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
+		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
 		6F3DF805A9BFF0DD47BFB091 /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF73921F94975C2F02534 /* Rails.png */; };
 		6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */; };
 /* End PBXBuildFile section */
@@ -389,6 +391,8 @@
 		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 		6F3DF290C45847D4636C91B5 /* CRRailroad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroad.m; sourceTree = "<group>"; };
+		6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroadBuilder.m; sourceTree = "<group>"; };
+		6F3DF45371756DBD2C741507 /* CETileIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETileIndex.h; sourceTree = "<group>"; };
 		6F3DF5316F8ABD7B61E42262 /* CRRail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRail.h; sourceTree = "<group>"; };
 		6F3DF73921F94975C2F02534 /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rails.png; path = Resources/Rails.png; sourceTree = "<group>"; };
 		6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+SpriteEx.h"; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 		6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+SpriteEx.m"; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
+		6F3DFCB798DAF2C18877E904 /* CETileIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETileIndex.m; sourceTree = "<group>"; };
+		6F3DFD6424C6232A8ACA597D /* CRRailroadBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroadBuilder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +438,8 @@
 				6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */,
 				0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */,
 				0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */,
+				6F3DFCB798DAF2C18877E904 /* CETileIndex.m */,
+				6F3DF45371756DBD2C741507 /* CETileIndex.h */,
 			);
 			name = CocosEx;
 			sourceTree = "<group>";
@@ -877,6 +885,8 @@
 				6F3DF290C45847D4636C91B5 /* CRRailroad.m */,
 				6F3DF5316F8ABD7B61E42262 /* CRRail.h */,
 				6F3DFB5016ED966D48D7CD2C /* CRRail.m */,
+				6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */,
+				6F3DFD6424C6232A8ACA597D /* CRRailroadBuilder.h */,
 			);
 			name = Rail;
 			sourceTree = "<group>";
@@ -1078,6 +1088,8 @@
 				6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */,
 				6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */,
 				6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */,
+				6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */,
+				6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
