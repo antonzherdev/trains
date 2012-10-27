@@ -4,47 +4,35 @@
 
 @implementation CRRail {
     CRRailForm _form;
+    CRRailroad *_railroad;
 }
 
-+ (id)railWithForm:(CRRailForm)form tile:(CGPoint)tile {
-    return [[[CRRail alloc] initWithForm: form tile: tile] autorelease];
++ (id)railInRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile {
+    return [[[CRRail alloc] initWithRailroad:railroad form:form tile:tile] autorelease];
 }
 
 
-- (id)initWithForm:(CRRailForm)form tile:(CGPoint)tile {
+- (id)initWithRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile {
     CGRect rect;
-    if(form == crRailFormVertical || form == crRailFormHorizontal) {
-        rect = CGRectMake(0, 0, 192, 96);
+    if(form == crRailFormY || form == crRailFormX) {
+        rect = CGRectMake(0, 0, 220, 110);
+    } else if (form == crRailFormTurn1 || form == crRailFormTurn3){
+        rect = CGRectMake(220, 0, 220, 110);
+    } else if(form == crRailFormTurn2){
+        rect = CGRectMake(0, 110, 220, 110);
     } else {
-        rect = CGRectMake(0, 96, 192, 96);
+        rect = CGRectMake(220, 110, 220, 110);
     }
     self = [self initWithFile:@"Rails.png" rect:rect];
     if (self) {
-        switch (form) {
-            case crRailFormHorizontal:
-                break;
-            case crRailFormVertical:
-                [self setFlipX:YES];
-                break;
-            case crRailFormTurn1:
-                break;
-            case crRailFormTurn2:
-                [self setFlipX:YES];;
-                break;
-            case crRailFormTurn3:
-                [self setFlipX:YES];
-                [self setFlipY:YES];
-                break;
-            case crRailFormTurn4:
-                [self setFlipY:YES];
-                break;
-            default:
-                @throw @"Unknown form";
+        if(form == crRailFormY || form == crRailFormTurn3) {
+            [self setFlipX:YES];
         }
 
         _form = form;
+        _railroad = railroad;
         self.anchorPoint = ccp(0, 0);
-        self.position = [CRRailroad positionForTile:tile];
+        self.position = [railroad positionForTile:tile];
     }
 
     return self;

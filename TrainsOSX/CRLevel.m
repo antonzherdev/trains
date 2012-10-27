@@ -18,7 +18,7 @@
     CETextureBackgroundLayer *layer = [CETextureBackgroundLayer layerWithFile:@"Grass.png"];
     [self addChild: layer];
 
-    _railroad = [CRRailroad railroadForLevel:self];
+    _railroad = [CRRailroad railroadForLevel:self zeroPoint:ccp(0, 0) tileHeight:110];
     [self addChild:_railroad];
 
     return self;

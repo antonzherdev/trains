@@ -4,8 +4,9 @@
 @class CRLevel;
 
 @interface CRRailroad : CCNode
-+ (id)railroadForLevel:(CRLevel *)level;
-- (id)initWithLevel:(CRLevel *)level;
++ (id)railroadForLevel:(CRLevel *)level zeroPoint:(CGPoint)point tileHeight:(int)height;
 
-+ (CGPoint)positionForTile:(CGPoint)tile;
+- (id)initWithLevel:(CRLevel *)level zeroPoint:(CGPoint)point tileHeight:(int)height;
+
+- (CGPoint)positionForTile:(CGPoint)tile;
 @end

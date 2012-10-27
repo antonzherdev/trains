@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d-ex.h"
 
+@class CRRailroad;
+
 typedef enum {
-    crRailFormHorizontal,
-    crRailFormVertical,
+    crRailFormX,
+    crRailFormY,
     crRailFormTurn1,
     crRailFormTurn2,
     crRailFormTurn3,
@@ -11,8 +13,8 @@ typedef enum {
 } CRRailForm;
 
 @interface CRRail : CCSprite
-+(id) railWithForm:(CRRailForm) form tile:(CGPoint) tile;
++ (id)railInRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile;
 
-- (id)initWithForm:(CRRailForm)form tile:(CGPoint)tile;
+- (id)initWithRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile;
 @end
 
