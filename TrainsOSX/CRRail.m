@@ -1,21 +1,16 @@
 #import "CRRail.h"
-#import "CRRailroad.h"
 
 
 @implementation CRRail {
     CRRailForm _form;
-    CRRailroad *_railroad;
-    CGPoint _tile;
 }
-@synthesize tile = _tile;
 
-
-+ (id)railInRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile {
-    return [[[CRRail alloc] initWithRailroad:railroad form:form tile:tile] autorelease];
++ (id)railWithForm:(CRRailForm)form {
+    return [[[CRRail alloc] initWithForm:form] autorelease];
 }
 
 
-- (id)initWithRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile {
+- (id)initWithForm:(CRRailForm)form {
     CGRect rect;
     if(form == crRailFormY || form == crRailFormX) {
         rect = CGRectMake(0, 0, 220, 110);
@@ -31,11 +26,7 @@
         if(form == crRailFormY || form == crRailFormTurn3) {
             [self setFlipX:YES];
         }
-        _tile = tile;
         _form = form;
-        _railroad = railroad;
-        self.anchorPoint = ccp(0, 0);
-        self.position = [railroad positionForTile:tile];
     }
 
     return self;

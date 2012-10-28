@@ -13,10 +13,8 @@ typedef enum {
 } CRRailForm;
 
 @interface CRRail : CCSprite
-@property(nonatomic) CGPoint tile;
++ (id)railWithForm:(CRRailForm)form;
 
-+ (id)railInRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile;
-
-- (id)initWithRailroad:(CRRailroad *)railroad form:(CRRailForm)form tile:(CGPoint)tile;
+- (id)initWithForm:(CRRailForm)form;
 @end
 

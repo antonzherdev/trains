@@ -3,10 +3,8 @@
 
 @class CRLevel;
 
-@interface CRRailroad : CCNode
-+ (id)railroadForLevel:(CRLevel *)level zeroPoint:(CGPoint)point tileHeight:(int)height size:(CGSize)size1;
+@interface CRRailroad : CEOrtoMap
++ (CRRailroad *)railroadForLevel:(CRLevel *)level dim:(CEOrtoMapDim)dim;
 
-- (id)initWithLevel:(CRLevel *)level zeroPoint:(CGPoint)point tileHeight:(int)height size:(CGSize)size1;
-
-- (CGPoint)positionForTile:(CGPoint)tile;
+- (id)initWithLevel:(CRLevel *)level dim:(CEOrtoMapDim)dim;
 @end

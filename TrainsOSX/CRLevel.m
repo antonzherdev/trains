@@ -18,10 +18,19 @@
     CETextureBackgroundLayer *layer = [CETextureBackgroundLayer layerWithFile:@"Grass.png"];
     [self addChild: layer];
 
-    _railroad = [CRRailroad railroadForLevel:self zeroPoint:ccp(0, 0) tileHeight:110 size:CGSizeMake(10, 10)];
+    CEOrtoMapDim dim;
+    dim.tileHeight = 110;
+    dim.size.width = 10;
+    dim.size.height = 10;
+    _railroad = [[CRRailroad railroadForLevel:self dim:dim] retain];
     [self addChild:_railroad];
 
     return self;
+}
+
+- (void)dealloc {
+    [_railroad release];
+    [super dealloc];
 }
 
 @end
