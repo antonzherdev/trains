@@ -7,6 +7,7 @@
 
 @interface CEMap : CCNode
 @property(nonatomic, readonly) CEMapSize size;
+@property(nonatomic) BOOL drawMesh;
 
 - (id)initWithSize:(CEMapSize)size1;
 
@@ -17,6 +18,10 @@
 - (BOOL) isValidTile : (CETile)tile;
 
 - (CETileIndex *)createTileIndex;
+
+- (void)createMesh:(CCNode *)mesh;
+
+- (void)drawMeshLayer;
 @end
 
 @interface CEMapLayer : NSObject

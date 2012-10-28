@@ -39,6 +39,8 @@
         [self addRail:[CRRail railWithForm:crRailFormTurn3] tile:ceTile(-1, 6)];
         [self addRail:[CRRail railWithForm:crRailFormY] tile:ceTile(-1, 7)];
         [self addRail:[CRRail railWithForm:crRailFormTurn4] tile:ceTile(-1, 8)];
+
+        self.drawMesh = YES;
     }
 
     return self;

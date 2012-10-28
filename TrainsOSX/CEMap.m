@@ -1,9 +1,16 @@
 #import "CEMap.h"
 
+@interface CEMapMesh : CCNode
+- (id)initWithMap:(CEMap *)map;
+@end
+
 @implementation CEMap {
     CEMapSize _size;
+    BOOL _drawMesh;
+    CEMapMesh *_mesh;
 }
 @synthesize size = _size;
+@synthesize drawMesh = _drawMesh;
 
 
 - (id)initWithSize:(CEMapSize)size {
@@ -40,6 +47,36 @@
 - (CETileIndex *)createTileIndex {
     return [CETileIndex tileIndexWithSize:_size];
 }
+
+- (void)setDrawMesh:(BOOL)drawMesh {
+    _drawMesh = drawMesh;
+    if(drawMesh) {
+        _mesh = [[CEMapMesh alloc] initWithMap:self];
+        [self createMesh:_mesh];
+        [self addChild:_mesh];
+    } else {
+        [_mesh removeFromParentAndCleanup:YES];
+        [_mesh release];
+        _mesh = nil;
+    }
+}
+
+- (void)createMesh:(CCNode *)mesh {
+
+}
+
+- (void)drawMeshLayer {
+    glEnable(GL_LINE_SMOOTH);
+    glLineWidth(2);
+    ccDrawColor4F(0, 0, 0, 0.7);
+    ccDrawRect(ccp(2, 2), ccp(self.contentSize.width, self.contentSize.height));
+    glLineWidth(1);
+}
+
+- (void)dealloc {
+    [_mesh release];
+    [super dealloc];
+}
 @end
 
 @implementation CEMapLayer {
@@ -69,4 +106,22 @@
     [_tileIndex release];
     [super dealloc];
 }
+@end
+
+
+@implementation CEMapMesh {
+    CEMap *_map;
+}
+- (id)initWithMap:(CEMap *)map {
+    self = [super init];
+    if(self) {
+        _map = map;
+    }
+    return self;
+}
+
+- (void)draw {
+    [_map drawMeshLayer];
+}
+
 @end
