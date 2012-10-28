@@ -2,27 +2,27 @@
 
 
 @implementation CETileIndex {
-    CGSize _size;
+    CEMapSize _size;
     NSMutableArray *_index;
-    NSUInteger (^_block)(CGSize, CGPoint);
+    NSUInteger (^_block)(CEMapSize, CETile);
 
 }
 @synthesize size = _size;
 
-+ (id)tileIndexWithSize:(CGSize)size {
-    return [[[CETileIndex alloc] initWithSize:size tileIndexBlock:^(CGSize size_, CGPoint tile) {
++ (id)tileIndexWithSize:(CEMapSize)size {
+    return [[[CETileIndex alloc] initWithSize:size tileIndexBlock:^(CEMapSize size_, CETile tile) {
         return (NSUInteger) (size_.width*tile.y + tile.x);
     }] autorelease];
 }
 
-+ (id)tileIndexForOrtoMapWithSize:(CGSize)size {
-    return [[[CETileIndex alloc] initWithSize:size tileIndexBlock:^(CGSize size_, CGPoint tile) {
++ (id)tileIndexForOrtoMapWithSize:(CEMapSize)size {
+    return [[[CETileIndex alloc] initWithSize:size tileIndexBlock:^(CEMapSize size_, CETile tile) {
         return (NSUInteger) (size_.width*(tile.y - tile.x - 1) + (tile.x + tile.y));
     }] autorelease];
 }
 
 
-- (id)initWithSize:(CGSize)size tileIndexBlock:(NSUInteger (^)(CGSize, CGPoint))block {
+- (id)initWithSize:(CEMapSize)size tileIndexBlock:(NSUInteger (^)(CEMapSize, CETile))block {
     self = [super init];
     if(self) {
         _size = size;
@@ -36,12 +36,12 @@
     return self;
 }
 
-- (void)addObject:(id)object toTile:(CGPoint)tile {
+- (void)addObject:(id)object toTile:(CETile)tile {
     NSMutableArray * array = (NSMutableArray *) [self objectsAtTile:tile];
     [array addObject:object];
 }
 
-- (NSArray *)objectsAtTile:(CGPoint)tile {
+- (NSArray *)objectsAtTile:(CETile)tile {
     return [_index objectAtIndex:_block(_size, tile)];
 }
 

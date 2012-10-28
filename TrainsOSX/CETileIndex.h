@@ -1,15 +1,39 @@
 #import <Foundation/Foundation.h>
 
+struct CETile {
+    int x;
+    int y;
+};
+typedef struct CETile CETile;
+
+CG_INLINE CETile
+ceTile(int x, int y)
+{
+    CETile p; p.x = x; p.y = y; return p;
+}
+
+struct CEMapSize {
+    int width;
+    int height;
+};
+typedef struct CEMapSize CEMapSize;
+
+CG_INLINE CEMapSize
+ceMapSize(int width, int height)
+{
+    CEMapSize p; p.width = width; p.height = height; return p;
+}
+
 
 @interface CETileIndex : NSObject
-@property(nonatomic, readonly) CGSize size;
+@property(nonatomic, readonly) CEMapSize size;
 
-+ (id) tileIndexWithSize:(CGSize) size;
-+ (id)tileIndexForOrtoMapWithSize:(CGSize) size;
++ (id) tileIndexWithSize:(CEMapSize) size;
++ (id)tileIndexForOrtoMapWithSize:(CEMapSize) size;
 
-- (id)initWithSize:(CGSize)size tileIndexBlock:(NSUInteger (^)(CGSize, CGPoint))block;
+- (id)initWithSize:(CEMapSize)size tileIndexBlock:(NSUInteger (^)(CEMapSize, CETile))block;
 
--(void) addObject:(id)object toTile:(CGPoint) tile;
--(NSArray*)objectsAtTile:(CGPoint) tile;
+-(void) addObject:(id)object toTile:(CETile) tile;
+-(NSArray*)objectsAtTile:(CETile) tile;
 
 @end

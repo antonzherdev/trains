@@ -125,14 +125,15 @@
 		0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5DF161B679B0085AB91 /* AppDelegate.m */; };
 		0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */; };
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
+		6F3DF099F3A1D126D316CF6F /* CCSprite+CESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
 		6F3DF3B1534D612C4D75148F /* CEOrtoMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */; };
+		6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
 		6F3DF805A9BFF0DD47BFB091 /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF73921F94975C2F02534 /* Rails.png */; };
 		6F3DF9FD84DFACCA42CFE909 /* CEMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF36A18CCC89D8594DEFB /* CEMap.m */; };
-		6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -393,21 +394,23 @@
 		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 		6F3DF290C45847D4636C91B5 /* CRRailroad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroad.m; sourceTree = "<group>"; };
+		6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CENode.m"; sourceTree = "<group>"; };
 		6F3DF36A18CCC89D8594DEFB /* CEMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMap.m; sourceTree = "<group>"; };
 		6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroadBuilder.m; sourceTree = "<group>"; };
 		6F3DF45371756DBD2C741507 /* CETileIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETileIndex.h; sourceTree = "<group>"; };
 		6F3DF5316F8ABD7B61E42262 /* CRRail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRail.h; sourceTree = "<group>"; };
+		6F3DF5FE8EF9F3C073099971 /* CCNode+CENode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CENode.h"; sourceTree = "<group>"; };
 		6F3DF73921F94975C2F02534 /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rails.png; path = Resources/Rails.png; sourceTree = "<group>"; };
-		6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+SpriteEx.h"; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroad.h; sourceTree = "<group>"; };
-		6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+SpriteEx.m"; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
 		6F3DFCB798DAF2C18877E904 /* CETileIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETileIndex.m; sourceTree = "<group>"; };
 		6F3DFCCCD563C1F49F317FB8 /* CEMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMap.h; sourceTree = "<group>"; };
 		6F3DFD6424C6232A8ACA597D /* CRRailroadBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroadBuilder.h; sourceTree = "<group>"; };
 		6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEOrtoMap.m; sourceTree = "<group>"; };
+		6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+CESprite.m"; sourceTree = "<group>"; };
 		6F3DFF87623D8983EA6115F3 /* CEOrtoMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEOrtoMap.h; sourceTree = "<group>"; };
+		6F3DFFC87FF30CC319AE0D68 /* CCSprite+CESprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+CESprite.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,8 +443,6 @@
 			isa = PBXGroup;
 			children = (
 				6F3DFC598C88B627956EA049 /* cocos2d-ex.h */,
-				6F3DF7A02BF27D53DA282DD3 /* CCSprite+SpriteEx.h */,
-				6F3DF9DAAAB4B4466ADAF658 /* CCSprite+SpriteEx.m */,
 				0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */,
 				0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */,
 				6F3DFCB798DAF2C18877E904 /* CETileIndex.m */,
@@ -450,6 +451,10 @@
 				6F3DFF87623D8983EA6115F3 /* CEOrtoMap.h */,
 				6F3DF36A18CCC89D8594DEFB /* CEMap.m */,
 				6F3DFCCCD563C1F49F317FB8 /* CEMap.h */,
+				6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */,
+				6F3DF5FE8EF9F3C073099971 /* CCNode+CENode.h */,
+				6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */,
+				6F3DFFC87FF30CC319AE0D68 /* CCSprite+CESprite.h */,
 			);
 			name = CocosEx;
 			sourceTree = "<group>";
@@ -1095,13 +1100,14 @@
 				0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */,
 				0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */,
 				028F1C0C161F66FD002FE46D /* CRLevel.m in Sources */,
-				6F3DFB169A9109D661E19642 /* CCSprite+SpriteEx.m in Sources */,
 				6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */,
 				6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */,
 				6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */,
 				6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */,
 				6F3DF3B1534D612C4D75148F /* CEOrtoMap.m in Sources */,
 				6F3DF9FD84DFACCA42CFE909 /* CEMap.m in Sources */,
+				6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */,
+				6F3DF099F3A1D126D316CF6F /* CCSprite+CESprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

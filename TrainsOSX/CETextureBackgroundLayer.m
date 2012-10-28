@@ -8,7 +8,7 @@
 
 
 #import "CETextureBackgroundLayer.h"
-#import "CCSprite+SpriteEx.h"
+#import "cocos2d-ex.h"
 
 @implementation CETextureBackgroundLayer
 

@@ -1,5 +1,6 @@
 #import "CRRailroadBuilder.h"
 #import "CRRailroad.h"
+#import "CCNode+CENode.h"
 
 
 @implementation CRRailroadBuilder {
@@ -20,6 +21,13 @@
 }
 
 - (BOOL)ccMouseDown:(NSEvent *)event {
+    CGPoint point = [self point:event];
+    CCLOG(@"Mouse down on point (%f,%f)", point.x, point.y);
+    CETile tile = [_railroad tileForPoint:point];
+    if(![_railroad isValidTile:tile]) return NO;
+
+    CCLOG(@"Mouse down on tile (%d,%d)", tile.x, tile.y);
+
     return NO;
 }
 

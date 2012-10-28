@@ -1,22 +1,25 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CETileIndex.h"
 
 @class CETileIndex;
 @class CEMapLayer;
 
 @interface CEMap : CCNode
-@property(nonatomic, readonly) CGSize size;
+@property(nonatomic, readonly) CEMapSize size;
 
-- (id)initWithSize:(CGSize)size1;
+- (id)initWithSize:(CEMapSize)size1;
 
 - (CEMapLayer*) addLayer;
 - (CEMapLayer*) addLayerWithNode:(CCNode*)node;
-- (CGPoint)positionForTile:(CGPoint)tile;
+- (CGPoint)pointForTile:(CETile)tile;
+- (CETile)tileForPoint:(CGPoint)point;
+- (BOOL) isValidTile : (CETile)tile;
 
 - (CETileIndex *)createTileIndex;
 @end
 
 @interface CEMapLayer : NSObject
 - (id) initWithMap:(CEMap*)map node:(CCNode*)node;
-- (void) addChild:(CCNode*)child tile:(CGPoint)tile;
+- (void) addChild:(CCNode*)child tile:(CETile)tile;
 @end

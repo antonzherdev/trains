@@ -1,14 +1,7 @@
-//
-// Created by antonzherdev on 07.10.12.
-//
-// To change the template use AppCode | Preferences | File Templates.
-//
+#import "CCSprite+CESprite.h"
 
 
-#import "CCSprite+SpriteEx.h"
-
-
-@implementation CCSprite (SpriteEx)
+@implementation CCSprite (CESprite)
 + (id)spriteWithFile:(NSString *)fileName pixelFormat:(CCTexture2DPixelFormat)format {
     CCTexture2DPixelFormat oldFormat = [CCTexture2D defaultAlphaPixelFormat];
     [CCTexture2D setDefaultAlphaPixelFormat:format];

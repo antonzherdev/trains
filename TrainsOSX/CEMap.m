@@ -1,13 +1,12 @@
 #import "CEMap.h"
-#import "cocos2d-ex.h"
 
 @implementation CEMap {
-    CGSize _size;
+    CEMapSize _size;
 }
 @synthesize size = _size;
 
 
-- (id)initWithSize:(CGSize)size {
+- (id)initWithSize:(CEMapSize)size {
     self = [super init];
     if(self) {
         _size = size;
@@ -25,9 +24,18 @@
     return layer;
 }
 
-- (CGPoint)positionForTile:(CGPoint)tile {
+- (CGPoint)pointForTile:(CETile)tile {
     @throw @"abstract";
 }
+
+- (CETile)tileForPoint:(CGPoint)point {
+    @throw @"abstract";
+}
+
+- (BOOL)isValidTile:(CETile)tile {
+    @throw @"abstract";
+}
+
 
 - (CETileIndex *)createTileIndex {
     return [CETileIndex tileIndexWithSize:_size];
@@ -43,17 +51,18 @@
     self = [super init];
     if(self) {
         _node = node;
+        _node.contentSize = map.contentSize;
         _map = map;
         _tileIndex = [[_map createTileIndex] retain];
     }
     return self;
 }
 
-- (void)addChild:(CCNode *)node tile:(CGPoint)tile {
+- (void)addChild:(CCNode *)node tile:(CETile)tile {
     [_node addChild:node];
     [_tileIndex addObject:node toTile:tile];
     node.anchorPoint = ccp(0, 0);
-    node.position = [_map positionForTile:tile];
+    node.position = [_map pointForTile:tile];
 }
 
 - (void)dealloc {
