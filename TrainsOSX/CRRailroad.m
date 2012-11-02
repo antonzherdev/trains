@@ -2,6 +2,7 @@
 #import "CRLevel.h"
 #import "CRRail.h"
 #import "CRRailroadBuilder.h"
+#import "CRCity.h"
 
 
 @implementation CRRailroad {
@@ -9,6 +10,7 @@
 
     CRRailroadBuilder *_builder;
     CEMapLayer *_railsLayer;
+    CEMapLayer *_cityLayer;
 }
 
 
@@ -21,11 +23,9 @@
     self = [super initWithDim:dim];
     if (self) {
         _railsLayer = [self addLayer];
+        _cityLayer = [self addLayer];
         _builder = [CRRailroadBuilder builderForRailroad:self];
         [self addLayerWithNode:_builder];
-
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(-1, 1)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(0, 1)];
 
         [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(0, 8)];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(1, 8)];
@@ -39,11 +39,21 @@
         [self addRail:[CRRail railWithForm:crRailFormTurn3] tile:ceTile(-1, 6)];
         [self addRail:[CRRail railWithForm:crRailFormY] tile:ceTile(-1, 7)];
         [self addRail:[CRRail railWithForm:crRailFormTurn4] tile:ceTile(-1, 8)];
+        
+        [self addCity:[CRCity cityWithColor:crOrangeCity] tile:ceTile(-6, 6)];
+        [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(-5, 6)];
 
-        self.drawMesh = YES;
+        [self addCity:[CRCity cityWithColor:crGreenCity] tile:ceTile(1, 12)];
+        [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(0, 12)];
+
+       //self.drawMesh = YES;
     }
 
     return self;
+}
+
+- (void)addCity:(CRCity *)city tile:(CETile)tile {
+    [_cityLayer addChild:city tile:tile];
 }
 
 - (void)addRail:(CRRail *)rail tile:(CETile)tile {
