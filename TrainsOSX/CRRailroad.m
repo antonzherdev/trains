@@ -25,7 +25,6 @@
         _railsLayer = [self addLayer];
         _cityLayer = [self addLayer];
         _builder = [CRRailroadBuilder builderForRailroad:self];
-        [self addLayerWithNode:_builder];
 
         [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(0, 8)];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(1, 8)];
@@ -46,7 +45,7 @@
         [self addCity:[CRCity cityWithColor:crGreenCity] tile:ceTile(1, 12)];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:ceTile(0, 12)];
 
-       //self.drawMesh = YES;
+        self.drawMesh = YES;
     }
 
     return self;

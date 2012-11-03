@@ -2,3 +2,4 @@
 #import "CCSprite+CESprite.h"
 #import "CETileIndex.h"
 #import "CEOrtoMap.h"
+#import "CCNode+CENode.h"

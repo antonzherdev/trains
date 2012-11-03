@@ -4,6 +4,8 @@
 @implementation CRRail {
     CRRailForm _form;
 }
+@synthesize form = _form;
+
 
 + (id)railWithForm:(CRRailForm)form {
     return [[[CRRail alloc] initWithForm:form] autorelease];

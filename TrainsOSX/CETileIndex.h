@@ -12,6 +12,12 @@ ceTile(int x, int y)
     CETile p; p.x = x; p.y = y; return p;
 }
 
+CG_INLINE BOOL
+ceTileEq(const CETile a, const CETile b)
+{
+    return a.x == b.x && a.y == b.y;
+}
+
 struct CEMapSize {
     int width;
     int height;

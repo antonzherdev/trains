@@ -4,6 +4,7 @@
 @class CRRailroad;
 
 typedef enum {
+    crRailFormUnknown,
     crRailFormX,
     crRailFormY,
     crRailFormTurn1,
@@ -13,6 +14,8 @@ typedef enum {
 } CRRailForm;
 
 @interface CRRail : CCSprite
+@property(nonatomic, readonly) CRRailForm form;
+
 + (id)railWithForm:(CRRailForm)form;
 
 - (id)initWithForm:(CRRailForm)form;

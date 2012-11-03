@@ -12,11 +12,13 @@
     (tile.y - tile.x - 1)* (int)(_dim.tileHeight/2));
 }
 
-- (CETile)tileForPoint:(CGPoint)point {
-    return ceTile(
-            (int) round((point.x - 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight))),
-            (int) round((point.x + 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight))));
+
+- (CGPoint)tilePointForPoint:(CGPoint)point {
+    return ccp(
+            (point.x - 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight)),
+            (point.x + 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight)));
 }
+
 
 - (BOOL)isValidTile:(CETile)tile {
     int s = tile.x + tile.y;

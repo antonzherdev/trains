@@ -13,8 +13,11 @@
 
 - (CEMapLayer*) addLayer;
 - (CEMapLayer*) addLayerWithNode:(CCNode*)node;
+
 - (CGPoint)pointForTile:(CETile)tile;
 - (CETile)tileForPoint:(CGPoint)point;
+- (CGPoint)tilePointForPoint:(CGPoint)point;
+
 - (BOOL) isValidTile : (CETile)tile;
 
 - (CETileIndex *)createTileIndex;
@@ -25,6 +28,11 @@
 @end
 
 @interface CEMapLayer : NSObject
+@property(nonatomic, readonly) CCNode *node;
+
 - (id) initWithMap:(CEMap*)map node:(CCNode*)node;
 - (void) addChild:(CCNode*)child tile:(CETile)tile;
 @end
+
+CETile convertTilePointToTile(CGPoint tilePoint);
+CGPoint convertToTileSpace(CGPoint tilePoint);
