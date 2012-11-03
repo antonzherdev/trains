@@ -4,6 +4,7 @@
 #import "CRRail.h"
 
 
+
 @implementation CRRailroadBuilder {
     CRRailroad *_railroad;
     CGPoint _startTilePoint;
@@ -14,6 +15,11 @@
     CEIPoint _railTile;
     CEMapLayer *_layer;
     CEIPoint _startQuarter;
+
+    CGPoint _touchStartPoint;
+    CGPoint _touchStartScreenPoint;
+    NSTouch* _startTouches[2];
+    BOOL _touching;
 }
 
 + (id)builderForRailroad:(CRRailroad *)railroad {
@@ -26,17 +32,26 @@
         _railroad = railroad;
         _layer = [railroad addLayerWithNode:self];
         self.isMouseEnabled = YES;
+        self.isTouchEnabled = YES;
     }
     return self;
 }
 
 - (BOOL)ccMouseDown:(NSEvent *)event {
     CGPoint point = [self point:event];
+    [self mouseDown:point];
+    return YES;
+}
+
+- (void)mouseDown:(CGPoint)point {
+    CCLOG(@"CRRailroadBuilder.mouseDown(%f, %f)", point.x, point.y);
     _startTilePoint = [_railroad tilePointForPoint:point];
     _startTile = ceConvertTilePointToTile(_startTilePoint);
+
+    CCLOG(@"startTile = %d, %d", _startTile.x, _startTile.y);
+
     _startInTileSpace = ceConvertToTileSpace(_startTilePoint);
     _startQuarter = [self quarterInTile:_startTile point:point];
-    return YES;
 }
 
 - (CEIPoint)quarterInTile:(CEIPoint)tile point:(CGPoint)point {
@@ -46,8 +61,15 @@
 
 - (BOOL)ccMouseDragged:(NSEvent *)event {
     CGPoint point = [self point:event];
+    [self mouseDragged:point];
+
+    return YES;
+}
+
+- (void)mouseDragged:(CGPoint)point {
+    CCLOG(@"CRRailroadBuilder.mouseDragged(%f, %f)", point.x, point.y);
     CGPoint tilePoint = [_railroad tilePointForPoint:point];
-    
+
     CRRailForm railForm = crRailFormUnknown;
     CEIPoint railTile = _startTile;
 
@@ -127,8 +149,6 @@
     } else {
         [self removeRail];
     }
-
-    return YES;
 }
 
 - (void)removeRail {
@@ -138,11 +158,87 @@
 
 
 - (BOOL)ccMouseUp:(NSEvent *)event {
+    [self mouseUp];
+    return YES;
+}
+
+- (void)mouseUp {
+    CCLOG(@"CRRailroadBuilder.mouseUp");
     if(_rail != nil) {
         [_rail removeFromParentAndCleanup:YES];
         [_railroad addRail:_rail tile:_railTile];
         _rail = nil;
     }
+}
+
+- (BOOL)ccTouchesBeganWithEvent:(NSEvent *)event {
+    CCGLView *view = [[CCDirectorMac sharedDirector] view];
+    NSSet *touches = [event touchesMatchingPhase:NSTouchPhaseTouching inView:view];
+    if(touches.count == 2) {
+        _touching = YES;
+        NSArray *array = [touches allObjects];
+        _startTouches[0] = [[array objectAtIndex:0] retain];
+        _startTouches[1] = [[array objectAtIndex:1] retain];
+        
+        CGPoint p = [event locationInWindow];
+        _touchStartScreenPoint = CGEventGetLocation([event CGEvent]);
+
+        CCLOG(@"Touch start %f,%f", _touchStartScreenPoint.x, _touchStartScreenPoint.y);
+        p = [[[CCDirector sharedDirector] view] convertPointFromBase:p];
+        _touchStartPoint = [self convertToNodeSpace:p];
+        [self mouseDown:_touchStartPoint];
+    }
+
+    return YES;
+}
+
+- (BOOL)ccTouchesMovedWithEvent:(NSEvent *)event {
+    if(!_touching) return NO;
+    
+    CCGLView *view = [[CCDirectorMac sharedDirector] view];
+    NSSet *touches = [event touchesMatchingPhase:NSTouchPhaseTouching inView:view];
+    NSTouch *touch0 = [self findTouch:_startTouches[0] inTouches:touches];
+    if(touch0 == nil) return YES;
+    NSTouch *touch1 = [self findTouch:_startTouches[1] inTouches:touches];
+    if(touch1 == nil) return YES;
+
+    NSPoint np1 = _startTouches[0].normalizedPosition;
+    NSPoint np2 = _startTouches[1].normalizedPosition;
+    NSPoint p1 = touch0.normalizedPosition;
+    NSPoint p2 = touch1.normalizedPosition;
+    CGFloat w = touch0.deviceSize.width;
+    CGFloat h = touch0.deviceSize.height;
+    CGPoint delta = ccp(
+    3*((MIN(p1.x, p2.x) * w) - (MIN(np1.x, np2.x)* w)),
+    3*((MIN(p1.y, p2.y) * h) - (MIN(np1.y, np2.y)* h))
+    );
+
+
+    CGPoint p = ccpAdd(_touchStartPoint, delta);
+    CGPoint cursor = ccp(_touchStartScreenPoint.x + delta.x, _touchStartScreenPoint.y - delta.y);
+    CGWarpMouseCursorPosition(cursor);
+    [self mouseDragged:p];
+
+    return YES;
+}
+
+- (NSTouch *)findTouch:(NSTouch *)touch inTouches:(NSSet *)touches {
+    for(NSTouch * t in touches) {
+        if([t.identity isEqual:touch.identity]) {
+            return t;
+        }
+    }
+    return nil;
+}
+
+- (BOOL)ccTouchesEndedWithEvent:(NSEvent *)event {
+    if(!_touching) return NO;
+    
+    _touching = NO;
+    [_startTouches[0] release];
+    [_startTouches[1] release];
+    [self mouseUp];
+    
     return YES;
 }
 

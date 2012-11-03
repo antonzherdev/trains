@@ -45,7 +45,7 @@
         [self addCity:[CRCity cityWithColor:crGreenCity] tile:cei(1, 12)];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
 
-        //self.drawMesh = YES;
+        self.drawMesh = YES;
     }
 
     return self;

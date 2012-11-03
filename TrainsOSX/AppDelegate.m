@@ -14,27 +14,31 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
+    //Original size
+    CGSize originalSize = CGSizeMake(1440, 900);
+
+
+    CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
 
 	// enable FPS and SPF
 	[director setDisplayStats:YES];
-	
+
 	// connect the OpenGL view with the director
-	[director setView:glView_];
+    [director setView:glView_];
+    [self toggleFullScreen:self];
 
 	// EXPERIMENTAL stuff.
 	// 'Effects' don't work correctly when autoscale is turned on.
 	// Use kCCDirectorResize_NoScale if you don't want auto-scaling.
-//	[director setResizeMode:kCCDirectorResize_AutoScale];
-	[director setResizeMode:kCCDirectorResize_NoScale];
+    [director setOriginalWinSize:originalSize];
+	[director setResizeMode:kCCDirectorResize_AutoScale];
+//	[director setResizeMode:kCCDirectorResize_NoScale];
 
 	// Enable "moving" mouse event. Default no.
 	[window_ setAcceptsMouseMovedEvents:YES];
-	
-    
+
 	// Center main window
 	//[window_ center];
-    [self toggleFullScreen:nil];
 
     [director runWithScene:[CRLevel levelWithNumber:0]];
 }
@@ -55,8 +59,10 @@
 
 - (IBAction)toggleFullScreen: (id)sender
 {
-	CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
-	[director setFullScreen: ! [director isFullScreen] ];
+    [glView_ setAcceptsTouchEvents:NO];
+    CCDirectorMac *director = (CCDirectorMac*) [CCDirector sharedDirector];
+    [director setFullScreen: ! [director isFullScreen] ];
+    [glView_ setAcceptsTouchEvents:YES];
 }
 
 @end

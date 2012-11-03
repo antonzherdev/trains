@@ -507,7 +507,6 @@
 		0291C46C161B67990085AB91 /* TrainsOSX */ = {
 			isa = PBXGroup;
 			children = (
-				028F1C09161F660E002FE46D /* CocosEx */,
 				6F3DFC19C5BA368F7C4EE43B /* Base */,
 				6F3DFDBDBF8214515D010FC1 /* Trains */,
 			);
@@ -931,6 +930,7 @@
 				028F1C0D161F6704002FE46D /* Level */,
 				6F3DF744BD253279AD81D618 /* Railroad */,
 				6F3DF47CF721D1F8B2FBAE5C /* App */,
+				028F1C09161F660E002FE46D /* CocosEx */,
 			);
 			name = Trains;
 			sourceTree = "<group>";
