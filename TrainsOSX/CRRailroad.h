@@ -10,8 +10,8 @@
 
 - (id)initWithLevel:(CRLevel *)level dim:(CEOrtoMapDim)dim;
 
-- (void)addCity:(CRCity *)city tile:(CETile)tile;
+- (void)addCity:(CRCity *)city tile:(CEIPoint)tile;
 
-- (void)addRail:(CRRail *)rail tile:(CETile)tile;
+- (void)addRail:(CRRail *)rail tile:(CEIPoint)tile;
 
 @end

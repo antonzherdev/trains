@@ -20,7 +20,7 @@
 
     CEOrtoMapDim dim;
     dim.tileHeight = 110;
-    dim.size = ceMapSize(14, 17);
+    dim.size = ceISize(14, 17);
     _railroad = [[CRRailroad railroadForLevel:self dim:dim] retain];
     _railroad.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
     _railroad.anchorPoint = ccp(0.5, 0.5);

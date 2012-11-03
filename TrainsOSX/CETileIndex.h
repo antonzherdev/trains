@@ -1,45 +1,65 @@
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
-struct CETile {
+struct CEIPoint {
     int x;
     int y;
 };
-typedef struct CETile CETile;
+typedef struct CEIPoint CEIPoint;
 
-CG_INLINE CETile
-ceTile(int x, int y)
+CG_INLINE CEIPoint
+cei(int x, int y)
 {
-    CETile p; p.x = x; p.y = y; return p;
+    CEIPoint p; p.x = x; p.y = y; return p;
 }
 
 CG_INLINE BOOL
-ceTileEq(const CETile a, const CETile b)
+ceiEq(const CEIPoint a, const CEIPoint b)
 {
     return a.x == b.x && a.y == b.y;
 }
 
-struct CEMapSize {
+CG_INLINE int
+ceiDistance(const CEIPoint a, const CEIPoint b)
+{
+   return abs(a.x - b.x) + abs(a.y - b.y);
+}
+
+CG_INLINE CEIPoint
+ceiSub(const CEIPoint a, const CEIPoint b)
+{
+    return cei(a.x - b.x, a.y - b.y);
+}
+
+CG_INLINE CGPoint
+cepMul(const CGPoint a, const CEIPoint b)
+{
+    return ccp(a.x*b.x, a.y*b.y);
+}
+
+
+struct CEISize {
     int width;
     int height;
 };
-typedef struct CEMapSize CEMapSize;
+typedef struct CEISize CEISize;
 
-CG_INLINE CEMapSize
-ceMapSize(int width, int height)
+CG_INLINE CEISize
+ceISize(int width, int height)
 {
-    CEMapSize p; p.width = width; p.height = height; return p;
+    CEISize p; p.width = width; p.height = height; return p;
 }
 
 
 @interface CETileIndex : NSObject
-@property(nonatomic, readonly) CEMapSize size;
+@property(nonatomic, readonly) CEISize size;
 
-+ (id) tileIndexWithSize:(CEMapSize) size;
-+ (id)tileIndexForOrtoMapWithSize:(CEMapSize) size;
++ (id) tileIndexWithSize:(CEISize) size;
++ (id)tileIndexForOrtoMapWithSize:(CEISize) size;
 
-- (id)initWithSize:(CEMapSize)size tileIndexBlock:(NSUInteger (^)(CEMapSize, CETile))block;
+- (id)initWithSize:(CEISize)size tileIndexBlock:(NSUInteger (^)(CEISize, CEIPoint))block;
 
--(void) addObject:(id)object toTile:(CETile) tile;
--(NSArray*)objectsAtTile:(CETile) tile;
+-(void) addObject:(id)object toTile:(CEIPoint) tile;
+-(NSArray*)objectsAtTile:(CEIPoint) tile;
 
 @end

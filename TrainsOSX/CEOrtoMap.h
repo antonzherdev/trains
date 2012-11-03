@@ -4,7 +4,7 @@
 
 struct CEOrtoMapDim {
     NSUInteger tileHeight;
-    CEMapSize size;
+    CEISize size;
 };
 typedef struct CEOrtoMapDim CEOrtoMapDim;
 

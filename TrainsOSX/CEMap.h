@@ -6,19 +6,19 @@
 @class CEMapLayer;
 
 @interface CEMap : CCNode
-@property(nonatomic, readonly) CEMapSize size;
+@property(nonatomic, readonly) CEISize size;
 @property(nonatomic) BOOL drawMesh;
 
-- (id)initWithSize:(CEMapSize)size1;
+- (id)initWithSize:(CEISize)size1;
 
 - (CEMapLayer*) addLayer;
 - (CEMapLayer*) addLayerWithNode:(CCNode*)node;
 
-- (CGPoint)pointForTile:(CETile)tile;
-- (CETile)tileForPoint:(CGPoint)point;
+- (CGPoint)pointForTile:(CEIPoint)tile;
+- (CEIPoint)tileForPoint:(CGPoint)point;
 - (CGPoint)tilePointForPoint:(CGPoint)point;
 
-- (BOOL) isValidTile : (CETile)tile;
+- (BOOL) isValidTile : (CEIPoint)tile;
 
 - (CETileIndex *)createTileIndex;
 
@@ -31,8 +31,8 @@
 @property(nonatomic, readonly) CCNode *node;
 
 - (id) initWithMap:(CEMap*)map node:(CCNode*)node;
-- (void) addChild:(CCNode*)child tile:(CETile)tile;
+- (void) addChild:(CCNode*)child tile:(CEIPoint)tile;
 @end
 
-CETile convertTilePointToTile(CGPoint tilePoint);
-CGPoint convertToTileSpace(CGPoint tilePoint);
+CEIPoint ceConvertTilePointToTile(CGPoint tilePoint);
+CGPoint ceConvertToTileSpace(CGPoint tilePoint);

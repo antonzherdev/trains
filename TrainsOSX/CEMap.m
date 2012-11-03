@@ -5,7 +5,7 @@
 @end
 
 @implementation CEMap {
-    CEMapSize _size;
+    CEISize _size;
     BOOL _drawMesh;
     CEMapMesh *_mesh;
     NSMutableArray *_layers;
@@ -14,7 +14,7 @@
 @synthesize drawMesh = _drawMesh;
 
 
-- (id)initWithSize:(CEMapSize)size {
+- (id)initWithSize:(CEISize)size {
     self = [super init];
     if(self) {
         _size = size;
@@ -34,13 +34,13 @@
     return layer;
 }
 
-- (CGPoint)pointForTile:(CETile)tile {
+- (CGPoint)pointForTile:(CEIPoint)tile {
     @throw @"abstract";
 }
 
-- (CETile)tileForPoint:(CGPoint)point {
+- (CEIPoint)tileForPoint:(CGPoint)point {
     CGPoint tilePoint = [self tilePointForPoint:point];
-    return convertTilePointToTile(tilePoint);
+    return ceConvertTilePointToTile(tilePoint);
 }
 
 - (CGPoint)tilePointForPoint:(CGPoint)point {
@@ -48,7 +48,7 @@
 }
 
 
-- (BOOL)isValidTile:(CETile)tile {
+- (BOOL)isValidTile:(CEIPoint)tile {
     @throw @"abstract";
 }
 
@@ -107,10 +107,10 @@
     return self;
 }
 
-- (void)addChild:(CCNode *)node tile:(CETile)tile {
+- (void)addChild:(CCNode *)node tile:(CEIPoint)tile {
     [_node addChild:node];
     [_tileIndex addObject:node toTile:tile];
-    node.anchorPoint = ccp(0, 0);
+    node.anchorPoint = ccp(0.5, 0.5);
     node.position = [_map pointForTile:tile];
 }
 
@@ -138,10 +138,10 @@
 
 @end
 
-CETile convertTilePointToTile(CGPoint tilePoint) {
-    return ceTile((int) round(tilePoint.x), (int) round(tilePoint.y));
+CEIPoint ceConvertTilePointToTile(CGPoint tilePoint) {
+    return cei((int) round(tilePoint.x), (int) round(tilePoint.y));
 }
 
-CGPoint convertToTileSpace(CGPoint tilePoint) {
+CGPoint ceConvertToTileSpace(CGPoint tilePoint) {
     return ccp(tilePoint.x - ((int) round(tilePoint.x)), tilePoint.y - ((int) round(tilePoint.y)));
 }

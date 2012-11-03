@@ -6,10 +6,10 @@
 @synthesize dim = _dim;
 
 
-- (CGPoint)pointForTile:(CETile)tile {
+- (CGPoint)pointForTile:(CEIPoint)tile {
     return ccp(
-    (tile.y + tile.x)* (int)(_dim.tileHeight),
-    (tile.y - tile.x - 1)* (int)(_dim.tileHeight/2));
+    (tile.y + tile.x + 1)* (int)(_dim.tileHeight),
+    (tile.y - tile.x)* (int)(_dim.tileHeight/2));
 }
 
 
@@ -20,7 +20,7 @@
 }
 
 
-- (BOOL)isValidTile:(CETile)tile {
+- (BOOL)isValidTile:(CEIPoint)tile {
     int s = tile.x + tile.y;
     int d = tile.y - tile.x;
     return  0 <= s && s <= _dim.size.width - 1 &&
@@ -54,8 +54,9 @@
             NSString *string = [NSString stringWithFormat:@"%d, %d", x, y];
             CCLabelTTF* label = [CCLabelTTF labelWithString:string fontName:@"Arial" fontSize:12];
             label.color = ccc3(0, 0, 0);
-            CGPoint tilePoint = [self pointForTile:ceTile(x, y)];
-            label.position = ccpAdd(tilePoint, ccp(_dim.tileHeight, _dim.tileHeight/2));
+            CGPoint tilePoint = [self pointForTile:cei(x, y)];
+            label.anchorPoint = ccp(0.5, 0.5);
+            label.position = tilePoint;
             [mesh addChild:label];
             x++;
             y++;
@@ -70,7 +71,7 @@
         int x = -(sy + 1)/2 - 1;
         int y = (sy + 2)/2 - 1;
         for(int sx = -1; sx < (_dim.size.width/2) + (sy&1); sx++) {
-            CGPoint tilePoint = [self pointForTile:ceTile(x, y)];
+            CGPoint tilePoint = ccpSub([self pointForTile:cei(x, y)], ccp(_dim.tileHeight, _dim.tileHeight/2));
             ccDrawLine(
                     ccpAdd(tilePoint, ccp(_dim.tileHeight, _dim.tileHeight)),
                     ccpAdd(tilePoint, ccp(_dim.tileHeight*2, _dim.tileHeight/2))
