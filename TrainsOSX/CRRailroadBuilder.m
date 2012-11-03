@@ -45,7 +45,9 @@
 
 - (void)mouseDown:(CGPoint)point {
     CCLOG(@"CRRailroadBuilder.mouseDown(%f, %f)", point.x, point.y);
+
     _startTilePoint = [_railroad tilePointForPoint:point];
+    CCLOG(@"startTilePoint = %f, %f)", _startTilePoint.x, _startTilePoint.y);
     _startTile = ceConvertTilePointToTile(_startTilePoint);
 
     CCLOG(@"startTile = %d, %d", _startTile.x, _startTile.y);
@@ -185,6 +187,8 @@
 
         CCLOG(@"Touch start %f,%f", _touchStartScreenPoint.x, _touchStartScreenPoint.y);
         p = [[[CCDirector sharedDirector] view] convertPointFromBase:p];
+        CCDirectorMac *dir = (CCDirectorMac *) [CCDirectorMac sharedDirector];
+        p = [dir convertToLogicalCoordinates:p];
         _touchStartPoint = [self convertToNodeSpace:p];
         [self mouseDown:_touchStartPoint];
     }

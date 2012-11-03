@@ -23,16 +23,16 @@
 	// enable FPS and SPF
 	[director setDisplayStats:YES];
 
-	// connect the OpenGL view with the director
-    [director setView:glView_];
-    [self toggleFullScreen:self];
-
 	// EXPERIMENTAL stuff.
 	// 'Effects' don't work correctly when autoscale is turned on.
 	// Use kCCDirectorResize_NoScale if you don't want auto-scaling.
     [director setOriginalWinSize:originalSize];
 	[director setResizeMode:kCCDirectorResize_AutoScale];
-//	[director setResizeMode:kCCDirectorResize_NoScale];
+	//[director setResizeMode:kCCDirectorResize_NoScale];
+
+    // connect the OpenGL view with the director
+    [director setView:glView_];
+    [self toggleFullScreen:self];
 
 	// Enable "moving" mouse event. Default no.
 	[window_ setAcceptsMouseMovedEvents:YES];

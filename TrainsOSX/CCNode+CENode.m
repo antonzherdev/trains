@@ -4,7 +4,8 @@
 
 @implementation CCNode (CENode)
 - (CGPoint)point:(NSEvent *)event {
-    CGPoint gl = [[CCDirector sharedDirector] convertEventToGL:event];
+    CCDirectorMac *dir = (CCDirectorMac *) [CCDirectorMac sharedDirector];
+    CGPoint gl = [dir convertEventToGL:event];
     return [self convertToNodeSpace:gl];
 }
 
