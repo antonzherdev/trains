@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d-ex.h"
+#import "CRRail.h"
 
 @class CRLevel;
-@class CRRail;
 @class CRCity;
 
 @interface CRRailroad : CEOrtoMap
@@ -14,4 +14,5 @@
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile;
 
+- (BOOL)canBuildRailWithForm:(CRRailForm)form inTile:(CEIPoint)tile;
 @end

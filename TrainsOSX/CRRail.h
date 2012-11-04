@@ -7,10 +7,10 @@ typedef enum {
     crRailFormUnknown,
     crRailFormX,
     crRailFormY,
-    crRailFormTurn1,
-    crRailFormTurn2,
-    crRailFormTurn3,
-    crRailFormTurn4
+    crRailFormTurnX_Y,
+    crRailFormTurnXY,
+    crRailFormTurn_XY,
+    crRailFormTurn_X_Y
 } CRRailForm;
 
 @interface CRRail : CCSprite

@@ -114,6 +114,11 @@
     node.position = [_map pointForTile:tile];
 }
 
+- (NSArray *)objectsAtTile:(CEIPoint)tile {
+    return [_tileIndex objectsAtTile:tile];
+}
+
+
 - (void)dealloc {
     [_tileIndex release];
     [super dealloc];

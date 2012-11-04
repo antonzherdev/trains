@@ -1,7 +1,6 @@
 #import "cocos2d-ex.h"
 #import "CRRailroadBuilder.h"
 #import "CRRailroad.h"
-#import "CRRail.h"
 
 
 
@@ -117,16 +116,16 @@
             if((sub.x > 0.2 && sub.y < -0.2) || (sub.x < -0.2 && sub.y > 0.2)) {
                 CGPoint s = ccpSub(point, [_railroad pointForTile:railTile]);
                 if(s.x < 0) {
-                    railForm = crRailFormTurn1;
+                    railForm = crRailFormTurnX_Y;
                 } else {
-                    railForm = crRailFormTurn3;
+                    railForm = crRailFormTurn_XY;
                 }
             } else if( (sub.x < -0.2 && sub.y < -0.2) || (sub.x > 0.2 && sub.y > 0.2)) {
                 CGPoint s = ccpSub(point, [_railroad pointForTile:railTile]);
                 if(s.y < 0) {
-                    railForm = crRailFormTurn4;
+                    railForm = crRailFormTurn_X_Y;
                 } else {
-                    railForm = crRailFormTurn2;
+                    railForm = crRailFormTurnXY;
                 }
             } else if(sub.x > 0.4 || sub.x < -0.4) {
                 railForm = crRailFormX;
@@ -143,10 +142,14 @@
             }
         }
         if(_rail == nil) {
-            //CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
-            _rail = [CRRail railWithForm:railForm];
-            _railTile = railTile;
-            [_layer addChild:_rail tile:_railTile];
+            if([_railroad canBuildRailWithForm:railForm inTile:railTile]) {
+                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
+                _rail = [CRRail railWithForm:railForm];
+                _railTile = railTile;
+                [_layer addChild:_rail tile:_railTile];
+            } else {
+                CCLOG(@"Coluld not build rail in tile %d,%d whithh form %d", railTile.x, railTile.y, railForm);
+            }
         }
     } else {
         [self removeRail];
