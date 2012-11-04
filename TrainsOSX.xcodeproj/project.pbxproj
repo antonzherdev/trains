@@ -910,7 +910,6 @@
 				6F3DF9FBBD580702B9AFE76A /* CRCity.m */,
 				6F3DF635A04A1EEE65CE7A6E /* CRCity.h */,
 			);
-			lastKnownFileType = text;
 			name = Railroad;
 			sourceTree = "<group>";
 		};
@@ -1147,7 +1146,7 @@
 		0291C5E4161B679B0085AB91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1168,7 +1167,7 @@
 		0291C5E5161B679B0085AB91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
