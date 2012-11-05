@@ -15,16 +15,16 @@
     CGRect rect;
     if(form == crRailFormY || form == crRailFormX) {
         rect = CGRectMake(0, 0, 220, 110);
-    } else if (form == crRailFormTurnX_Y || form == crRailFormTurn_XY){
+    } else if (form == crRailFormTurnXY || form == crRailFormTurn_X_Y){
         rect = CGRectMake(220, 0, 220, 110);
-    } else if(form == crRailFormTurnXY){
+    } else if(form == crRailFormTurn_XY){
         rect = CGRectMake(0, 110, 220, 110);
     } else {
         rect = CGRectMake(220, 110, 220, 110);
     }
     self = [self initWithFile:@"Rails.png" rect:rect];
     if (self) {
-        if(form == crRailFormY || form == crRailFormTurn_XY) {
+        if(form == crRailFormY || form == crRailFormTurnXY) {
             [self setFlipX:YES];
         }
         _form = form;
