@@ -3,7 +3,6 @@
 #import "CRCar.h"
 #import "CRLevel.h"
 #import "CRCity.h"
-#import "CRRail.h"
 
 
 @implementation CRTrain {
@@ -62,12 +61,18 @@
 
 - (void)updatePosition {
     CRRailPoint railPoint = _railPoint;
-    CGPoint point = [CRRail calculateRailPoint:_railPoint railroad:_railroad];
+    railPoint.tile = cei(-5, 6);
+    CGPoint point = [_railroad calculateRailPoint:railPoint];
+    int z = 0;
     for(CRCar * car in _cars) {
         CGPoint start = point;
-        CRMoveRailPointResult moveResult = [_railroad moveRailPoint:railPoint length:car.length * _orientation];
-        point = [CRRail calculateRailPoint:moveResult.railPoint railroad:_railroad];
+        CRMoveRailPointResult moveResult = [_railroad moveRailPoint:railPoint length:car.length * -_orientation];
+        railPoint = moveResult.railPoint;
+        point = [_railroad calculateRailPoint:railPoint];
         [car setStart:start end:point];
+        if(point.y > start.y) z--;
+        else z++;
+        car.zOrder = z;
     }
 }
 @end

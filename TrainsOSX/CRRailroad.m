@@ -6,11 +6,13 @@
 
 
 @implementation CRRailroad {
+    NSUInteger th;
+
     CRLevel *_level;
 
     CRRailroadBuilder *_builder;
     CEMapLayer *_railsLayer;
-    CRCity * _cities[crGreen];
+    CRCity * _cities[crGreen + 1];
 }
 
 
@@ -24,6 +26,7 @@
     if (self) {
         _railsLayer = [self addLayer];
         _builder = [CRRailroadBuilder builderForRailroad:self];
+        th = dim.tileHeight;
 
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 8)];
@@ -44,7 +47,7 @@
         [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
 
-        self.drawMesh = YES;
+//        self.drawMesh = YES;
     }
 
     return self;
@@ -110,9 +113,160 @@
 }
 
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
+    railPoint.x += length/(th*1.12);
+    CGFloat error = 0;
+    while (railPoint.x < 0 || railPoint.x > 1) {
+        CEIPoint t = railPoint.tile;
+        switch (railPoint.form) {
+            case crRailFormX:
+                if(railPoint.x < 0) t.x--;
+                else t.x++;
+                break;
+            case crRailFormY:
+                if(railPoint.x < 0) t.y--;
+                else t.y++;
+                break;
+            case crRailFormTurnX_Y:
+                if(railPoint.x < 0) {
+                    t.x--;
+                    t.y++;
+                }
+                else {
+                    t.x++;
+                    t.y--;
+                }
+                break;
+            case crRailFormTurnXY:
+                if(railPoint.x < 0) {
+                    t.x--;
+                    t.y--;
+                }
+                else {
+                    t.x++;
+                    t.y++;
+                }
+                break;
+            case crRailFormTurn_XY:
+                if(railPoint.x < 0) {
+                    t.x++;
+                    t.y--;
+                }
+                else {
+                    t.x--;
+                    t.y++;
+                }
+                break;
+            case crRailFormTurn_X_Y:
+                if(railPoint.x < 0) {
+                    t.x++;
+                    t.y++;
+                }
+                else {
+                    t.x--;
+                    t.y--;
+                }
+                break;
+            default:
+                @throw @"Unknown rail form";
+        }
+        NSArray *rails = [_railsLayer objectsAtTile:t];
+        id nextRail = nil;
+        for(id rail in rails) {
+            CRRailForm f = [rail form];
+            switch (railPoint.form) {
+                case crRailFormX:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormX) railPoint.x += 1;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x += 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormX) railPoint.x -= 1;
+                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x -= 1;
+                        else continue;
+                    }
+                    break;
+                case crRailFormY:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormY) railPoint.x += 1;
+                        else if(f == crRailFormTurnXY) railPoint.x = -railPoint.x - 1;
+                        else if(f == crRailFormTurn_XY) railPoint.x = -railPoint.x - 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormY) railPoint.x -= 1;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        else continue;
+                    }
+                    break;
+                case crRailFormTurnX_Y:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormX) railPoint.x = -railPoint.x - 1;
+                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x += 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormY) railPoint.x = 1 - railPoint.x;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) railPoint.x -= 1;
+                        else continue;
+                    }
+                    break;
+                case crRailFormTurnXY:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormX) railPoint.x = -railPoint.x - 1;
+                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x += 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormY) railPoint.x -= 1;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        else continue;
+                    }
+                    break;
+                case crRailFormTurn_XY:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormX) railPoint.x += 1;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x = -railPoint.x - 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormY) railPoint.x -= 1;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        else continue;
+                    }
+                    break;
+                case crRailFormTurn_X_Y:
+                    if(railPoint.x < 0) {
+                        if(f == crRailFormX) railPoint.x += 1;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x = -railPoint.x - 1;
+                        else continue;
+                    } else {
+                        if(f == crRailFormY) railPoint.x = 1 - railPoint.x;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) railPoint.x -= 1;
+                        else continue;
+                    }
+                    break;
+                default:
+                    continue;
+            }
+            nextRail = rail;
+            break;
+        }
+        if(nextRail == nil) {
+            if(railPoint.x < 0) {
+                error =  -railPoint.x;
+                railPoint.x = 0;
+            } else {
+                error = railPoint.x - 1;
+                railPoint.x = 1;
+            }
+        } else {
+            railPoint.tile = t;
+        }
+    }
     CRMoveRailPointResult result;
     result.railPoint = railPoint;
-    result.error = 0;
+    result.error = error;
     return result;
+}
+
+- (CGPoint)calculateRailPoint:(CRRailPoint)railPoint {
+    CGPoint p = [self pointForTile:railPoint.tile];
+    return ccp(p.x  + railPoint.x*th - th/2, p.y - railPoint.x*th/2 + th/4);
 }
 @end

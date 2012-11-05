@@ -23,7 +23,7 @@
     CEOrtoMapDim dim;
     dim.tileHeight = 110;
     dim.size = ceISize(14, 17);
-    _railroad = [[CRRailroad railroadForLevel:self dim:dim] retain];
+    _railroad = [CRRailroad railroadForLevel:self dim:dim];
     _railroad.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
     _railroad.anchorPoint = ccp(0.5, 0.5);
     [self addChild:_railroad];
@@ -39,11 +39,6 @@
     [_trainsLayer addChild:train];
 
     return self;
-}
-
-- (void)dealloc {
-    [_railroad release];
-    [super dealloc];
 }
 
 @end

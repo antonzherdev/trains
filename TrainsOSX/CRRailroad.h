@@ -14,4 +14,6 @@
 - (CRCity *)cityForColor:(CRCityColor)color;
 
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length;
+
+- (CGPoint)calculateRailPoint:(CRRailPoint)point;
 @end

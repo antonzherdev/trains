@@ -6,6 +6,9 @@
     int _width;
     int _height;
     CGFloat _length;
+
+    CGFloat _corX;
+    CGFloat _corY;
 }
 @synthesize length = _length;
 
@@ -21,7 +24,9 @@
             file = @"Car1.png";
             _width = 48;
             _height = 40;
-            _length = 62.5;
+            _length = 40;
+            _corX += 5;
+            _corY += 5;
             break;
         default:
             @throw @"Unknown car type";
@@ -35,6 +40,6 @@
 }
 
 - (void)setStart:(CGPoint)start end:(CGPoint)end {
-    self.position = start;
+    self.position = ccp((end.x + start.x)/2 + _corX, (end.y + start.y)/2 + _corY);
 }
 @end

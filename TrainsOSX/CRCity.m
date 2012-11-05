@@ -50,4 +50,9 @@
 - (CRDirection)startTrainOrientation {
     return (_tile.x + _tile.y == 0) || (_tile.y - _tile.x) == 0 ? crForward : crBackward;
 }
+
+- (CRRailForm)form {
+    return _orientation == crCityOrientationX ? crRailFormX : crRailFormY;;
+}
+
 @end

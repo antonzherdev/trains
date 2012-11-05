@@ -12,4 +12,6 @@
 - (CRRailPoint)startRailPoint;
 
 - (CRDirection)startTrainOrientation;
+
+- (CRRailForm) form;
 @end

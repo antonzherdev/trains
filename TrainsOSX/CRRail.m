@@ -1,5 +1,4 @@
 #import "CRRail.h"
-#import "CRRailroad.h"
 
 
 @implementation CRRail {
@@ -32,11 +31,5 @@
     }
 
     return self;
-}
-
-+ (CGPoint)calculateRailPoint:(CRRailPoint)railPoint railroad:(CRRailroad *)railroad {
-    CGPoint p = [railroad pointForTile:railPoint.tile];
-
-    return p;
 }
 @end
