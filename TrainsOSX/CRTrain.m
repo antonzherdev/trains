@@ -15,8 +15,11 @@
 
     CRDirection _orientation;
     CRDirection _moveDirection;
+    CGFloat _speed;
 }
 @synthesize color = _color;
+@synthesize speed = _speed;
+@synthesize moveDirection = _moveDirection;
 
 
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
@@ -26,8 +29,10 @@
 - (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
     self = [super init];
     if(self) {
+        _speed = 60;
         _level = level;
         _railroad = railroad;
+        _moveDirection = crForward;
         _color = color;
         _cars = [[NSMutableArray alloc] init];
     }
@@ -57,16 +62,22 @@
     _orientation = [city startTrainOrientation];
     _moveDirection = crForward;
     [self updatePosition];
+    [self scheduleUpdate];
 }
 
-- (void)updatePosition {
+- (CGFloat)updatePosition {
     CRRailPoint railPoint = _railPoint;
-    railPoint.tile = cei(-5, 6);
     CGPoint point = [_railroad calculateRailPoint:railPoint];
-    int z = 0;
+    CRDirection orientation = _orientation;
+    int z = 100;
+    CGFloat error = 0;
     for(CRCar * car in _cars) {
-        CGPoint start = point;
-        CRMoveRailPointResult moveResult = [_railroad moveRailPoint:railPoint length:car.length * -_orientation];
+        CGPoint start;
+        start = point;
+        CRMoveRailPointResult moveResult;
+        moveResult = [_railroad moveRailPoint:railPoint length:car.length * -orientation];
+        error = moveResult.error;
+        orientation = -moveResult.direction;
         railPoint = moveResult.railPoint;
         point = [_railroad calculateRailPoint:railPoint];
         [car setStart:start end:point];
@@ -74,5 +85,34 @@
         else z++;
         car.zOrder = z;
     }
+    return error;
 }
+
+-(void) update:(ccTime)deltaTime
+{
+    CGFloat length = _speed * deltaTime;
+    [self move:length];
+
+    if(_moveDirection == crBackward) {
+        CGFloat error;
+        while((error = [self updatePosition]) > FLT_EPSILON) {
+            self.moveDirection = -_moveDirection;
+            [self move:error];
+        }
+    } else {
+        [self updatePosition];
+    }
+}
+
+- (void)move:(CGFloat)length {
+    CRMoveRailPointResult result = [_railroad moveRailPoint:_railPoint length:length * _moveDirection * _orientation];
+    while (result.error > FLT_EPSILON) {
+        self.moveDirection = -_moveDirection;
+        result = [_railroad moveRailPoint:_railPoint length:result.error * _moveDirection * _orientation];
+    }
+    _orientation = _moveDirection * _orientation * result.direction;
+    _railPoint = result.railPoint;
+}
+
+
 @end

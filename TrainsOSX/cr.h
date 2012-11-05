@@ -29,12 +29,6 @@ struct CRRailPoint {
 };
 typedef struct CRRailPoint CRRailPoint;
 
-struct CRMoveRailPointResult {
-    CRRailPoint railPoint;
-    CGFloat error;
-};
-typedef struct CRMoveRailPointResult CRMoveRailPointResult;
-
 
 typedef enum {
     crCarType1
@@ -44,6 +38,13 @@ typedef enum {
     crForward = 1,
     crBackward = -1
 } CRDirection;
+
+struct CRMoveRailPointResult {
+    CRRailPoint railPoint;
+    CGFloat error;
+    CRDirection direction;
+};
+typedef struct CRMoveRailPointResult CRMoveRailPointResult;
 
 
 @class CRRailroad;

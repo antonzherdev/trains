@@ -43,6 +43,8 @@
 
         [self addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
+        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-4, 6)];
+        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-3, 6)];
 
         [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
@@ -113,9 +115,12 @@
 }
 
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
-    railPoint.x += length/(th*1.12);
+    float k = th * 1.12;
+    railPoint.x += length/ k;
+
     CGFloat error = 0;
-    while (railPoint.x < 0 || railPoint.x > 1) {
+    CRDirection dir = length < 0 ? crBackward : crForward;
+    while (railPoint.x < -FLT_EPSILON || railPoint.x > 1 + FLT_EPSILON) {
         CEIPoint t = railPoint.tile;
         switch (railPoint.form) {
             case crRailFormX:
@@ -173,76 +178,81 @@
         id nextRail = nil;
         for(id rail in rails) {
             CRRailForm f = [rail form];
+            BOOL invertDirection = NO;
             switch (railPoint.form) {
                 case crRailFormX:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormX) railPoint.x += 1;
-                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x += 1;
-                        else continue;
+                        if(!(f == crRailFormX || f == crRailFormTurnXY || f == crRailFormTurnX_Y)) continue;
                     } else {
-                        if(f == crRailFormX) railPoint.x -= 1;
-                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x -= 1;
-                        else continue;
+                        if(!(f == crRailFormX || f == crRailFormTurn_XY || f == crRailFormTurn_X_Y)) continue;
                     }
                     break;
                 case crRailFormY:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormY) railPoint.x += 1;
-                        else if(f == crRailFormTurnXY) railPoint.x = -railPoint.x - 1;
-                        else if(f == crRailFormTurn_XY) railPoint.x = -railPoint.x - 1;
+                        if(f == crRailFormY) invertDirection = NO;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = YES;
                         else continue;
                     } else {
-                        if(f == crRailFormY) railPoint.x -= 1;
-                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        if(f == crRailFormY) invertDirection = NO;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) invertDirection = YES;
                         else continue;
                     }
                     break;
                 case crRailFormTurnX_Y:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormX) railPoint.x = -railPoint.x - 1;
-                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x += 1;
+                        if(f == crRailFormX) invertDirection = YES;
+                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = NO;
                         else continue;
                     } else {
-                        if(f == crRailFormY) railPoint.x = 1 - railPoint.x;
-                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) railPoint.x -= 1;
+                        if(f == crRailFormY) invertDirection = YES;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = NO;
                         else continue;
                     }
                     break;
                 case crRailFormTurnXY:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormX) railPoint.x = -railPoint.x - 1;
-                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) railPoint.x += 1;
+                        if(f == crRailFormX) invertDirection = YES;
+                        else if(f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = NO;
                         else continue;
                     } else {
-                        if(f == crRailFormY) railPoint.x -= 1;
-                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        if(f == crRailFormY) invertDirection = NO;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) invertDirection = YES;
                         else continue;
                     }
                     break;
                 case crRailFormTurn_XY:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormX) railPoint.x += 1;
-                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x = -railPoint.x - 1;
+                        if(f == crRailFormX) invertDirection = NO;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) invertDirection = YES;
                         else continue;
                     } else {
-                        if(f == crRailFormY) railPoint.x -= 1;
-                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) railPoint.x = 1 - railPoint.x;
+                        if(f == crRailFormY) invertDirection = NO;
+                        else if(f == crRailFormTurnX_Y || f == crRailFormTurn_X_Y) invertDirection = YES;
                         else continue;
                     }
                     break;
                 case crRailFormTurn_X_Y:
                     if(railPoint.x < 0) {
-                        if(f == crRailFormX) railPoint.x += 1;
-                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) railPoint.x = -railPoint.x - 1;
+                        if(f == crRailFormX) invertDirection = NO;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurnX_Y) invertDirection = YES;
                         else continue;
                     } else {
-                        if(f == crRailFormY) railPoint.x = 1 - railPoint.x;
-                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) railPoint.x -= 1;
+                        if(f == crRailFormY) invertDirection = YES;
+                        else if(f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = NO;
                         else continue;
                     }
                     break;
                 default:
                     continue;
+            }
+            if(invertDirection) {
+                if(railPoint.x < 0) railPoint.x = -railPoint.x - 1;
+                else railPoint.x = 1 - railPoint.x;
+
+                dir = -dir;
+            } else {
+                if(railPoint.x < 0) railPoint.x += 1;
+                else railPoint.x -= 1;
             }
             nextRail = rail;
             break;
@@ -261,7 +271,8 @@
     }
     CRMoveRailPointResult result;
     result.railPoint = railPoint;
-    result.error = error;
+    result.error = error*k;
+    result.direction = dir;
     return result;
 }
 
