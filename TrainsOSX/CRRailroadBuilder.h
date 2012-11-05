@@ -1,5 +1,4 @@
-#import <Foundation/Foundation.h>
-#import "cocos2d-ex.h"
+#import "cr.h"
 
 @class CRRailroad;
 

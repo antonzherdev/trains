@@ -1,11 +1,11 @@
 #import "CRRail.h"
+#import "CRRailroad.h"
 
 
 @implementation CRRail {
     CRRailForm _form;
 }
 @synthesize form = _form;
-
 
 + (id)railWithForm:(CRRailForm)form {
     return [[[CRRail alloc] initWithForm:form] autorelease];
@@ -34,4 +34,9 @@
     return self;
 }
 
++ (CGPoint)calculateRailPoint:(CRRailPoint)railPoint railroad:(CRRailroad *)railroad {
+    CGPoint p = [railroad pointForTile:railPoint.tile];
+
+    return p;
+}
 @end

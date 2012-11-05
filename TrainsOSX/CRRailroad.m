@@ -2,7 +2,7 @@
 #import "CRLevel.h"
 #import "CRRailroadBuilder.h"
 #import "CRCity.h"
-#import "cocos2d-ex.h"
+#import "CRRail.h"
 
 
 @implementation CRRailroad {
@@ -10,7 +10,7 @@
 
     CRRailroadBuilder *_builder;
     CEMapLayer *_railsLayer;
-    CEMapLayer *_cityLayer;
+    CRCity * _cities[crGreen];
 }
 
 
@@ -23,7 +23,6 @@
     self = [super initWithDim:dim];
     if (self) {
         _railsLayer = [self addLayer];
-        _cityLayer = [self addLayer];
         _builder = [CRRailroadBuilder builderForRailroad:self];
 
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
@@ -38,21 +37,22 @@
         [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(-1, 6)];
         [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-1, 7)];
         [self addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(-1, 8)];
-        
-        [self addCity:[CRCity cityWithColor:crOrangeCity] tile:cei(-6, 6)];
+
+        [self addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
 
-        [self addCity:[CRCity cityWithColor:crGreenCity] tile:cei(1, 12)];
+        [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
 
-        //self.drawMesh = YES;
+        self.drawMesh = YES;
     }
 
     return self;
 }
 
-- (void)addCity:(CRCity *)city tile:(CEIPoint)tile {
-    [_cityLayer addChild:city tile:tile];
+- (void)addCity:(CRCity *)city {
+    [_railsLayer addChild:city tile:city.tile];
+    _cities[city.cityColor] = city;
 }
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile {
@@ -103,5 +103,16 @@
             return YES;
     }
     return YES;
+}
+
+- (CRCity *)cityForColor:(CRCityColor)color {
+    return _cities[color];
+}
+
+- (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
+    CRMoveRailPointResult result;
+    result.railPoint = railPoint;
+    result.error = 0;
+    return result;
 }
 @end

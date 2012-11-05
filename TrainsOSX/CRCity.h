@@ -1,15 +1,15 @@
-#import <Foundation/Foundation.h>
-#import "cocos2d-ex.h"
-
-typedef enum {
-    crOrangeCity,
-    crGreenCity,
-} CRCityColor;
+#import "cr.h"
 
 @interface CRCity : CCSprite
-@property(nonatomic) CRCityColor cityColor;
+@property(nonatomic, readonly) CRCityColor cityColor;
+@property(nonatomic, readonly) CEIPoint tile;
 
-+(id) cityWithColor:(CRCityColor)color;
 
-- (id)initWithColor:(CRCityColor)color;
++ (id)cityWithColor:(CRCityColor)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile;
+
+- (id)initWithColor:(CRCityColor)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile;
+
+- (CRRailPoint)startRailPoint;
+
+- (CRDirection)startTrainOrientation;
 @end
