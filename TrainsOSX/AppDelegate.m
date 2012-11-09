@@ -40,7 +40,7 @@
 	// Center main window
 	//[window_ center];
 
-    [director runWithScene:[CRLevel levelWithNumber:0]];
+    [director runWithScene:[CRLevel level]];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) theApplication

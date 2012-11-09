@@ -1,9 +1,12 @@
 #import "cr.h"
 
-@interface CRRailroad : CEOrtoMap
-+ (CRRailroad *)railroadForLevel:(CRLevel *)level dim:(CEOrtoMapDim)dim;
+@interface CRRailroad : CEOrtoMap {
+    CEMapLayer *_railsLayer;
+    NSUInteger _th;
+}
++ (CRRailroad *)railroadForDim:(CEOrtoMapDim)dim;
 
-- (id)initWithLevel:(CRLevel *)level dim:(CEOrtoMapDim)dim;
+- (id)initWithDim:(CEOrtoMapDim)dim;
 
 - (void)addCity:(CRCity *)city;
 
@@ -13,7 +16,4 @@
 
 - (CRCity *)cityForColor:(CRCityColor)color;
 
-- (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length;
-
-- (CGPoint)calculateRailPoint:(CRRailPoint)point;
 @end

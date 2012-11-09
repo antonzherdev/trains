@@ -3,6 +3,7 @@
 #import "CRCar.h"
 #import "CRLevel.h"
 #import "CRCity.h"
+#import "CRRailroad+CRRailPoint.h"
 
 
 @implementation CRTrain {
