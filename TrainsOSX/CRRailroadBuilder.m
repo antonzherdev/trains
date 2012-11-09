@@ -116,16 +116,16 @@
             if((sub.x > 0.2 && sub.y < -0.2) || (sub.x < -0.2 && sub.y > 0.2)) {
                 CGPoint s = ccpSub(point, [_railroad pointForTile:railTile]);
                 if(s.x < 0) {
-                    railForm = crRailFormTurnX_Y;
+                    railForm = crRailFormTurn_X_Y;
                 } else {
-                    railForm = crRailFormTurn_XY;
+                    railForm = crRailFormTurnXY;
                 }
             } else if( (sub.x < -0.2 && sub.y < -0.2) || (sub.x > 0.2 && sub.y > 0.2)) {
                 CGPoint s = ccpSub(point, [_railroad pointForTile:railTile]);
                 if(s.y < 0) {
-                    railForm = crRailFormTurn_X_Y;
+                    railForm = crRailFormTurnX_Y;
                 } else {
-                    railForm = crRailFormTurnXY;
+                    railForm = crRailFormTurn_XY;
                 }
             } else if(sub.x > 0.4 || sub.x < -0.4) {
                 railForm = crRailFormX;
