@@ -5,6 +5,7 @@
 #import "CCNode+CENode.h"
 #import "CECurve.h"
 #import "CEBezier.h"
+#import "CEOrtoSprite.h"
 
 static inline CGPoint
 cepAdd3(const CGPoint v1, const CGPoint v2, const CGPoint v3)

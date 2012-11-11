@@ -55,7 +55,7 @@
         _curves[crRailFormTurnX_Y] = ceCurveBezier(ceBezier2(x, ccp(0, -0.15*_th), _y), 100);
         _curves[crRailFormTurn_X_Y] = ceCurveBezier(ceBezier2(_x, ccp(-0.5*_th, 0), _y), 100);
 
-       self.drawMesh = YES;
+//       self.drawMesh = YES;
     }
 
     return self;

@@ -81,7 +81,7 @@
         orientation = -moveResult.direction;
         railPoint = moveResult.railPoint;
         point = [_railroad calculateRailPoint:railPoint];
-        [car setStart:start end:point];
+        if(error == 0) [car setStart:start end:point];
         if(point.y > start.y) z--;
         else z++;
         car.zOrder = z;
