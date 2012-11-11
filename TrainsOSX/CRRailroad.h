@@ -3,6 +3,8 @@
 @interface CRRailroad : CEOrtoMap {
     CEMapLayer *_railsLayer;
     NSUInteger _th;
+
+    CECurve _curve_XY;
 }
 + (CRRailroad *)railroadForDim:(CEOrtoMapDim)dim;
 

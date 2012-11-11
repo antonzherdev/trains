@@ -44,7 +44,9 @@
         [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
 
-//       self.drawMesh = YES;
+        _curve_XY = ceCurveBezier(ceBezier2(ccp(-0.5*_th, 0.25*_th), ccp(0, 0.1*_th), ccp(0.5*_th, 0.25*_th)), 100);
+
+       self.drawMesh = YES;
     }
 
     return self;
