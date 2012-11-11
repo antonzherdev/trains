@@ -1,14 +1,6 @@
 #import "CRRailroad+CRRailPoint.h"
 #import "CRRail.h"
 
-CG_INLINE CGFloat translateX(CRRailPoint railPoint, CGFloat th, CGPoint p) {
-    return p.x + railPoint.x*th - th/2;
-}
-
-CG_INLINE CGPoint calc(CGPoint start, CECurve curve, CGFloat x) {
-    return ccpAdd(start, ceCurvePoint(curve, x));
-}
-
 @implementation CRRailroad (CRRailPoint)
 
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
@@ -152,23 +144,6 @@ CG_INLINE CGPoint calc(CGPoint start, CECurve curve, CGFloat x) {
 
 - (CGPoint)calculateRailPoint:(CRRailPoint)railPoint {
     CGPoint p = [self pointForTile:railPoint.tile];
-    switch (railPoint.form) {
-        case crRailFormUnknown:
-            @throw @"Form unknown";
-        case crRailFormX:
-            return ccp(translateX(railPoint, _th, p), p.y - railPoint.x*_th/2 + _th/4);
-        case crRailFormY:
-            break;
-        case crRailFormTurnX_Y:
-            break;
-        case crRailFormTurn_XY: {
-            return calc(p, _curve_XY, railPoint.x);
-        }
-        case crRailFormTurnXY:
-            break;
-        case crRailFormTurn_X_Y:
-            break;
-    }
-    return ccp(p.x + railPoint.x * _th - _th / 2, p.y - railPoint.x * _th / 2 + _th / 4);
+    return ccpAdd(p, ceCurvePoint(_curves[railPoint.form], railPoint.x));
 }
 @end

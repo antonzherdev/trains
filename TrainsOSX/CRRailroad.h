@@ -4,7 +4,7 @@
     CEMapLayer *_railsLayer;
     NSUInteger _th;
 
-    CECurve _curve_XY;
+    CECurve _curves[crRailFormTurn_X_Y + 1];
 }
 + (CRRailroad *)railroadForDim:(CEOrtoMapDim)dim;
 
