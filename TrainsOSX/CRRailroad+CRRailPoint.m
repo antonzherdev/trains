@@ -43,19 +43,23 @@
         id nextRail = nil;
         for (id rail in rails) {
             CRRailForm f = [rail form];
-            BOOL invertDirection = NO;
+            BOOL invertDirection;
             switch (railPoint.form) {
                 case crRailFormX:
                     if (railPoint.x < 0) {
-                        if (!(f == crRailFormX || f == crRailFormTurnXY || f == crRailFormTurnX_Y)) continue;
+                        if (f == crRailFormX) invertDirection = NO;
+                        else if (f == crRailFormTurnXY || f == crRailFormTurnX_Y) invertDirection = YES;
+                        else continue;
                     } else {
-                        if (!(f == crRailFormX || f == crRailFormTurn_XY || f == crRailFormTurn_X_Y)) continue;
+                        if (f == crRailFormX) invertDirection = NO;
+                        else if (f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = NO;
+                        else continue;
                     }
                     break;
                 case crRailFormY:
                     if (railPoint.x < 0) {
                         if (f == crRailFormY) invertDirection = NO;
-                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = YES;
+                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = NO;
                         else continue;
                     } else {
                         if (f == crRailFormY) invertDirection = NO;
@@ -111,8 +115,8 @@
                     continue;
             }
             if (invertDirection) {
-                if (railPoint.x < 0) railPoint.x = -railPoint.x - 1;
-                else railPoint.x = 1 - railPoint.x;
+                if (railPoint.x < 0) railPoint.x = -railPoint.x;
+                else railPoint.x = 2 - railPoint.x;
 
                 dir = -dir;
             } else {

@@ -111,7 +111,7 @@
         self.moveDirection = -_moveDirection;
         result = [_railroad moveRailPoint:_railPoint length:result.error * _moveDirection * _orientation];
     }
-    _orientation = _moveDirection * _orientation * result.direction;
+    _orientation = _moveDirection * result.direction;
     _railPoint = result.railPoint;
 }
 
