@@ -1,0 +1,6 @@
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif
+
+
+#define CC_ENABLE_GL_STATE_CACHE 1
