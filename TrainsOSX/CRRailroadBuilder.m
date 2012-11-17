@@ -32,6 +32,7 @@
         _layer = [railroad addLayerWithNode:self];
         self.isMouseEnabled = YES;
         self.isTouchEnabled = YES;
+        self.isKeyboardEnabled = YES;
     }
     return self;
 }

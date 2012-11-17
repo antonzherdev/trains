@@ -1,5 +1,5 @@
 #import "cr.h"
 
-@interface CRLevel : CCScene
+@interface CRLevel : CCScene <CCKeyboardEventDelegate>
 + (CRLevel *)level;
 @end

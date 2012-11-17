@@ -38,7 +38,21 @@
     [train startFromCityWithColor:crOrange];
     [_trainsLayer addChild:train];
 
+    [[[CCDirector sharedDirector] eventDispatcher] addKeyboardDelegate:self priority:0];
+
     return self;
 }
+
+- (BOOL)ccKeyDown:(NSEvent *)event {
+    if([[event characters] isEqualToString:@"s"]) {
+        if([[CCDirector sharedDirector] isPaused]) {
+            [[CCDirector sharedDirector] resume];
+        }  else {
+            [[CCDirector sharedDirector] pause];
+        }
+    }
+    return NO;
+}
+
 
 @end

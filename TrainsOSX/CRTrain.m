@@ -30,7 +30,7 @@
 - (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
     self = [super init];
     if(self) {
-        _speed = 60;
+        _speed = 30;
         _level = level;
         _railroad = railroad;
         _moveDirection = crForward;
