@@ -61,6 +61,7 @@
         return ABS(angle - [sum angle]) < ABS(angle - [obj angle]) ? sum : obj;
     }];
 
+    if(a.angle == 0) flipX = NO;
     [self setFlipX:flipX];
 //    CCLOG(@"angle = %f, result = %f", angle, a.angle);
     [self setTextureRect:a.rect];
