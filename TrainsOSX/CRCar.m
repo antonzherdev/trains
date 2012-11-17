@@ -28,6 +28,7 @@
             @throw @"Unknown car type";
     }
     self = [super initWithFile:file rect:CGRectMake(0, _height *color, _width, _height)];
+    [self addAngle:23./18 rect:CGRectMake(_width, _height*color, _width, _height)];
     if(self) {
         _type = type;
         self.anchorPoint = ccp(0.5, 0.5);

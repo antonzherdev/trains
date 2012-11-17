@@ -32,7 +32,7 @@
     _trainsLayer.contentSize = _railroad.contentSize;
     [_railroad addChild:_trainsLayer];
 
-    CRTrain *train = [CRTrain trainWithLevel:self railroad:_railroad color:crGreen];
+    CRTrain *train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
     [train addCarWithType:crCarType1];
     [train addCarWithType:crCarType1];
     [train startFromCityWithColor:crOrange];

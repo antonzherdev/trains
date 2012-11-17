@@ -6,5 +6,5 @@
 @property(nonatomic) CGPoint shift;
 
 - (void)setStart:(CGPoint)start end:(CGPoint)end;
-
+- (void)addAngle:(CGFloat)angle rect:(CGRect)rect;
 @end
