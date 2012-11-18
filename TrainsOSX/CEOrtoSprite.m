@@ -56,6 +56,13 @@
     [_ortoSprite addAngle:angle rect:_rect shift:shift];
     _rect.origin.x += _rect.size.width;
 }
+
+- (void)addAngle:(CGFloat)angle x:(CGFloat)x shift:(CGPoint)shift {
+    _rect.size.width = x - _rect.origin.x;
+    [_ortoSprite addAngle:angle rect:_rect shift:shift];
+    _rect.origin.x += _rect.size.width;
+
+}
 @end
 
 @implementation CEOrtoSprite {
@@ -94,7 +101,7 @@
 
     if(a.angle == 0) flipX = NO;
     [self setFlipX:flipX];
-    CCLOG(@"angle = %f, result = %f", angle, a.angle);
+//    CCLOG(@"angle = %f, result = %f", angle, a.angle);
     [self setTextureRect:a.rect];
     self.position = ccp((end.x + start.x)/2 + (flipX ? -a.shift.x : a.shift.x), (end.y + start.y)/2 + a.shift.y);
 }

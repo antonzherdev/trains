@@ -11,6 +11,7 @@
 - (void)addAngle:(CGFloat)angle shift:(CGPoint)shift;
 
 
+- (void)addAngle:(CGFloat)angle x:(CGFloat)x shift:(CGPoint)shift;
 @end
 
 @interface CEOrtoSprite : CCSprite
