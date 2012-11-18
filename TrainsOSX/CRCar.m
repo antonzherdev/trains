@@ -21,7 +21,7 @@
             file = @"Car1.png";
             _width = 48;
             _height = 40;
-            _length = 40;
+            _length = 41;
             break;
         default:
             @throw @"Unknown car type";
@@ -29,11 +29,11 @@
     self = [super initWithFile:file];
     CEOrtoSpriteLine *line = [self lineWithStartRect:CGRectMake(0, _height * color, _width, _height)];
     [line addAngle:1 shift:ccp(4, 4)];
-    [line addAngle:0.6 shift:ccp(6, 3)];
-    [line addAngle:0.45 shift:ccp(6, 4)];
-    [line addAngle:0.3 shift:ccp(-2, 2)];
-    [line addAngle:0.15 shift:ccp(-2, 0)];
-    [line addAngle:0 shift:ccp(-8, 4)];
+    [line addAngle:0.6 shift:ccp(4, 4)];
+    [line addAngle:0.45 shift:ccp(2, 4)];
+    [line addAngle:0.3 shift:ccp(-2, 4)];
+    [line addAngle:0.15 shift:ccp(0, 4)];
+    [line addAngle:0 shift:ccp(0, 4)];
 
     if(self) {
         _type = type;
