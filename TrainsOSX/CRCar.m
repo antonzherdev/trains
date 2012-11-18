@@ -26,11 +26,15 @@
         default:
             @throw @"Unknown car type";
     }
-    self = [super initWithFile:file rect:CGRectMake(0, _height *color, _width, _height)];
-    [self addAngle:2 rect:CGRectMake(0, _height * color, _width, _height) shift:ccp(4, 4)];
-    [self addAngle:1.25 rect:CGRectMake(_width, _height * color, _width, _height) shift:ccp(6, 4)];
-    [self addAngle:0.6 rect:CGRectMake(2 * _width, _height * color, _width, _height) shift:ccp(2, 6)];
-    [self addAngle:0 rect:CGRectMake(3 * _width, _height * color, _width, _height) shift:ccp(-2, 4)];
+    self = [super initWithFile:file];
+    CEOrtoSpriteLine *line = [self lineWithStartRect:CGRectMake(0, _height * color, _width, _height)];
+    [line addAngle:1 shift:ccp(4, 4)];
+    [line addAngle:0.6 shift:ccp(6, 3)];
+    [line addAngle:0.45 shift:ccp(6, 4)];
+    [line addAngle:0.3 shift:ccp(-2, 2)];
+    [line addAngle:0.15 shift:ccp(-2, 0)];
+    [line addAngle:0 shift:ccp(-8, 4)];
+
     if(self) {
         _type = type;
         self.anchorPoint = ccp(0.5, 0.5);

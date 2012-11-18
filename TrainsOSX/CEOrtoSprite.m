@@ -34,10 +34,42 @@
 }
 @end
 
+@implementation CEOrtoSpriteLine {
+    CGRect _rect;
+    CEOrtoSprite* _ortoSprite;
+}
+- (id)initWithOrtoSprite:(CEOrtoSprite *)ortoSprite rect:(CGRect)rect {
+    self = [super init];
+    if (self) {
+        _ortoSprite = ortoSprite;
+        _rect = rect;
+    }
+
+    return self;
+}
+
++ (id)lineWithOrtoSprite:(CEOrtoSprite *)ortoSprite rect:(CGRect)rect {
+    return [[[CEOrtoSpriteLine alloc] initWithOrtoSprite:ortoSprite rect:rect] autorelease];
+}
+
+- (void)addAngle:(CGFloat)angle shift:(CGPoint)shift {
+    [_ortoSprite addAngle:angle rect:_rect shift:shift];
+    _rect.origin.x += _rect.size.width;
+}
+@end
 
 @implementation CEOrtoSprite {
-    
     NSMutableArray *_angles;
+}
+
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        _angles = [[NSMutableArray alloc] init];
+    }
+
+    return self;
 }
 
 - (id)initWithTexture:(CCTexture2D *)texture rect:(CGRect)rect {
@@ -50,9 +82,8 @@
 }
 
 
-
 - (void)setStart:(CGPoint)start end:(CGPoint)end {
-    CGFloat angle = (end.x - start.x) / (end.y - start.y);
+    CGFloat angle = (end.x - start.x) / ((end.y - start.y)*2);
     BOOL flipX = angle > 0;
 //    CCLOG(@"angle = %f", angle);
     angle = ABS(angle);
@@ -71,6 +102,10 @@
 - (void)addAngle:(CGFloat)angle rect:(CGRect)rect shift:(CGPoint)shift {
     CEOrtoSpriteAngle *a = [[[CEOrtoSpriteAngle alloc] initWithAngle:angle rect:rect shift:shift] autorelease];
     [_angles addObject:a];
+}
+
+- (CEOrtoSpriteLine *)lineWithStartRect:(CGRect)rect {
+    return [CEOrtoSpriteLine lineWithOrtoSprite:self rect:rect];
 }
 
 - (void)dealloc {
