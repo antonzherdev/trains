@@ -15,7 +15,7 @@
                 break;
             case crRailFormTurn_X_Y:
             case crRailFormTurnXY:
-                fullLength = _th * 0.85;
+                fullLength = _th * 0.9;
                 break;
             case crRailFormTurnX_Y:
             case crRailFormTurn_XY:

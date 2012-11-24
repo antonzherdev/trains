@@ -16,4 +16,7 @@
 - (void)addCarWithType:(CRCarType)type;
 
 - (void)startFromCityWithColor:(CRCityColor)color;
+
+- (void)move:(CGFloat)length;
+
 @end

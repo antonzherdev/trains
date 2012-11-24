@@ -7,6 +7,7 @@
 @implementation CRLevel {
     CRRailroad *_railroad;
     CCNode *_trainsLayer;
+    CRTrain *_train;
 }
 
 + (CRLevel *)level {
@@ -32,11 +33,12 @@
     _trainsLayer.contentSize = _railroad.contentSize;
     [_railroad addChild:_trainsLayer];
 
-    CRTrain *train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
-    [train addCarWithType:crCarType1];
-    [train addCarWithType:crCarType1];
-    [train startFromCityWithColor:crOrange];
-    [_trainsLayer addChild:train];
+    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
+//    _train.speed = 0;
+    [_train addCarWithType:crCarType1];
+    [_train addCarWithType:crCarType1];
+    [_train startFromCityWithColor:crOrange];
+    [_trainsLayer addChild:_train];
 
     [[[CCDirector sharedDirector] eventDispatcher] addKeyboardDelegate:self priority:0];
 
@@ -50,6 +52,18 @@
         }  else {
             [[CCDirector sharedDirector] pause];
         }
+    } else if([[event characters] isEqualToString:@"w"]) {
+        _train.speed = 0;
+        [_train move:10];
+    } else if([[event characters] isEqualToString:@"q"]) {
+        _train.speed = 0;
+        [_train move:-10];
+    } else if([[event characters] isEqualToString:@"r"]) {
+        _train.speed = 0;
+        [_train move:1];
+    } else if([[event characters] isEqualToString:@"e"]) {
+        _train.speed = 0;
+        [_train move:-1];
     }
     return NO;
 }

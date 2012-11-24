@@ -91,8 +91,23 @@
 
 -(void) update:(ccTime)deltaTime
 {
-    CGFloat length = _speed * deltaTime;
+    if(_speed == 0) return;
+
+    CGFloat length = _moveDirection * _speed * deltaTime;
     [self move:length];
+}
+
+- (void)move:(CGFloat)length {
+    if(fabs(length) < FLT_EPSILON) return;
+
+    _moveDirection = length < 0 ? crBackward : crForward;
+    CRMoveRailPointResult result = [_railroad moveRailPoint:_railPoint length:length * _orientation];
+    while (result.error > FLT_EPSILON) {
+        self.moveDirection = -_moveDirection;
+        result = [_railroad moveRailPoint:_railPoint length:result.error * _moveDirection * _orientation];
+    }
+    _orientation = _moveDirection * result.direction;
+    _railPoint = result.railPoint;
 
     if(_moveDirection == crBackward) {
         CGFloat error;
@@ -103,16 +118,6 @@
     } else {
         [self updatePosition];
     }
-}
-
-- (void)move:(CGFloat)length {
-    CRMoveRailPointResult result = [_railroad moveRailPoint:_railPoint length:length * _moveDirection * _orientation];
-    while (result.error > FLT_EPSILON) {
-        self.moveDirection = -_moveDirection;
-        result = [_railroad moveRailPoint:_railPoint length:result.error * _moveDirection * _orientation];
-    }
-    _orientation = _moveDirection * result.direction;
-    _railPoint = result.railPoint;
 }
 
 
