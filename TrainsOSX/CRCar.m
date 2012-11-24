@@ -39,6 +39,9 @@
     [line addAngle:0 x:365 shift:ccp(0, 4)];
     [line addAngle:0.08 x:389 shift:ccp(0, 4)];
     [line addAngle:0.22 x:422 shift:ccp(1, 4)];
+    [line addAngle:0.37 x:458 shift:ccp(2, 6)];
+    [line addAngle:0.52 x:498 shift:ccp(1, 6)];
+    [line addAngle:0.95 x:546 shift:ccp(2, 5)];
 
     if(self) {
         _type = type;
