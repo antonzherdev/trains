@@ -47,7 +47,7 @@
 
         [self initRailPoint];
 
-//       self.drawMesh = YES;
+       self.drawMesh = YES;
     }
 
     return self;

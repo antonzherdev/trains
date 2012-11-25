@@ -29,6 +29,7 @@
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
 		6F3DF3B1534D612C4D75148F /* CEOrtoMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */; };
 		6F3DF3F797C8E47A452407FD /* Car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF00AF854C4775D30B46C /* Car1.png */; };
+		6F3DF5949E6109FA0C483A0E /* NSMutableArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */; };
 		6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
@@ -86,6 +87,7 @@
 		6F3DF745F457C41FE14A4F36 /* CRTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTrain.m; sourceTree = "<group>"; };
 		6F3DF75B6BF126F1D8316576 /* CECurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECurve.h; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroad.h; sourceTree = "<group>"; };
+		6F3DF9217AB05E7415DA2C99 /* cocoa-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocoa-ex.h"; sourceTree = "<group>"; };
 		6F3DF9FBBD580702B9AFE76A /* CRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCity.m; sourceTree = "<group>"; };
 		6F3DFA265F42C0CAC2DD981B /* CECurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECurve.m; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		6F3DFB92CEF05392C19FFFFE /* CRCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCar.h; sourceTree = "<group>"; };
 		6F3DFBBA8ABBEDD55900EAE6 /* CRTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTrain.h; sourceTree = "<group>"; };
 		6F3DFC2F6B7A6ABE2951509A /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = City.png; path = Resources/City.png; sourceTree = "<group>"; };
+		6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CocoaEx.m"; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
 		6F3DFCB798DAF2C18877E904 /* CETileIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETileIndex.m; sourceTree = "<group>"; };
 		6F3DFCCCD563C1F49F317FB8 /* CEMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMap.h; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEOrtoMap.m; sourceTree = "<group>"; };
 		6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCSprite+CESprite.m"; sourceTree = "<group>"; };
 		6F3DFF87623D8983EA6115F3 /* CEOrtoMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEOrtoMap.h; sourceTree = "<group>"; };
+		6F3DFF9F7E122A314C289688 /* NSMutableArray+CocoaEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CocoaEx.h"; sourceTree = "<group>"; };
 		6F3DFFC87FF30CC319AE0D68 /* CCSprite+CESprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCSprite+CESprite.h"; sourceTree = "<group>"; };
 		B8ACB03F5AB241CA9AB573A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -252,6 +256,16 @@
 			name = App;
 			sourceTree = "<group>";
 		};
+		6F3DF609C408525FE8B88180 /* CocoaEx */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */,
+				6F3DFF9F7E122A314C289688 /* NSMutableArray+CocoaEx.h */,
+				6F3DF9217AB05E7415DA2C99 /* cocoa-ex.h */,
+			);
+			name = CocoaEx;
+			sourceTree = "<group>";
+		};
 		6F3DF744BD253279AD81D618 /* Railroad */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +311,7 @@
 				6F3DF47CF721D1F8B2FBAE5C /* App */,
 				028F1C09161F660E002FE46D /* CocosEx */,
 				6F3DF9A39DB3362002A37EE9 /* Train */,
+				6F3DF609C408525FE8B88180 /* CocoaEx */,
 			);
 			name = Trains;
 			sourceTree = "<group>";
@@ -408,6 +423,7 @@
 				6F3DF86A1C5B32EA136FAE66 /* CECurve.m in Sources */,
 				6F3DFFDF4981BC81C1ED8575 /* CEBezier.m in Sources */,
 				6F3DFF3770913B4B25C8A123 /* CEOrtoSprite.m in Sources */,
+				6F3DF5949E6109FA0C483A0E /* NSMutableArray+CocoaEx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

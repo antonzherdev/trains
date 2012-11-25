@@ -22,22 +22,35 @@ typedef enum {
     crRailFormTurn_X_Y
 } CRRailForm;
 
+typedef enum {
+    crRailTypeRail,
+    crRailTypeCity
+} CRRailType;
+
 struct CRRailPoint {
     CEIPoint tile;
     CRRailForm form;
+    CRRailType type;
     CGFloat x;
 };
 typedef struct CRRailPoint CRRailPoint;
-
-
-typedef enum {
-    crCarType1
-} CRCarType;
 
 typedef enum {
     crForward = 1,
     crBackward = -1
 } CRDirection;
+
+
+struct CRRailVector {
+    CRRailPoint railPoint;
+    CRDirection direction;
+};
+typedef struct CRRailVector CRRailVector;
+
+
+typedef enum {
+    crCarType1
+} CRCarType;
 
 struct CRMoveRailPointResult {
     CRRailPoint railPoint;

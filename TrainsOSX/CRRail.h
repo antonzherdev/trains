@@ -6,5 +6,7 @@
 + (id)railWithForm:(CRRailForm)form;
 
 - (id)initWithForm:(CRRailForm)form;
+
+- (CRRailType)railType;
 @end
 

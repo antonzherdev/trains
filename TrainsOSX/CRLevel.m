@@ -40,12 +40,12 @@
     [_train startFromCityWithColor:crOrange];
     [_trainsLayer addChild:_train];
 
-    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
-    [_train addCarWithType:crCarType1];
-    [_train addCarWithType:crCarType1];
-    [_train addCarWithType:crCarType1];
-    [_train startFromCityWithColor:crGreen];
-    [_trainsLayer addChild:_train];
+//    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
+//    [_train addCarWithType:crCarType1];
+//    [_train addCarWithType:crCarType1];
+//    [_train addCarWithType:crCarType1];
+//    [_train startFromCityWithColor:crGreen];
+//    [_trainsLayer addChild:_train];
 
     [[[CCDirector sharedDirector] eventDispatcher] addKeyboardDelegate:self priority:0];
 

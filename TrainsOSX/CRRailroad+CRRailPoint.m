@@ -183,6 +183,7 @@
         } else {
             railPoint.tile = t;
             railPoint.form = [nextRail form];
+            railPoint.type = [nextRail railType];
         }
     }
     CRMoveRailPointResult result;

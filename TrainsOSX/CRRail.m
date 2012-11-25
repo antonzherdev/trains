@@ -32,4 +32,9 @@
 
     return self;
 }
+
+- (CRRailType)railType {
+    return crRailTypeRail;
+}
+
 @end

@@ -1,4 +1,5 @@
 #import "CRCity.h"
+#import "CRRailroad.h"
 
 
 @implementation CRCity {
@@ -38,21 +39,30 @@
     return self;
 }
 
-- (CRRailPoint)startRailPoint {
-    CRRailPoint result;
-    result.tile = _tile;
-    result.form = _orientation == crCityOrientationX ? crRailFormX : crRailFormY;
-    result.x = (_tile.x + _tile.y == 0) || (_tile.y - _tile.x) == 0 ? 0 : 1.0;
-
-    return result;
-}
-
-- (CRDirection)startTrainOrientation {
-    return (_tile.x + _tile.y == 0) || (_tile.y - _tile.x) == 0 ? crForward : crBackward;
++ (CRDirection)directionForCityInTile:(CEIPoint)tile form:(CRRailForm)form railroad:(CRRailroad *)railroad {
+    if(tile.x + tile.y == 0) return crForward;
+    if(tile.y - tile.x == 1) return form == crRailFormX ? crBackward : crForward;
+    if(tile.y + tile.x == railroad.dim.size.width - 1) return crBackward;
+    return form == crRailFormX ? crForward : crBackward;
 }
 
 - (CRRailForm)form {
     return (_orientation == crCityOrientationX ? crRailFormX : crRailFormY);
 }
 
+- (CRRailType)railType {
+    return crRailTypeCity;
+}
+
+
+- (CRRailVector)startRailVectorForRailroad:(CRRailroad *)railroad {
+    CRRailVector v;
+    v.railPoint.tile = _tile;
+    v.railPoint.form = [self form];
+    v.railPoint.type = crRailTypeCity;
+    v.direction = [CRCity directionForCityInTile:_tile form:v.railPoint.form railroad:railroad];
+    v.railPoint.x = v.direction == crForward ? 0 : 1.0;
+
+    return v;
+}
 @end
