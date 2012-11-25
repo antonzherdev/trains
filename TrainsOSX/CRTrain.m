@@ -72,6 +72,7 @@
     CRDirection orientation = _orientation;
     int z = 100;
     CGFloat error = 0;
+    CGFloat prevY = 0;
     for(CRCar * car in _cars) {
         CGPoint start;
         start = point;
@@ -82,8 +83,10 @@
         railPoint = moveResult.railPoint;
         point = [_railroad calculateRailPoint:railPoint];
         if(error == 0) [car setStart:start end:point];
-        if(point.y > start.y) z--;
+
+        if(car.position.y > prevY) z--;
         else z++;
+        prevY = car.position.y;
         car.zOrder = z;
     }
     return error;

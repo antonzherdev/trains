@@ -18,8 +18,10 @@
                 fullLength = _th * 0.9;
                 break;
             case crRailFormTurnX_Y:
+                fullLength = _th * 0.9;
+                break;
             case crRailFormTurn_XY:
-                fullLength = _th * 1.12;
+                fullLength = _th * 0.82;
                 break;
             default:
                 @throw @"Unknown rail form";

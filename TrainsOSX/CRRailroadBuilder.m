@@ -44,13 +44,13 @@
 }
 
 - (void)mouseDown:(CGPoint)point {
-    CCLOG(@"CRRailroadBuilder.mouseDown(%f, %f)", point.x, point.y);
+//    CCLOG(@"CRRailroadBuilder.mouseDown(%f, %f)", point.x, point.y);
 
     _startTilePoint = [_railroad tilePointForPoint:point];
-    CCLOG(@"startTilePoint = %f, %f)", _startTilePoint.x, _startTilePoint.y);
+//    CCLOG(@"startTilePoint = %f, %f)", _startTilePoint.x, _startTilePoint.y);
     _startTile = ceConvertTilePointToTile(_startTilePoint);
 
-    CCLOG(@"startTile = %d, %d", _startTile.x, _startTile.y);
+//    CCLOG(@"startTile = %d, %d", _startTile.x, _startTile.y);
 
     _startInTileSpace = ceConvertToTileSpace(_startTilePoint);
     _startQuarter = [self quarterInTile:_startTile point:point];
@@ -69,7 +69,7 @@
 }
 
 - (void)mouseDragged:(CGPoint)point {
-    CCLOG(@"CRRailroadBuilder.mouseDragged(%f, %f)", point.x, point.y);
+//    CCLOG(@"CRRailroadBuilder.mouseDragged(%f, %f)", point.x, point.y);
     CGPoint tilePoint = [_railroad tilePointForPoint:point];
 
     CRRailForm railForm = crRailFormUnknown;
@@ -144,12 +144,12 @@
         }
         if(_rail == nil) {
             if([_railroad canBuildRailWithForm:railForm inTile:railTile]) {
-                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
+//                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
                 _rail = [CRRail railWithForm:railForm];
                 _railTile = railTile;
                 [_layer addChild:_rail tile:_railTile];
             } else {
-                CCLOG(@"Coluld not build rail in tile %d,%d whithh form %d", railTile.x, railTile.y, railForm);
+//                CCLOG(@"Coluld not build rail in tile %d,%d whithh form %d", railTile.x, railTile.y, railForm);
             }
         }
     } else {
@@ -169,7 +169,7 @@
 }
 
 - (void)mouseUp {
-    CCLOG(@"CRRailroadBuilder.mouseUp");
+//    CCLOG(@"CRRailroadBuilder.mouseUp");
     if(_rail != nil) {
         [_rail removeFromParentAndCleanup:YES];
         [_railroad addRail:_rail tile:_railTile];

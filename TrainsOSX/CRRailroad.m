@@ -38,8 +38,8 @@
 
         [self addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(-4, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-4, 5)];
+        [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(-4, 6)];
+        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-4, 7)];
 
         [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
@@ -51,8 +51,8 @@
         _curves[crRailFormX] = ceCurveBezier(ceBezier1(_x, x), 100);
         _curves[crRailFormY] = ceCurveBezier(ceBezier1(_y, y), 100);
         _curves[crRailFormTurnXY] = ceCurveBezier(ceBezier2(x, ccp(-0.05*_th, 0), y), 100);
-        _curves[crRailFormTurn_XY] = ceCurveBezier(ceBezier2(_x, ccp(0, 0.1*_th), y), 100);
-        _curves[crRailFormTurnX_Y] = ceCurveBezier(ceBezier2(x, ccp(0, -0.15*_th), _y), 100);
+        _curves[crRailFormTurn_XY] = ceCurveBezier(ceBezier2(_x, ccp(0, 0.05*_th), y), 100);
+        _curves[crRailFormTurnX_Y] = ceCurveBezier(ceBezier2(x, ccp(0, 0.07*_th), _y), 100);
         _curves[crRailFormTurn_X_Y] = ceCurveBezier(ceBezier2(_x, ccp(0.05*_th, 0), _y), 100);
 
 //       self.drawMesh = YES;
