@@ -3,6 +3,20 @@
 
 @implementation CRRailroad (CRRailPoint)
 
+- (void)initRailPoint {
+    CGPoint x = ccp(0.5 * _th, -0.25 * _th);
+    CGPoint _x = ccp(-0.5 * _th, 0.25 * _th);
+    CGPoint y = ccp(0.5 * _th, 0.25 * _th);
+    CGPoint _y = ccp(-0.5 * _th, -0.25 * _th);
+    _curves[crRailFormX] = ceCurveBezier(ceBezier1(_x, x), 100);
+    _curves[crRailFormY] = ceCurveBezier(ceBezier1(_y, y), 100);
+    _curves[crRailFormTurnXY] = ceCurveBezier(ceBezier2(x, ccp(-0.05* _th, 0), y), 100);
+    _curves[crRailFormTurn_XY] = ceCurveBezier(ceBezier2(_x, ccp(0, 0.05* _th), y), 100);
+    _curves[crRailFormTurnX_Y] = ceCurveBezier(ceBezier2(x, ccp(0, 0.07* _th), _y), 100);
+    _curves[crRailFormTurn_X_Y] = ceCurveBezier(ceBezier2(_x, ccp(0.05* _th, 0), _y), 100);
+}
+
+
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
     CGFloat error = 0;
     CRDirection dir = length < 0 ? crBackward : crForward;
@@ -107,18 +121,18 @@
                 case crRailFormTurnX_Y:
                     if (railPoint.x == 0) {
                         if (f == crRailFormX) invertDirection = YES;
-                        else if (f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = NO;
+                        else if (f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = YES;
                         else continue;
                     } else {
                         if (f == crRailFormY) invertDirection = YES;
-                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = NO;
+                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = YES;
                         else continue;
                     }
                     break;
                 case crRailFormTurnXY:
                     if (railPoint.x == 0) {
                         if (f == crRailFormX) invertDirection = YES;
-                        else if (f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = NO;
+                        else if (f == crRailFormTurn_XY || f == crRailFormTurn_X_Y) invertDirection = YES;
                         else continue;
                     } else {
                         if (f == crRailFormY) invertDirection = NO;
@@ -144,7 +158,7 @@
                         else continue;
                     } else {
                         if (f == crRailFormY) invertDirection = YES;
-                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = NO;
+                        else if (f == crRailFormTurnXY || f == crRailFormTurn_XY) invertDirection = YES;
                         else continue;
                     }
                     break;

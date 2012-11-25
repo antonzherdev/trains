@@ -189,7 +189,7 @@
         CGPoint p = [event locationInWindow];
         _touchStartScreenPoint = CGEventGetLocation([event CGEvent]);
 
-        CCLOG(@"Touch start %f,%f", _touchStartScreenPoint.x, _touchStartScreenPoint.y);
+//        CCLOG(@"Touch start %f,%f", _touchStartScreenPoint.x, _touchStartScreenPoint.y);
         p = [[[CCDirector sharedDirector] view] convertPointFromBase:p];
         CCDirectorMac *dir = (CCDirectorMac *) [CCDirectorMac sharedDirector];
         p = [dir convertToLogicalCoordinates:p];

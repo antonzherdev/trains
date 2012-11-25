@@ -52,7 +52,7 @@
 }
 
 - (CRRailForm)form {
-    return _orientation == crCityOrientationX ? crRailFormX : crRailFormY;;
+    return (_orientation == crCityOrientationX ? crRailFormX : crRailFormY);
 }
 
 @end
