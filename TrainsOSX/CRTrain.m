@@ -23,6 +23,7 @@
 }
 @synthesize color = _color;
 @synthesize speed = _speed;
+@synthesize delegate;
 
 
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
@@ -134,6 +135,7 @@
         } else {
             _cityError += length;
             if (_cityError >= _length) {
+                [delegate train:self arrivedToCity:[_railroad cityInTile:_v1.railPoint.tile]];
                 [self invertMoveDirection];
             }
             [self updatePosition];
@@ -151,6 +153,7 @@
             _cityDirection = [CRCity directionForCityInTile:result.railPoint.tile form:result.railPoint.form railroad:_railroad];
             if(_cityDirection != _v1.direction) {
                 _cityError = result.error;
+                [delegate train:self goingToCity:[_railroad cityInTile:result.railPoint.tile]];
                 [self updatePosition];
                 return;
             }

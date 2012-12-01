@@ -18,4 +18,5 @@
 
 - (CRCity *)cityForColor:(CRCityColor)color;
 
+- (CRCity *)cityInTile:(CEIPoint)point;
 @end

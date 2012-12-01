@@ -2,7 +2,11 @@
 #import "CETextureBackgroundLayer.h"
 #import "CRRailroad.h"
 #import "CRTrain.h"
+#import "CRCity.h"
 
+
+@interface CRLevel () <CRTrainDelegate>
+@end
 
 @implementation CRLevel {
     CRRailroad *_railroad;
@@ -38,18 +42,24 @@
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [_train startFromCityWithColor:crOrange];
-    [_trainsLayer addChild:_train];
+    [self addTrain:_train];
 
-//    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
-//    [_train addCarWithType:crCarType1];
-//    [_train addCarWithType:crCarType1];
-//    [_train addCarWithType:crCarType1];
-//    [_train startFromCityWithColor:crGreen];
-//    [_trainsLayer addChild:_train];
+    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
+    [_train addCarWithType:crCarType1];
+    [_train addCarWithType:crCarType1];
+    [_train addCarWithType:crCarType1];
+    [_train startFromCityWithColor:crGreen];
+    [self addTrain:_train];
+
 
     [[[CCDirector sharedDirector] eventDispatcher] addKeyboardDelegate:self priority:0];
 
     return self;
+}
+
+- (void)addTrain:(CRTrain *)train {
+    [_trainsLayer addChild:train];
+    train.delegate = self;
 }
 
 - (BOOL)ccKeyDown:(NSEvent *)event {
@@ -73,6 +83,16 @@
         [_train move:-1];
     }
     return NO;
+}
+
+- (void)train:(CRTrain *)train goingToCity:(CRCity *)city {
+
+}
+
+- (void)train:(CRTrain *)train arrivedToCity:(CRCity *)city {
+    if(city.cityColor == train.color) {
+        [train removeFromParentAndCleanup:YES];
+    }
 }
 
 

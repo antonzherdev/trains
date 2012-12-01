@@ -3,6 +3,7 @@
 #import "CRCity.h"
 #import "CRRail.h"
 #import "CRRailroad+CRRailPoint.h"
+#import "NSArray+BlocksKit.h"
 
 
 @implementation CRRailroad {
@@ -120,4 +121,9 @@
     return _cities[color];
 }
 
+- (CRCity *)cityInTile:(CEIPoint)point {
+    return [[_railsLayer objectsAtTile:point] match:^BOOL(id obj) {
+        return [obj isKindOfClass:[CRCity class]];
+    }];
+}
 @end

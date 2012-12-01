@@ -2,12 +2,17 @@
 
 @class CRRailroad;
 @class CRLevel;
+@class CRCity;
+
+@protocol CRTrainDelegate
+- (void)train:(CRTrain*) train goingToCity:(CRCity*)city;
+- (void)train:(CRTrain*) train arrivedToCity:(CRCity*)city;
+@end
 
 @interface CRTrain : CCNode
 @property(nonatomic, readonly) CRCityColor color;
 @property(nonatomic) CGFloat speed;
-
-
+@property(nonatomic) id<CRTrainDelegate> delegate;
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color;
 
 - (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color;
