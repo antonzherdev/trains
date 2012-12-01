@@ -39,15 +39,15 @@
 
         [self addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(-4, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-4, 7)];
+//        [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(-4, 6)];
+//        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-4, 7)];
 
         [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
         [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
 
         [self initRailPoint];
 
-       self.drawMesh = YES;
+//       self.drawMesh = YES;
     }
 
     return self;

@@ -19,6 +19,7 @@
     CGFloat _speed;
     CGFloat _length;
     CGFloat _cityError;
+    CRDirection _cityDirection;
 }
 @synthesize color = _color;
 @synthesize speed = _speed;
@@ -73,16 +74,29 @@
     int z = 100;
     CGFloat error = 0;
     CGFloat prevY = 0;
+    CGFloat cityError = _cityError;
     for(CRCar * car in _cars) {
         CGPoint start;
         start = point;
+        if(cityError >= car.length) {
+            cityError -= car.length;
+            continue;
+        }
         CRMoveRailPointResult moveResult;
-        moveResult = [_railroad moveRailPoint:v.railPoint length:car.length * -v.direction];
+        moveResult = [_railroad moveRailPoint:v.railPoint length:(car.length - cityError) * -v.direction];
         error = moveResult.error;
         v.direction = -moveResult.direction;
         v.railPoint = moveResult.railPoint;
         point = [_railroad calculateRailPoint:v.railPoint];
-        if(error == 0) [car setStart:start end:point];
+        if(cityError > 0) {
+            [car setVisible:NO];
+            cityError = 0;
+        } else if(error == 0) {
+            [car setVisible:YES];
+            [car setStart:start end:point];
+        } else {
+            [car setVisible:NO];
+        }
 
         if(car.position.y > prevY) z--;
         else z++;
@@ -101,23 +115,55 @@
 }
 
 - (void)move:(CGFloat)length {
-    if(fabs(length) < FLT_EPSILON) return;
+    if(length < FLT_EPSILON) return;
 
+    if(_cityError > FLT_EPSILON) {
+        if(_cityDirection == _v1.direction) {
+            _cityError -= length;
+            if(_cityError < FLT_EPSILON) {
+                _cityError = 0;
+                length = -_cityError;
+                if(length < FLT_EPSILON) {
+                    [self updatePosition];
+                    return;
+                }
+            } else {
+                [self updatePosition];
+                return;
+            }
+        } else {
+            _cityError += length;
+            if (_cityError >= _length) {
+                [self invertMoveDirection];
+            }
+            [self updatePosition];
+            return;
+        }
+    }
     CRMoveRailPointResult result = [_railroad moveRailPoint:_v1.railPoint length:length * _v1.direction];
     while (1) {
         _v1.railPoint = result.railPoint;
         _v1.direction = result.direction;
-//        if(result.railPoint.type == crRailTypeCity) {
-//            CRDirection cityDirection = [CRCity directionForCityInTile:result.railPoint.tile form:result.railPoint.form railroad:_railroad];
-//            if(cityDirection == _moveDirection)
-//        }
         [self updatePosition];
         if(result.error < FLT_EPSILON) return;
 
-        CC_SWAP(_v1, _v2);
-        [_cars revert];
+        if(result.railPoint.type == crRailTypeCity) {
+            _cityDirection = [CRCity directionForCityInTile:result.railPoint.tile form:result.railPoint.form railroad:_railroad];
+            if(_cityDirection != _v1.direction) {
+                _cityError = result.error;
+                [self updatePosition];
+                return;
+            }
+        }
+
+        [self invertMoveDirection];
         result = [_railroad moveRailPoint:_v1.railPoint length:result.error * _v1.direction];
     }
+}
+
+- (void)invertMoveDirection {
+    CC_SWAP(_v1, _v2);
+    [_cars revert];
 }
 
 @end
