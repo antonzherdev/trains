@@ -6,7 +6,6 @@
 @interface CRTrain : CCNode
 @property(nonatomic, readonly) CRCityColor color;
 @property(nonatomic) CGFloat speed;
-@property(nonatomic) CRDirection moveDirection;
 
 
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color;

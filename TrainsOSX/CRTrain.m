@@ -16,13 +16,12 @@
     CRRailVector _v1;
     CRRailVector _v2;
 
-    CRDirection _moveDirection;
     CGFloat _speed;
     CGFloat _length;
+    CGFloat _cityError;
 }
 @synthesize color = _color;
 @synthesize speed = _speed;
-@synthesize moveDirection = _moveDirection;
 
 
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
@@ -34,9 +33,9 @@
     if(self) {
         _speed = 30;
         _length = 0;
+        _cityError = 0;
         _level = level;
         _railroad = railroad;
-        _moveDirection = crForward;
         _color = color;
         _cars = [[NSMutableArray alloc] init];
     }
@@ -64,7 +63,6 @@
 - (void)startFromCityWithColor:(CRCityColor)color {
     CRCity * city = [_railroad cityForColor:color];
     _v1 = [city startRailVectorForRailroad:_railroad];
-    _moveDirection = crForward;
     [self updatePosition];
     [self scheduleUpdate];
 }
@@ -99,32 +97,27 @@
 {
     if(_speed == 0) return;
 
-    CGFloat length = _moveDirection * _speed * deltaTime;
-    [self move:length];
+    [self move:_speed * deltaTime];
 }
 
 - (void)move:(CGFloat)length {
     if(fabs(length) < FLT_EPSILON) return;
 
-    self.moveDirection = length < 0 ? crBackward : crForward;
-    CRMoveRailPointResult result = [_railroad moveRailPoint:_v1.railPoint length:ABS(length) * _v1.direction];
+    CRMoveRailPointResult result = [_railroad moveRailPoint:_v1.railPoint length:length * _v1.direction];
     while (1) {
         _v1.railPoint = result.railPoint;
         _v1.direction = result.direction;
+//        if(result.railPoint.type == crRailTypeCity) {
+//            CRDirection cityDirection = [CRCity directionForCityInTile:result.railPoint.tile form:result.railPoint.form railroad:_railroad];
+//            if(cityDirection == _moveDirection)
+//        }
         [self updatePosition];
         if(result.error < FLT_EPSILON) return;
 
-        self.moveDirection = -_moveDirection;
+        CC_SWAP(_v1, _v2);
+        [_cars revert];
         result = [_railroad moveRailPoint:_v1.railPoint length:result.error * _v1.direction];
     }
 }
-
-- (void)setMoveDirection:(CRDirection)moveDirection {
-    if(_moveDirection == moveDirection) return;
-    _moveDirection = moveDirection;
-    CC_SWAP(_v1, _v2);
-    [_cars revert];
-}
-
 
 @end
