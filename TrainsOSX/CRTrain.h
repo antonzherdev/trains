@@ -12,7 +12,7 @@
 @interface CRTrain : CCNode
 @property(nonatomic, readonly) CRCityColor color;
 @property(nonatomic) CGFloat speed;
-@property(nonatomic) id<CRTrainDelegate> delegate;
+@property(nonatomic, assign) id<CRTrainDelegate> delegate;
 + (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color;
 
 - (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color;
