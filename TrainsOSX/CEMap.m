@@ -87,6 +87,10 @@
     [_layers release];
     [super dealloc];
 }
+
+- (NSInteger)zOrderForTile:(CEIPoint)point {
+    @throw @"abstract";
+}
 @end
 
 @implementation CEMapLayer {
@@ -112,6 +116,7 @@
     [_tileIndex addObject:node toTile:tile];
     node.anchorPoint = ccp(0.5, 0.5);
     node.position = [_map pointForTile:tile];
+    node.zOrder = [_map zOrderForTile:tile];
 }
 
 - (NSArray *)objectsAtTile:(CEIPoint)tile {

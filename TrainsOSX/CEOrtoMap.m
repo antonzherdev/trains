@@ -27,6 +27,10 @@
             1 <= d && d <= _dim.size.height;
 }
 
+- (NSInteger)zOrderForTile:(CEIPoint)point {
+    return self.zOrder - (point.y - point.x);
+}
+
 
 - (CETileIndex *)createTileIndex {
     return [CETileIndex tileIndexForOrtoMapWithSize:self.size];

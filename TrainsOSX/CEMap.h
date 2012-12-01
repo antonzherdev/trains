@@ -25,6 +25,8 @@
 - (void)createMesh:(CCNode *)mesh;
 
 - (void)drawMeshLayer;
+
+- (NSInteger)zOrderForTile:(CEIPoint)point;
 @end
 
 @interface CEMapLayer : NSObject

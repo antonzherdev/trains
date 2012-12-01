@@ -41,15 +41,15 @@
 //    _train.speed = 0;
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
-    [_train startFromCityWithColor:crOrange];
     [self addTrain:_train];
+    [_train startFromCityWithColor:crOrange];
 
     _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
-    [_train startFromCityWithColor:crGreen];
     [self addTrain:_train];
+    [_train startFromCityWithColor:crGreen];
 
 
     [[[CCDirector sharedDirector] eventDispatcher] addKeyboardDelegate:self priority:0];
@@ -58,6 +58,7 @@
 }
 
 - (void)addTrain:(CRTrain *)train {
+    train.zOrder = 100;
     [_trainsLayer addChild:train];
     train.delegate = self;
 }

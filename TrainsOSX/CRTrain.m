@@ -72,7 +72,7 @@
 - (void)updatePosition {
     CRRailVector v = _v1;
     CGPoint point = [_railroad calculateRailPoint:v.railPoint];
-    int z = 100;
+    int z = [self zOrder];
     CGFloat error = 0;
     CGFloat prevY = 0;
     CGFloat cityError = _cityError;
