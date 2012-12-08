@@ -3,5 +3,6 @@
     <option name="myName" value="Project Default" />
     <option name="myLocal" value="false" />
     <inspection_tool class="OCUnusedMethodInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="OCUnusedPropertyInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
   </profile>
 </component>

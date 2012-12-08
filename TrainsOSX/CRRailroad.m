@@ -4,12 +4,14 @@
 #import "CRRail.h"
 #import "CRRailroad+CRRailPoint.h"
 #import "NSArray+BlocksKit.h"
+#import "CRSwitch.h"
 
 
 @implementation CRRailroad {
     CRRailroadBuilder *_builder;
 
     CRCity * _cities[crGreen + 1];
+    CEMapLayer *_switchLayer;
 }
 
 
@@ -22,6 +24,8 @@
     self = [super initWithDim:dim];
     if (self) {
         _railsLayer = [self addLayer];
+        _switchLayer = [self addLayer];
+        _switchLayer.zOrder = 100;
         _builder = [CRRailroadBuilder builderForRailroad:self];
         _th = dim.tileHeight;
 
@@ -68,6 +72,25 @@
 }
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile {
+    NSArray *rails = [_railsLayer objectsAtTile:tile];
+
+    CRRailForm f = [rail form];
+    for (CRRail *r in rails) {
+        CRRailForm f1 = f;
+        CRRailForm f2 = [r form];
+        if(f1 > f2) {
+            f1 = f2;
+            f2 = f;
+        }
+        CRSwitch * aSwitch = nil;
+        if(f1 == crRailFormX && f2 == crRailFormTurn_X_Y) {
+            aSwitch = [CRSwitch switchWithForm1:f1 form2:f2];
+        }
+        if(aSwitch) {
+            [_switchLayer addChild:aSwitch tile:tile];
+            break;
+        }
+    }
     [_railsLayer addChild:rail tile:tile];
 }
 

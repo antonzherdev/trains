@@ -97,13 +97,16 @@
     CEMap *_map;
     CETileIndex *_tileIndex;
     CCNode *_node;
+    NSInteger _zOrder;
 }
 @synthesize node = _node;
+@synthesize zOrder = _zOrder;
 
 - (id)initWithMap:(CEMap *)map node:(CCNode *)node {
     self = [super init];
     if(self) {
         _node = node;
+        _zOrder = 0;
         _node.contentSize = map.contentSize;
         _map = map;
         _tileIndex = [[_map createTileIndex] retain];
@@ -116,7 +119,7 @@
     [_tileIndex addObject:node toTile:tile];
     node.anchorPoint = ccp(0.5, 0.5);
     node.position = [_map pointForTile:tile];
-    node.zOrder = [_map zOrderForTile:tile];
+    node.zOrder = _zOrder + [_map zOrderForTile:tile];
 }
 
 - (NSArray *)objectsAtTile:(CEIPoint)tile {

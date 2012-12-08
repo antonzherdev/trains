@@ -32,6 +32,8 @@
 @interface CEMapLayer : NSObject
 @property(nonatomic, readonly) CCNode *node;
 
+@property (nonatomic)NSInteger zOrder;
+
 - (id) initWithMap:(CEMap*)map node:(CCNode*)node;
 - (void) addChild:(CCNode*)child tile:(CEIPoint)tile;
 - (NSArray*) objectsAtTile:(CEIPoint) tile;
