@@ -22,5 +22,5 @@
 
 - (CRCity *)cityInTile:(CEIPoint)point;
 
-- (CRSwitch *)maybeCreateSwitchForRailForm:(CRRailForm)form tile:(CEIPoint)tile;
+- (NSArray *)maybeCreateSwitchesForRailForm:(CRRailForm)form tile:(CEIPoint)tile;
 @end

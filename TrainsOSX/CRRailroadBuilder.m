@@ -11,7 +11,7 @@
     CGPoint _startInTileSpace;
     
     CRRail* _rail;
-    CRSwitch* _switch;
+    NSArray* _switches;
     CEIPoint _railTile;
     CEMapLayer *_layer;
     CEIPoint _startQuarter;
@@ -147,10 +147,12 @@
             if([_railroad canBuildRailWithForm:railForm tile:railTile]) {
 //                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
                 _rail = [CRRail railWithForm:railForm];
-                _switch = [_railroad maybeCreateSwitchForRailForm:railForm tile:railTile];
+                _switches = [[_railroad maybeCreateSwitchesForRailForm:railForm tile:railTile] retain];
                 _railTile = railTile;
                 [_layer addChild:_rail tile:_railTile];
-                if(_switch) [_layer addChild:_switch tile:_railTile z:1];
+                for (CRSwitch * aSwitch in _switches) {
+                    [_layer addChild:aSwitch tile:_railTile z:1];
+                }
             } else {
 //                CCLOG(@"Coluld not build rail in tile %d,%d whithh form %d", railTile.x, railTile.y, railForm);
             }
@@ -163,8 +165,13 @@
 - (void)removeRail {
     [_rail removeFromParentAndCleanup:YES];
     _rail = nil;
-    [_switch removeFromParentAndCleanup:YES];
-    _switch = nil;
+    if(_switches != nil) {
+        for (CRSwitch * aSwitch in _switches) {
+            [aSwitch removeFromParentAndCleanup:YES];
+        }
+        [_switches release];
+        _switches = nil;
+    }
 }
 
 
@@ -253,6 +260,11 @@
     [self mouseUp];
     
     return YES;
+}
+
+- (void)dealloc {
+    [_switches release];
+    [super dealloc];
 }
 
 

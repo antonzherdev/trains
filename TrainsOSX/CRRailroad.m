@@ -73,8 +73,10 @@
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile {
     CRRailForm form = [rail form];
-    CRSwitch *aSwitch = [self maybeCreateSwitchForRailForm:form tile:tile];
-    if(aSwitch) [_switchLayer addChild:aSwitch tile:tile];
+    NSArray *switches = [self maybeCreateSwitchesForRailForm:form tile:tile];
+    for (CRSwitch * aSwitch in switches) {
+        [_switchLayer addChild:aSwitch tile:tile];
+    }
     [_railsLayer addChild:rail tile:tile];
 }
 
@@ -134,7 +136,8 @@
     }];
 }
 
-- (CRSwitch *)maybeCreateSwitchForRailForm:(CRRailForm)form tile:(CEIPoint)tile {
+- (NSArray *)maybeCreateSwitchesForRailForm:(CRRailForm)form tile:(CEIPoint)tile {
+    NSMutableArray* switches = [NSMutableArray array];
     NSArray *rails = [_railsLayer objectsAtTile:tile];
 
     for (CRRail *r in rails) {
@@ -144,14 +147,11 @@
             f1 = f2;
             f2 = form;
         }
-        CRSwitch * aSwitch = nil;
-        if(f1 == crRailFormX && f2 == crRailFormTurn_X_Y) {
-            aSwitch = [CRSwitch switchWithForm1:f1 form2:f2];
-        }
-        if(aSwitch) {
-            return aSwitch;
-        }
+        if(f1 == crRailFormTurnXY && f2 == crRailFormTurn_X_Y) continue;
+        if(f1 == crRailFormTurn_XY && f2 == crRailFormTurnX_Y) continue;
+        CRSwitch * aSwitch = [CRSwitch switchWithForm1:f1 form2:f2];
+        [switches addObject:aSwitch];
     }
-    return nil;
+    return switches;
 }
 @end

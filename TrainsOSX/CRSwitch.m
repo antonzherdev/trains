@@ -21,13 +21,24 @@
         }
 
         CGFloat x;
+        BOOL flipX = NO;
         if(_form1 == crRailFormX && _form2 == crRailFormTurn_X_Y) {
             x = 0;
+        } else if(_form1 == crRailFormY && _form2 == crRailFormTurnXY) {
+            x = 0;
+            flipX = YES;
+        } else if(_form1 == crRailFormX && _form2 == crRailFormTurnXY) {
+            x = 220;
+        }else if(_form1 == crRailFormY && _form2 == crRailFormTurn_X_Y) {
+            x = 220;
+            flipX = YES;
         } else {
             @throw @"Unknown switch";
         }
+
         CGRect rect = CGRectMake(x, 110, 220, 110);
         CCSprite *sprite = [CCSprite spriteWithFile:@"Rails.png" rect:rect];
+        if(flipX) [sprite setFlipX:YES];
         [self addChild:sprite];
     }
 
