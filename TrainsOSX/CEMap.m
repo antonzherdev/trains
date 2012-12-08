@@ -115,11 +115,7 @@
 }
 
 - (void)addChild:(CCNode *)node tile:(CEIPoint)tile {
-    [_node addChild:node];
-    [_tileIndex addObject:node toTile:tile];
-    node.anchorPoint = ccp(0.5, 0.5);
-    node.position = [_map pointForTile:tile];
-    node.zOrder = _zOrder + [_map zOrderForTile:tile];
+    [self addChild:node tile:tile z:0];
 }
 
 - (NSArray *)objectsAtTile:(CEIPoint)tile {
@@ -130,6 +126,14 @@
 - (void)dealloc {
     [_tileIndex release];
     [super dealloc];
+}
+
+- (void)addChild:(CCNode *)node tile:(CEIPoint)tile z:(NSInteger)z {
+    [_node addChild:node];
+    [_tileIndex addObject:node toTile:tile];
+    node.anchorPoint = ccp(0.5, 0.5);
+    node.position = [_map pointForTile:tile];
+    node.zOrder = (_zOrder<<20) + ([_map zOrderForTile:tile] <<8) + z;
 }
 @end
 

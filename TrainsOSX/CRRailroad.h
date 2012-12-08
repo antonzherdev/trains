@@ -1,5 +1,7 @@
 #import "cr.h"
 
+@class CRSwitch;
+
 @interface CRRailroad : CEOrtoMap {
     CEMapLayer *_railsLayer;
     NSUInteger _th;
@@ -14,9 +16,11 @@
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile;
 
-- (BOOL)canBuildRailWithForm:(CRRailForm)form inTile:(CEIPoint)tile;
+- (BOOL)canBuildRailWithForm:(CRRailForm)form tile:(CEIPoint)tile;
 
 - (CRCity *)cityForColor:(CRCityColor)color;
 
 - (CRCity *)cityInTile:(CEIPoint)point;
+
+- (CRSwitch *)maybeCreateSwitchForRailForm:(CRRailForm)form tile:(CEIPoint)tile;
 @end

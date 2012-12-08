@@ -37,6 +37,8 @@
 - (id) initWithMap:(CEMap*)map node:(CCNode*)node;
 - (void) addChild:(CCNode*)child tile:(CEIPoint)tile;
 - (NSArray*) objectsAtTile:(CEIPoint) tile;
+
+- (void)addChild:(CCNode *)node tile:(CEIPoint)tile z:(NSInteger)z;
 @end
 
 CEIPoint ceConvertTilePointToTile(CGPoint tilePoint);
