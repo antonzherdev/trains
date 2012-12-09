@@ -30,6 +30,10 @@
         }else if(_form1 == crRailFormY && _form2 == crRailFormTurn_X_Y && _form3 == crRailFormNil) {
             x = 220;
             flipX = YES;
+        } else if(_form1 == crRailFormX && _form2 == crRailFormTurn_XY && _form3 == crRailFormNil) {
+            x = 440;
+        } else if(_form1 == crRailFormX && _form2 == crRailFormTurnX_Y && _form3 == crRailFormNil) {
+            x = 660;
         } else if(_form1 == crRailFormX && _form2 == crRailFormY && _form3 == crRailFormNil) {
             x = 880;
         } else if(_form1 == crRailFormX && _form2 == crRailFormY && _form3 == crRailFormTurn_X_Y) {
