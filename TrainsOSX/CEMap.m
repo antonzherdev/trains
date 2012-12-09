@@ -135,6 +135,13 @@
     node.position = [_map pointForTile:tile];
     node.zOrder = (_zOrder<<20) + ([_map zOrderForTile:tile] <<8) + z;
 }
+
+- (void)clearTile:(CEIPoint)tile {
+    NSArray *objects = [self objectsAtTile:tile];
+    for (CCNode* object in objects) {
+        [object removeFromParentAndCleanup:YES];
+    }
+}
 @end
 
 

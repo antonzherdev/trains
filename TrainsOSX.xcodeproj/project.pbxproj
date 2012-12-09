@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026F67B01673B758006C59C9 /* CRRailroad+CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5E01CB9B1768FC94E92 /* CRRailroad+CRSwitch.m */; };
 		028F1C0C161F66FD002FE46D /* CRLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C0B161F66FD002FE46D /* CRLevel.m */; };
 		0291C461161B67990085AB91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291C460161B67990085AB91 /* QuartzCore.framework */; };
 		0291C463161B67990085AB91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0291C462161B67990085AB91 /* OpenGL.framework */; };
@@ -80,8 +81,10 @@
 		6F3DF45371756DBD2C741507 /* CETileIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETileIndex.h; sourceTree = "<group>"; };
 		6F3DF47D79CC526D20F29924 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		6F3DF4FE46DA237ACC5FA816 /* CRSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSwitch.h; sourceTree = "<group>"; };
+		6F3DF52BB88F00F60CEDE7E5 /* CRRailroad+CRSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CRRailroad+CRSwitch.h"; sourceTree = "<group>"; };
 		6F3DF5316F8ABD7B61E42262 /* CRRail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRail.h; sourceTree = "<group>"; };
 		6F3DF5A965C94BF826D18AD5 /* CRRailroad+CRRailPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CRRailroad+CRRailPoint.m"; sourceTree = "<group>"; };
+		6F3DF5E01CB9B1768FC94E92 /* CRRailroad+CRSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CRRailroad+CRSwitch.m"; sourceTree = "<group>"; };
 		6F3DF5EFC24C89AA8D0E644C /* cr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cr.h; sourceTree = "<group>"; };
 		6F3DF5FE8EF9F3C073099971 /* CCNode+CENode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CENode.h"; sourceTree = "<group>"; };
 		6F3DF635A04A1EEE65CE7A6E /* CRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCity.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 			children = (
 				6F3DF85165447D6B762B3D7B /* CRSwitch.m */,
 				6F3DF4FE46DA237ACC5FA816 /* CRSwitch.h */,
+				6F3DF52BB88F00F60CEDE7E5 /* CRRailroad+CRSwitch.h */,
+				6F3DF5E01CB9B1768FC94E92 /* CRRailroad+CRSwitch.m */,
 			);
 			name = Switch;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026F67B01673B758006C59C9 /* CRRailroad+CRSwitch.m in Sources */,
 				0291C5DD161B679B0085AB91 /* main.m in Sources */,
 				0291C5E0161B679B0085AB91 /* AppDelegate.m in Sources */,
 				0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */,
@@ -516,6 +522,7 @@
 				GCC_PREFIX_HEADER = TrainsOSX/Prefix.pch;
 				INFOPLIST_FILE = TrainsOSX/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};
@@ -534,6 +541,7 @@
 				GCC_PREFIX_HEADER = TrainsOSX/Prefix.pch;
 				INFOPLIST_FILE = TrainsOSX/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
 			};

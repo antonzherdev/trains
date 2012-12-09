@@ -2,6 +2,7 @@
 #import "CRRailroad.h"
 #import "CRRail.h"
 #import "CRSwitch.h"
+#import "CRRailroad+CRSwitch.h"
 
 
 @implementation CRRailroadBuilder {
@@ -73,7 +74,7 @@
 //    CCLOG(@"CRRailroadBuilder.mouseDragged(%f, %f)", point.x, point.y);
     CGPoint tilePoint = [_railroad tilePointForPoint:point];
 
-    CRRailForm railForm = crRailFormUnknown;
+    CRRailForm railForm = crRailFormNil;
     CEIPoint railTile = _startTile;
 
     if(ccpDistance(_startTilePoint, tilePoint) > 0.5) {
@@ -137,7 +138,7 @@
         }
     }
 
-    if(railForm != crRailFormUnknown) {
+    if(railForm != crRailFormNil) {
         if(_rail != nil) {
             if(_rail.form != railForm || !ceiEq(railTile, _railTile)) {
                 [self removeRail];

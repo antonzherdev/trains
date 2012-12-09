@@ -13,14 +13,16 @@ typedef enum {
 
 
 typedef enum {
-    crRailFormUnknown,
-    crRailFormX,
-    crRailFormY,
-    crRailFormTurnX_Y,
-    crRailFormTurnXY,
-    crRailFormTurn_XY,
-    crRailFormTurn_X_Y
+    crRailFormNil = 0,
+    crRailFormX = 1,
+    crRailFormY = 2,
+    crRailFormTurnX_Y = 3,
+    crRailFormTurnXY = 4,
+    crRailFormTurn_XY = 5,
+    crRailFormTurn_X_Y = 6
 } CRRailForm;
+
+#define CR_RAIL_FORM_MAX crRailFormTurn_X_Y
 
 typedef enum {
     crRailTypeRail,
