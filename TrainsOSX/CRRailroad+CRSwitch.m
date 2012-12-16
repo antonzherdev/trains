@@ -3,6 +3,8 @@
 #import "CRCity.h"
 #import "CRRailroad.h"
 #import "CRRailroad+CRSwitch.h"
+#import "NSArray+CocoaEx.h"
+#import "CRSwitchesComposition.h"
 
 
 @implementation CRRailroad (CRSwitch)
@@ -74,21 +76,9 @@
             if(f1 == crRailFormTurnX_Y && f2 == crRailFormTurn_XY) continue;
 
             CRSwitch * aSwitch;
-            aSwitch = nil;
-            for (CRRailForm f3 = f2 + 1; f3 <= CR_RAIL_FORM_MAX; f3++) {
-                if(!e[f3]) continue;
-
-                aSwitch = [CRSwitch switchWithForm1:f1 form2:f2 form3:f3];
-                if(aSwitch != nil) {
-                    e[f3] = NO;
-                    [switches addObject:aSwitch];
-                }
-            }
-            if(aSwitch == nil) {
-                aSwitch = [CRSwitch switchWithForm1:f1 form2:f2 form3:crRailFormNil];
-                if(aSwitch != nil) {
-                    [switches addObject:aSwitch];
-                }
+            aSwitch = [CRSwitch switchWithForm1:f1 form2:f2];
+            if(aSwitch != nil) {
+                [switches addObject:aSwitch];
             }
         }
     }
@@ -100,8 +90,25 @@
     [_switchLayer clearTile:tile];
 
     NSArray *switches = [self maybeCreateSwitchesForRailForm:crRailFormNil tile:tile];
-    for (CRSwitch * aSwitch in switches) {
-        [_switchLayer addChild:aSwitch tile:tile];
+    BOOL *composite = calloc(switches.count, sizeof(BOOL));
+    NSUInteger i = 0;
+    for (CRSwitch * s in switches) {
+        if(composite[i]) continue;
+
+        CRSwitchesComposition * composition = [CRSwitchesComposition compositionWithSwitch:s];
+        NSUInteger j = i + 1;
+        for(CRSwitch * s2 in [switches subarrayFrom:i + 1]) {
+            if(composite[j]) continue;
+
+
+            if([composition maybeJoinSwitch:s2]) {
+                composite[j] = YES;
+            }
+            j++;
+        }
+        [_switchLayer addChild:composition tile:tile];
+        i++;
     }
+    free(composite);
 }
 @end

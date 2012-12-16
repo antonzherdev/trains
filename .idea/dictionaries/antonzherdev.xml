@@ -4,6 +4,7 @@
       <w>bezier</w>
       <w>lerp</w>
       <w>orto</w>
+      <w>subarray</w>
     </words>
   </dictionary>
 </component>
