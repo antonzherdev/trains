@@ -1,4 +1,5 @@
 #import "CEMap.h"
+#import "NSObject+BlockObservation.h"
 
 @interface CEMapMesh : CCNode
 - (id)initWithMap:(CEMap *)map;
@@ -116,6 +117,9 @@
 
 - (void)addChild:(CCNode *)node tile:(CEIPoint)tile {
     [self addChild:node tile:tile z:0];
+    [node addObserverForKeyPath:@"parent" task:^(id sender) {
+        [_tileIndex removeObject:node tile:tile];
+    }];
 }
 
 - (NSArray *)objectsAtTile:(CEIPoint)tile {

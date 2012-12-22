@@ -62,4 +62,5 @@ ceISize(int width, int height)
 -(void) addObject:(id)object toTile:(CEIPoint) tile;
 -(NSArray*)objectsAtTile:(CEIPoint) tile;
 
+- (void)removeObject:(CCNode *)node tile:(CEIPoint)tile;
 @end

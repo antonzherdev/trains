@@ -21,4 +21,5 @@
 
 - (CRCity *)cityInTile:(CEIPoint)point;
 
+- (void)removeRailWithForm:(CRRailForm)form tile:(CEIPoint)tile;
 @end

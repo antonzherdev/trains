@@ -1,7 +1,6 @@
 #import "CRRailroadBuilder.h"
 #import "CRRailroad.h"
 #import "CRRail.h"
-#import "CRSwitch.h"
 #import "CRRailroad+CRSwitch.h"
 
 
@@ -12,9 +11,7 @@
     CGPoint _startInTileSpace;
     
     CRRail* _rail;
-    NSArray* _switches;
     CEIPoint _railTile;
-    CEMapLayer *_layer;
     CEIPoint _startQuarter;
 
     CGPoint _touchStartPoint;
@@ -31,7 +28,7 @@
     self = [super init];
     if(self) {
         _railroad = railroad;
-        _layer = [railroad addLayerWithNode:self];
+        [railroad addLayerWithNode:self];
         self.isMouseEnabled = YES;
         self.isTouchEnabled = YES;
         self.isKeyboardEnabled = YES;
@@ -148,14 +145,8 @@
             if([_railroad canBuildRailWithForm:railForm tile:railTile]) {
 //                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
                 _rail = [CRRail railWithForm:railForm];
-                _switches = [[_railroad maybeCreateSwitchesForRailForm:railForm tile:railTile] retain];
+                [_railroad addRail:_rail tile:railTile];
                 _railTile = railTile;
-                [_layer addChild:_rail tile:_railTile];
-                for (CRSwitch * aSwitch in _switches) {
-                    [_layer addChild:aSwitch tile:_railTile z:1];
-                }
-            } else {
-//                CCLOG(@"Coluld not build rail in tile %d,%d whithh form %d", railTile.x, railTile.y, railForm);
             }
         }
     } else {
@@ -164,15 +155,8 @@
 }
 
 - (void)removeRail {
-    [_rail removeFromParentAndCleanup:YES];
+    if(_rail != nil) [_railroad removeRailWithForm:_rail.form tile:_railTile];
     _rail = nil;
-    if(_switches != nil) {
-        for (CRSwitch * aSwitch in _switches) {
-            [aSwitch removeFromParentAndCleanup:YES];
-        }
-        [_switches release];
-        _switches = nil;
-    }
 }
 
 
@@ -184,8 +168,6 @@
 - (void)mouseUp {
 //    CCLOG(@"CRRailroadBuilder.mouseUp");
     if(_rail != nil) {
-        [_rail removeFromParentAndCleanup:YES];
-        [_railroad addRail:_rail tile:_railTile];
         _rail = nil;
     }
 }
@@ -264,7 +246,6 @@
 }
 
 - (void)dealloc {
-    [_switches release];
     [super dealloc];
 }
 

@@ -85,4 +85,14 @@
     }];
 }
 
+- (void)removeRailWithForm:(CRRailForm)form tile:(CEIPoint)tile {
+    NSArray *rails = [_railsLayer objectsAtTile:tile];
+    CRRail * rail = [rails match:^BOOL(id obj) {
+        return [obj form] == form;
+    }];
+    if(rail != nil) {
+        [rail removeFromParentAndCleanup:YES];
+        [self updateSwitchesInTile:tile];
+    }
+}
 @end

@@ -51,4 +51,8 @@
 }
 
 
+- (void)removeObject:(CCNode *)node tile:(CEIPoint)tile {
+    NSMutableArray * array = (NSMutableArray *) [self objectsAtTile:tile];
+    [array removeObject:node];
+}
 @end
