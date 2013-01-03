@@ -10,7 +10,7 @@
 @implementation CRRailroad {
     CRRailroadBuilder *_builder;
 
-    CRCity * _cities[crGreen + 1];
+    CRCity * _cities[CR_CITY_COLORS_COUNT];
 }
 
 
@@ -67,7 +67,7 @@
 
 - (void)addCity:(CRCity *)city {
     [_railsLayer addChild:city tile:city.tile];
-    _cities[city.cityColor] = city;
+    _cities[city.cityColor.ordinal] = city;
 }
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile {
@@ -75,8 +75,8 @@
     [self updateSwitchesInTile:tile];
 }
 
-- (CRCity *)cityForColor:(CRCityColor)color {
-    return _cities[color];
+- (CRCity *)cityForColor:(CRCityColor*)color {
+    return _cities[color.ordinal];
 }
 
 - (CRCity *)cityInTile:(CEIPoint)point {

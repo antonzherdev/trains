@@ -17,7 +17,7 @@
 
 - (void)addRail:(CRRail *)rail tile:(CEIPoint)tile;
 
-- (CRCity *)cityForColor:(CRCityColor)color;
+- (CRCity *)cityForColor:(CRCityColor*)color;
 
 - (CRCity *)cityInTile:(CEIPoint)point;
 

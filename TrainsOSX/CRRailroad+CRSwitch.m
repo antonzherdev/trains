@@ -51,7 +51,7 @@
 }
 
 - (void)fillFormIndex:(BOOL[])e withRails:(NSArray *)rails {
-    memset(e, 0, sizeof(e));
+    memset(e, 0, sizeof(BOOL)*(crRailFormTurn_X_Y + 1));
     for(NSUInteger i = 0; i < rails.count; i++) {
         CRRailForm railForm = [[rails objectAtIndex:i] form];
         e[railForm] = YES;

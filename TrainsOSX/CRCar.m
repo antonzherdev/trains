@@ -10,11 +10,11 @@
 @synthesize length = _length;
 
 
-+ (id)carWithType:(CRCarType)type color:(CRCityColor)color {
++ (id)carWithType:(CRCarType)type color:(CRCityColor*)color {
     return [[[CRCar alloc] initWithType:type color:color] autorelease];
 }
 
-- (id)initWithType:(CRCarType)type color:(CRCityColor)color {
+- (id)initWithType:(CRCarType)type color:(CRCityColor*)color {
     NSString *file;
     switch(type) {
         case crCarType1:
@@ -27,7 +27,7 @@
             @throw @"Unknown car type";
     }
     self = [super initWithFile:file];
-    CEOrtoSpriteLine *line = [self lineWithStartRect:CGRectMake(0, _height * color, _width, _height)];
+    CEOrtoSpriteLine *line = [self lineWithStartRect:CGRectMake(0, _height * color.ordinal, _width, _height)];
     [line addAngleTn:1 x:48 shift:ccp(4, 4)];
     [line addAngleTn:0.9 x:96 shift:ccp(2, 5)];
     [line addAngleTn:0.8 x:144 shift:ccp(3, 5)];

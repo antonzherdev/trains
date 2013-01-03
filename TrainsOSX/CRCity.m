@@ -3,7 +3,7 @@
 
 
 @implementation CRCity {
-    CRCityColor _cityColor;
+    CRCityColor* _cityColor;
     CRCityOrientation _orientation;
     CEIPoint _tile;
 }
@@ -11,21 +11,18 @@
 @synthesize tile = _tile;
 
 
-+ (id)cityWithColor:(CRCityColor)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
++ (id)cityWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
     return [[[CRCity alloc] initWithColor:color orientation:orientation tile:tile] autorelease];
 }
 
-- (id)initWithColor:(CRCityColor)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
+- (id)initWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
     CGRect rect;
-    switch(color) {
-        case crOrange:
-            rect = CGRectMake(0, 0, 220, 110);
-            break;
-        case crGreen:
-            rect = CGRectMake(220, 0, 220, 110);
-            break;
-        default:
-            @throw @"Unknown city color";
+    if(color == crOrange) {
+        rect = CGRectMake(0, 0, 220, 110);
+    } else if(color == crGreen) {
+        rect = CGRectMake(220, 0, 220, 110);
+    } else {
+        @throw @"Unknown city color";
     }
     self = [super initWithFile:@"City.png" rect:rect];
     if(self) {

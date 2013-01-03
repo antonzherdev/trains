@@ -32,18 +32,23 @@
 		6F3DF3F797C8E47A452407FD /* Car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF00AF854C4775D30B46C /* Car1.png */; };
 		6F3DF4B77D00078E6F6B32DC /* NSArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */; };
 		6F3DF5949E6109FA0C483A0E /* NSMutableArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */; };
+		6F3DF63DC472B1D54FF4383C /* CEEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF892677A53681CAD6625 /* CEEnum.m */; };
 		6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
 		6F3DF72CAD7F617448442CB4 /* CRSwitchesComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */; };
+		6F3DF769E3309F7BE526F8E6 /* trains_car1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFC09305C7103DBA3941B /* trains_car1.plist */; };
 		6F3DF7AE28608C93F5D9A837 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF47D79CC526D20F29924 /* Podfile */; };
 		6F3DF805A9BFF0DD47BFB091 /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF73921F94975C2F02534 /* Rails.png */; };
 		6F3DF86A1C5B32EA136FAE66 /* CECurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFA265F42C0CAC2DD981B /* CECurve.m */; };
+		6F3DF9A5F6E7E441601AD049 /* CRCityColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2ED53658866984A13E1 /* CRCityColor.m */; };
 		6F3DF9FD84DFACCA42CFE909 /* CEMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF36A18CCC89D8594DEFB /* CEMap.m */; };
 		6F3DFA0938641A0099140508 /* CRRailroad+CRRailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5A965C94BF826D18AD5 /* CRRailroad+CRRailPoint.m */; };
 		6F3DFAB0237E6EEA3BA0AA6C /* CRCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF439E99063519D7F0D97 /* CRCar.m */; };
+		6F3DFBE6903D589A251D901C /* trains_car1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF12098ED4B201A450EB6 /* trains_car1-hd.png */; };
 		6F3DFCD734D4F4C31813442B /* CRTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF745F457C41FE14A4F36 /* CRTrain.m */; };
 		6F3DFD0D54399F420F603AA3 /* CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF85165447D6B762B3D7B /* CRSwitch.m */; };
+		6F3DFE7E69A9CBC2E0F2C8ED /* trains_car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFBAF1D0FBE6BF7F56C37 /* trains_car1.png */; };
 		6F3DFF3770913B4B25C8A123 /* CEOrtoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */; };
 		6F3DFF5433CDC5BEB3F26954 /* CRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9FBBD580702B9AFE76A /* CRCity.m */; };
 		6F3DFFDF4981BC81C1ED8575 /* CEBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFDA903DBA378366693F2 /* CEBezier.m */; };
@@ -59,8 +64,8 @@
 		0291C466161B67990085AB91 /* AudioToolbox.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0291C468161B67990085AB91 /* AppKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0291C46A161B67990085AB91 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0291C470161B67990085AB91 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0291C473161B67990085AB91 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0291C470161B67990085AB91 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0291C473161B67990085AB91 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0291C475161B67990085AB91 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		0291C477161B67990085AB91 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icon.icns; sourceTree = "<group>"; };
 		0291C479161B67990085AB91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -73,9 +78,12 @@
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 		64CAF13C32E6472084F28C75 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		6F3DF00AF854C4775D30B46C /* Car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car1.png; path = Resources/Car1.png; sourceTree = "<group>"; };
+		6F3DF12098ED4B201A450EB6 /* trains_car1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trains_car1-hd.png"; path = "Resources/trains_car1-hd.png"; sourceTree = "<group>"; };
 		6F3DF290C45847D4636C91B5 /* CRRailroad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroad.m; sourceTree = "<group>"; };
 		6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CENode.m"; sourceTree = "<group>"; };
 		6F3DF2BE0BB2C87F4A6C6F0B /* CRRailroad+CRRailPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CRRailroad+CRRailPoint.h"; sourceTree = "<group>"; };
+		6F3DF2ED53658866984A13E1 /* CRCityColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCityColor.m; sourceTree = "<group>"; };
+		6F3DF341927A48A6C21D810E /* CEEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEEnum.h; sourceTree = "<group>"; };
 		6F3DF36A18CCC89D8594DEFB /* CEMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMap.m; sourceTree = "<group>"; };
 		6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailroadBuilder.m; sourceTree = "<group>"; };
 		6F3DF3E1137F8D891311F7C8 /* CEOrtoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEOrtoSprite.h; sourceTree = "<group>"; };
@@ -91,10 +99,12 @@
 		6F3DF5EFC24C89AA8D0E644C /* cr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cr.h; sourceTree = "<group>"; };
 		6F3DF5FE8EF9F3C073099971 /* CCNode+CENode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CENode.h"; sourceTree = "<group>"; };
 		6F3DF635A04A1EEE65CE7A6E /* CRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCity.h; sourceTree = "<group>"; };
+		6F3DF657317C96AADA36A67B /* CRCityColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCityColor.h; sourceTree = "<group>"; };
 		6F3DF73921F94975C2F02534 /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rails.png; path = Resources/Rails.png; sourceTree = "<group>"; };
 		6F3DF745F457C41FE14A4F36 /* CRTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTrain.m; sourceTree = "<group>"; };
 		6F3DF75B6BF126F1D8316576 /* CECurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECurve.h; sourceTree = "<group>"; };
 		6F3DF85165447D6B762B3D7B /* CRSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSwitch.m; sourceTree = "<group>"; };
+		6F3DF892677A53681CAD6625 /* CEEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEEnum.m; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRailroad.h; sourceTree = "<group>"; };
 		6F3DF9217AB05E7415DA2C99 /* cocoa-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocoa-ex.h"; sourceTree = "<group>"; };
 		6F3DF9FBBD580702B9AFE76A /* CRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCity.m; sourceTree = "<group>"; };
@@ -104,7 +114,9 @@
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRail.m; sourceTree = "<group>"; };
 		6F3DFB7F31B3649C52404F77 /* CEBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEBezier.h; sourceTree = "<group>"; };
 		6F3DFB92CEF05392C19FFFFE /* CRCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCar.h; sourceTree = "<group>"; };
+		6F3DFBAF1D0FBE6BF7F56C37 /* trains_car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trains_car1.png; path = Resources/trains_car1.png; sourceTree = "<group>"; };
 		6F3DFBBA8ABBEDD55900EAE6 /* CRTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTrain.h; sourceTree = "<group>"; };
+		6F3DFC09305C7103DBA3941B /* trains_car1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = trains_car1.plist; path = Resources/trains_car1.plist; sourceTree = "<group>"; };
 		6F3DFC2F6B7A6ABE2951509A /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = City.png; path = Resources/City.png; sourceTree = "<group>"; };
 		6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CocoaEx.m"; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cocos2d-ex.h"; sourceTree = "<group>"; };
@@ -147,6 +159,9 @@
 				6F3DF73921F94975C2F02534 /* Rails.png */,
 				6F3DFC2F6B7A6ABE2951509A /* City.png */,
 				6F3DF00AF854C4775D30B46C /* Car1.png */,
+				6F3DF12098ED4B201A450EB6 /* trains_car1-hd.png */,
+				6F3DFC09305C7103DBA3941B /* trains_car1.plist */,
+				6F3DFBAF1D0FBE6BF7F56C37 /* trains_car1.png */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -224,6 +239,7 @@
 			children = (
 				6F3DFC19C5BA368F7C4EE43B /* Base */,
 				6F3DFDBDBF8214515D010FC1 /* Trains */,
+				0291C46D161B67990085AB91 /* Resources */,
 			);
 			path = TrainsOSX;
 			sourceTree = "<group>";
@@ -258,12 +274,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F3DF2DADBEBE79BD9AF35E4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DF2ED53658866984A13E1 /* CRCityColor.m */,
+				6F3DF657317C96AADA36A67B /* CRCityColor.h */,
+				6F3DF5EFC24C89AA8D0E644C /* cr.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		6F3DF47CF721D1F8B2FBAE5C /* App */ = {
 			isa = PBXGroup;
 			children = (
 				0291C5DF161B679B0085AB91 /* AppDelegate.m */,
 				0291C5DE161B679B0085AB91 /* AppDelegate.h */,
-				6F3DF5EFC24C89AA8D0E644C /* cr.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -276,6 +301,8 @@
 				6F3DF9217AB05E7415DA2C99 /* cocoa-ex.h */,
 				6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */,
 				6F3DFA260DC71D424613434D /* NSArray+CocoaEx.h */,
+				6F3DF892677A53681CAD6625 /* CEEnum.m */,
+				6F3DF341927A48A6C21D810E /* CEEnum.h */,
 			);
 			name = CocoaEx;
 			sourceTree = "<group>";
@@ -312,7 +339,6 @@
 			isa = PBXGroup;
 			children = (
 				0291C5DA161B679B0085AB91 /* Supporting Files */,
-				0291C46D161B67990085AB91 /* Resources */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -327,6 +353,7 @@
 				6F3DF9A39DB3362002A37EE9 /* Train */,
 				6F3DF609C408525FE8B88180 /* CocoaEx */,
 				6F3DFF081BFA3C001DA2D931 /* Switch */,
+				6F3DF2DADBEBE79BD9AF35E4 /* Base */,
 			);
 			name = Trains;
 			sourceTree = "<group>";
@@ -405,6 +432,9 @@
 				6F3DF13C5422A063C38A1C07 /* City.png in Resources */,
 				6F3DF3F797C8E47A452407FD /* Car1.png in Resources */,
 				6F3DF7AE28608C93F5D9A837 /* Podfile in Resources */,
+				6F3DFBE6903D589A251D901C /* trains_car1-hd.png in Resources */,
+				6F3DF769E3309F7BE526F8E6 /* trains_car1.plist in Resources */,
+				6F3DFE7E69A9CBC2E0F2C8ED /* trains_car1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +486,8 @@
 				6F3DFD0D54399F420F603AA3 /* CRSwitch.m in Sources */,
 				6F3DF72CAD7F617448442CB4 /* CRSwitchesComposition.m in Sources */,
 				6F3DF4B77D00078E6F6B32DC /* NSArray+CocoaEx.m in Sources */,
+				6F3DF9A5F6E7E441601AD049 /* CRCityColor.m in Sources */,
+				6F3DF63DC472B1D54FF4383C /* CEEnum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +497,7 @@
 		0291C46F161B67990085AB91 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0291C470161B67990085AB91 /* English */,
+				0291C470161B67990085AB91 /* InfoPlist.strings */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -473,7 +505,7 @@
 		0291C472161B67990085AB91 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0291C473161B67990085AB91 /* English */,
+				0291C473161B67990085AB91 /* MainMenu.xib */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

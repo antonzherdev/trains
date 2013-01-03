@@ -9,7 +9,7 @@
 
 @implementation CRTrain {
     CRRailroad *_railroad;
-    CRCityColor _color;
+    CRCityColor* _color;
     NSMutableArray* _cars;
     CRLevel *_level;
 
@@ -26,11 +26,11 @@
 @synthesize delegate;
 
 
-+ (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
++ (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color {
     return [[[CRTrain alloc] initWithLevel:level railroad:railroad color:color] autorelease];
 }
 
-- (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor)color {
+- (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color {
     self = [super init];
     if(self) {
         _speed = 30;
@@ -62,7 +62,7 @@
     [super dealloc];
 }
 
-- (void)startFromCityWithColor:(CRCityColor)color {
+- (void)startFromCityWithColor:(CRCityColor*)color {
     CRCity * city = [_railroad cityForColor:color];
     _v1 = [city startRailVectorForRailroad:_railroad];
     [self updatePosition];

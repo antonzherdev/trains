@@ -1,10 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d-ex.h"
-
-typedef enum {
-    crOrange,
-    crGreen,
-} CRCityColor;
+#import "CRCityColor.h"
 
 typedef enum {
     crCityOrientationX,
