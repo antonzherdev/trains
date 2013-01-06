@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Car1_Green_00000</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{12, 21}, {100, 78}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{100, 78}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{208, 232}, {100, 78}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00001</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{16, 19}, {93, 81}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{93, 81}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 384}, {93, 81}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00002</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{20, 18}, {85, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{85, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 620}, {85, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00003</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{24, 18}, {76, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{76, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 712}, {76, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00004</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{29, 17}, {67, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 3}</string>
+			<key>spriteSize</key>
+			<string>{67, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{432, 652}, {67, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00005</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{33, 17}, {58, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{58, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{276, 740}, {58, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00006</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{38, 17}, {48, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{48, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{340, 740}, {48, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00007</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{44, 17}, {37, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 3}</string>
+			<key>spriteSize</key>
+			<string>{37, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{172, 884}, {37, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00008</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{44, 17}, {37, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 3}</string>
+			<key>spriteSize</key>
+			<string>{37, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{392, 828}, {37, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00009</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{38, 17}, {48, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{48, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{444, 740}, {48, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00010</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{33, 17}, {58, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{58, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{276, 828}, {58, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00011</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{28, 17}, {68, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{68, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{360, 652}, {68, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00012</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{24, 18}, {76, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{76, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 884}, {76, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00013</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{20, 18}, {84, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{84, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 796}, {84, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00014</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{16, 19}, {92, 81}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{92, 81}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{100, 384}, {92, 81}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00015</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{12, 21}, {100, 78}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{100, 78}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{312, 232}, {100, 78}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00016</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{9, 22}, {106, 76}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{106, 76}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 152}, {106, 76}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00017</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{6, 24}, {112, 73}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{112, 73}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{232, 0}, {112, 73}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00018</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{4, 26}, {116, 69}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{116, 69}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{240, 80}, {116, 69}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00019</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 28}, {118, 66}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{118, 66}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{124, 316}, {118, 66}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00020</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 31}, {120, 61}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 61}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 468}, {120, 61}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00021</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 33}, {120, 58}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{120, 58}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 536}, {120, 58}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00022</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 36}, {120, 53}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 53}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{340, 596}, {120, 53}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00023</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 36}, {120, 53}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 53}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{216, 596}, {120, 53}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00024</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 34}, {120, 57}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 57}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{340, 536}, {120, 57}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00025</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 31}, {120, 61}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 61}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{124, 468}, {120, 61}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00026</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 28}, {118, 66}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{118, 66}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 316}, {118, 66}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00027</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{4, 26}, {116, 69}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{116, 69}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{360, 80}, {116, 69}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00028</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{6, 24}, {112, 73}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{112, 73}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{116, 0}, {112, 73}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00029</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{9, 22}, {106, 76}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{106, 76}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{220, 152}, {106, 76}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00030</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{12, 21}, {100, 78}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{100, 78}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{104, 232}, {100, 78}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00031</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{15, 20}, {93, 80}}</string>
+			<key>spriteOffset</key>
+			<string>{-0.5, 2}</string>
+			<key>spriteSize</key>
+			<string>{93, 80}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{416, 384}, {93, 80}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00032</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{20, 18}, {84, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{84, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 708}, {84, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00033</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{24, 18}, {76, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{76, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 796}, {76, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00034</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{28, 17}, {68, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{68, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{216, 652}, {68, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00035</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{33, 17}, {58, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{58, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{216, 828}, {58, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00036</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{38, 17}, {48, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{48, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{392, 740}, {48, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00037</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{43, 18}, {38, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{38, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{172, 796}, {38, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00038</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{43, 18}, {38, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{38, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{172, 712}, {38, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00039</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{38, 17}, {48, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{48, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{340, 828}, {48, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00040</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{33, 17}, {58, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{58, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{216, 740}, {58, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00041</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{28, 17}, {68, 84}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 3}</string>
+			<key>spriteSize</key>
+			<string>{68, 84}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{288, 652}, {68, 84}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00042</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{24, 18}, {76, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{76, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 884}, {76, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00043</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{20, 18}, {85, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 2.5}</string>
+			<key>spriteSize</key>
+			<string>{85, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 536}, {85, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00044</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{16, 20}, {93, 80}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 2}</string>
+			<key>spriteSize</key>
+			<string>{93, 80}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{196, 384}, {93, 80}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00045</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{12, 21}, {100, 78}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{100, 78}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 232}, {100, 78}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00046</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{9, 22}, {106, 76}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{106, 76}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{332, 152}, {106, 76}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00047</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{6, 24}, {112, 73}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{112, 73}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {112, 73}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00048</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{4, 26}, {116, 70}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{116, 70}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{120, 80}, {116, 70}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00049</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 28}, {118, 66}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{118, 66}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{244, 316}, {118, 66}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00050</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 31}, {120, 61}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 61}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{248, 468}, {120, 61}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00051</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 34}, {120, 57}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 57}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{216, 536}, {120, 57}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00052</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 36}, {120, 53}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 53}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 652}, {120, 53}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00053</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 36}, {120, 53}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.5}</string>
+			<key>spriteSize</key>
+			<string>{120, 53}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{92, 596}, {120, 53}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00054</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 33}, {120, 58}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{120, 58}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{372, 468}, {120, 58}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00055</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 31}, {120, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{120, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{292, 384}, {120, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00056</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 28}, {118, 66}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{118, 66}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{368, 316}, {118, 66}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00057</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{4, 26}, {116, 70}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{116, 70}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 80}, {116, 70}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00058</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{6, 24}, {112, 73}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1.5}</string>
+			<key>spriteSize</key>
+			<string>{112, 73}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{348, 0}, {112, 73}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Car1_Green_00059</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{9, 22}, {106, 76}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 2}</string>
+			<key>spriteSize</key>
+			<string>{106, 76}</string>
+			<key>spriteSourceSize</key>
+			<string>{124, 124}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{112, 152}, {106, 76}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>GeneratedWith</key>
+		<string>SpriteHelper</string>
+		<key>format</key>
+		<integer>3</integer>
+	</dict>
+</dict>
+</plist>
