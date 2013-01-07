@@ -12,21 +12,9 @@
 
 
 - (id)initWithForm:(CRRailForm*)form {
-    CGRect rect;
-    if(form == crRailFormY || form == crRailFormX) {
-        rect = CGRectMake(0, 0, 220, 110);
-    } else if (form == crRailFormTurnXY || form == crRailFormTurn_X_Y){
-        rect = CGRectMake(220, 0, 220, 110);
-    } else if(form == crRailFormTurn_XY){
-        rect = CGRectMake(440, 0, 220, 110);
-    } else {
-        rect = CGRectMake(660, 0, 220, 110);
-    }
-    self = [self initWithFile:@"Rails.png" rect:rect];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"rails_rails.plist"];
+    self = [self initWithSpriteFrameName:form.name];
     if (self) {
-        if(form == crRailFormY || form == crRailFormTurnXY) {
-            [self setFlipX:YES];
-        }
         _form = form;
     }
 

@@ -29,13 +29,16 @@
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2A14065207E43079C03 /* Car1_Orange.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6666C3D9099AB966F87 /* Car1_Orange.plist */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
+		6F3DF361841A9DC1DAA562A5 /* rails_rails.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF810811FC56D99AB555F /* rails_rails.plist */; };
 		6F3DF3B1534D612C4D75148F /* CEOrtoMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */; };
 		6F3DF3C133D5B3718826DFE1 /* Car1_Green-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF462975CA05F835E0411 /* Car1_Green-hd.plist */; };
 		6F3DF42782BF5B40CAC00293 /* Car1_Green.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6C582BAC2EA2BAE5369 /* Car1_Green.plist */; };
 		6F3DF4B77D00078E6F6B32DC /* NSArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */; };
 		6F3DF5949E6109FA0C483A0E /* NSMutableArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */; };
+		6F3DF5998F1C8FCEF8C5EAAF /* rails_rails-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6D28F729E2FB40BC627 /* rails_rails-hd.png */; };
 		6F3DF5B3EF0456D433E7F55F /* CRRailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCAB236E8FCB3604B92D /* CRRailForm.m */; };
 		6F3DF63DC472B1D54FF4383C /* CEEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF892677A53681CAD6625 /* CEEnum.m */; };
+		6F3DF640A36210EF23369B35 /* rails_rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF199403BB9EA79FF3E39 /* rails_rails.png */; };
 		6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
@@ -52,6 +55,7 @@
 		6F3DFC75D1D5C46D0AA5DF41 /* Car1_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF9751EA8E12D8BADEB27 /* Car1_Green.png */; };
 		6F3DFCD734D4F4C31813442B /* CRTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF745F457C41FE14A4F36 /* CRTrain.m */; };
 		6F3DFD0D54399F420F603AA3 /* CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF85165447D6B762B3D7B /* CRSwitch.m */; };
+		6F3DFD28A9F4E481565A3448 /* rails_rails-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */; };
 		6F3DFDB990B1FFC01FE89092 /* Car1_Green-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF353225181D2D09AB785 /* Car1_Green-hd.png */; };
 		6F3DFDDAC7C9278F62FA5A4A /* Car1_Orange-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFE55268CAB885D0C4A01 /* Car1_Orange-hd.png */; };
 		6F3DFF3770913B4B25C8A123 /* CEOrtoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */; };
@@ -82,6 +86,7 @@
 		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CETextureBackgroundLayer.m; path = Sources/CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
 		64CAF13C32E6472084F28C75 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		6F3DF199403BB9EA79FF3E39 /* rails_rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rails_rails.png; path = Images/Rails/Sprite/rails_rails.png; sourceTree = "<group>"; };
 		6F3DF1E856A58245EF3E6A17 /* Car1_Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car1_Orange.png; path = Images/Car1/Sprite/Car1_Orange.png; sourceTree = "<group>"; };
 		6F3DF20B44B6ADF28431DB15 /* Car1_Orange-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "Car1_Orange-hd.plist"; path = "Images/Car1/Sprite/Car1_Orange-hd.plist"; sourceTree = "<group>"; };
 		6F3DF290C45847D4636C91B5 /* CRRailroad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRRailroad.m; path = Sources/CRRailroad.m; sourceTree = "<group>"; };
@@ -110,9 +115,11 @@
 		6F3DF657317C96AADA36A67B /* CRCityColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCityColor.h; path = Sources/CRCityColor.h; sourceTree = "<group>"; };
 		6F3DF6666C3D9099AB966F87 /* Car1_Orange.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Car1_Orange.plist; path = Images/Car1/Sprite/Car1_Orange.plist; sourceTree = "<group>"; };
 		6F3DF6C582BAC2EA2BAE5369 /* Car1_Green.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Car1_Green.plist; path = Images/Car1/Sprite/Car1_Green.plist; sourceTree = "<group>"; };
+		6F3DF6D28F729E2FB40BC627 /* rails_rails-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rails_rails-hd.png"; path = "Images/Rails/Sprite/rails_rails-hd.png"; sourceTree = "<group>"; };
 		6F3DF73921F94975C2F02534 /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rails.png; path = Resources/Rails.png; sourceTree = "<group>"; };
 		6F3DF745F457C41FE14A4F36 /* CRTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRTrain.m; path = Sources/CRTrain.m; sourceTree = "<group>"; };
 		6F3DF75B6BF126F1D8316576 /* CECurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CECurve.h; path = Sources/CECurve.h; sourceTree = "<group>"; };
+		6F3DF810811FC56D99AB555F /* rails_rails.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = rails_rails.plist; path = Images/Rails/Sprite/rails_rails.plist; sourceTree = "<group>"; };
 		6F3DF85165447D6B762B3D7B /* CRSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRSwitch.m; path = Sources/CRSwitch.m; sourceTree = "<group>"; };
 		6F3DF892677A53681CAD6625 /* CEEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEEnum.m; path = Sources/CEEnum.m; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRailroad.h; path = Sources/CRRailroad.h; sourceTree = "<group>"; };
@@ -136,6 +143,7 @@
 		6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEOrtoSprite.m; path = Sources/CEOrtoSprite.m; sourceTree = "<group>"; };
 		6F3DFD6424C6232A8ACA597D /* CRRailroadBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRailroadBuilder.h; path = Sources/CRRailroadBuilder.h; sourceTree = "<group>"; };
 		6F3DFDA903DBA378366693F2 /* CEBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEBezier.m; path = Sources/CEBezier.m; sourceTree = "<group>"; };
+		6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "rails_rails-hd.plist"; path = "Images/Rails/Sprite/rails_rails-hd.plist"; sourceTree = "<group>"; };
 		6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEOrtoMap.m; path = Sources/CEOrtoMap.m; sourceTree = "<group>"; };
 		6F3DFE55268CAB885D0C4A01 /* Car1_Orange-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Car1_Orange-hd.png"; path = "Images/Car1/Sprite/Car1_Orange-hd.png"; sourceTree = "<group>"; };
 		6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCSprite+CESprite.m"; path = "Sources/CCSprite+CESprite.m"; sourceTree = "<group>"; };
@@ -264,6 +272,7 @@
 				0291C479161B67990085AB91 /* Info.plist */,
 				0291C46E161B67990085AB91 /* English.lproj */,
 				6F3DF3B233A04E9F3F3F8AF5 /* Car1 */,
+				6F3DF042F2DE32D2BCEC36CB /* Rails */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -275,6 +284,17 @@
 				0291C472161B67990085AB91 /* MainMenu.xib */,
 			);
 			name = English.lproj;
+			sourceTree = "<group>";
+		};
+		6F3DF042F2DE32D2BCEC36CB /* Rails */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */,
+				6F3DF6D28F729E2FB40BC627 /* rails_rails-hd.png */,
+				6F3DF810811FC56D99AB555F /* rails_rails.plist */,
+				6F3DF199403BB9EA79FF3E39 /* rails_rails.png */,
+			);
+			name = Rails;
 			sourceTree = "<group>";
 		};
 		6F3DF2DADBEBE79BD9AF35E4 /* Base */ = {
@@ -450,6 +470,10 @@
 				6F3DFDDAC7C9278F62FA5A4A /* Car1_Orange-hd.png in Resources */,
 				6F3DF2A14065207E43079C03 /* Car1_Orange.plist in Resources */,
 				6F3DF7B3A639B7042608A8DD /* Car1_Orange.png in Resources */,
+				6F3DFD28A9F4E481565A3448 /* rails_rails-hd.plist in Resources */,
+				6F3DF5998F1C8FCEF8C5EAAF /* rails_rails-hd.png in Resources */,
+				6F3DF361841A9DC1DAA562A5 /* rails_rails.plist in Resources */,
+				6F3DF640A36210EF23369B35 /* rails_rails.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

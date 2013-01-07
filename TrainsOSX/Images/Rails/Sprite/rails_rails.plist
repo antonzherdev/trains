@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>+x+y</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{119.5, 22.5}, {55.5, 65.5}}</string>
+			<key>spriteOffset</key>
+			<string>{37.25, -0.25}</string>
+			<key>spriteSize</key>
+			<string>{55.5, 65.5}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 196}, {65.5, 55.5}}</string>
+			<key>textureRotated</key>
+			<true/>
+		</dict>
+		<key>+x-y</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{45, 59.5}, {130, 28.5}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -18.75}</string>
+			<key>spriteSize</key>
+			<string>{130, 28.5}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 136}, {130, 28.5}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>-x+y</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{45.5, 22.5}, {130, 28}}</string>
+			<key>spriteOffset</key>
+			<string>{0.5, 18.5}</string>
+			<key>spriteSize</key>
+			<string>{130, 28}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 166}, {130, 28}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>-x-y</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{45.5, 22}, {55.5, 65.5}}</string>
+			<key>spriteOffset</key>
+			<string>{-36.75, 0.25}</string>
+			<key>spriteSize</key>
+			<string>{55.5, 65.5}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{68, 196}, {65.5, 55.5}}</string>
+			<key>textureRotated</key>
+			<true/>
+		</dict>
+		<key>x</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{45, 22.5}, {130, 65.5}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0.25}</string>
+			<key>spriteSize</key>
+			<string>{130, 65.5}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 0}, {130, 65.5}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>y</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{45, 22.5}, {130, 65}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{130, 65}</string>
+			<key>spriteSourceSize</key>
+			<string>{220, 110}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{0, 68}, {130, 65}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>GeneratedWith</key>
+		<string>SpriteHelper</string>
+		<key>format</key>
+		<integer>3</integer>
+	</dict>
+</dict>
+</plist>
