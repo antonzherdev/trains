@@ -58,7 +58,7 @@
 }
 
 - (void)dealloc {
-    for(int i = 1; i <= crRailFormTurn_X_Y; i++) {
+    for(int i = 1; i < CR_RAIL_FORMS_COUNT; i++) {
         ceCurveDelete(_curves[i]);
     }
     [super dealloc];
@@ -85,7 +85,7 @@
     }];
 }
 
-- (void)removeRailWithForm:(CRRailForm)form tile:(CEIPoint)tile {
+- (void)removeRailWithForm:(CRRailForm*)form tile:(CEIPoint)tile {
     NSArray *rails = [_railsLayer objectsAtTile:tile];
     CRRail * rail = [rails match:^BOOL(id obj) {
         return [obj form] == form;

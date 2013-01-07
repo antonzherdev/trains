@@ -36,14 +36,14 @@
     return self;
 }
 
-+ (CRDirection)directionForCityInTile:(CEIPoint)tile form:(CRRailForm)form railroad:(CRRailroad *)railroad {
++ (CRDirection)directionForCityInTile:(CEIPoint)tile form:(CRRailForm*)form railroad:(CRRailroad *)railroad {
     if(tile.x + tile.y == 0) return crForward;
     if(tile.y - tile.x == 1) return form == crRailFormX ? crBackward : crForward;
     if(tile.y + tile.x == railroad.dim.size.width - 1) return crBackward;
     return form == crRailFormX ? crForward : crBackward;
 }
 
-- (CRRailForm)form {
+- (CRRailForm*)form {
     return (_orientation == crCityOrientationX ? crRailFormX : crRailFormY);
 }
 

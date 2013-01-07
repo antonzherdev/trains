@@ -1,11 +1,11 @@
 #import "cr.h"
 
 @interface CRRail : CCSprite
-@property(nonatomic, readonly) CRRailForm form;
+@property(nonatomic, readonly) CRRailForm* form;
 
-+ (id)railWithForm:(CRRailForm)form;
++ (id)railWithForm:(CRRailForm*)form;
 
-- (id)initWithForm:(CRRailForm)form;
+- (id)initWithForm:(CRRailForm*)form;
 
 - (CRRailType)railType;
 @end

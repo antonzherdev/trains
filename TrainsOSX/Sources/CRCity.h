@@ -11,9 +11,9 @@
 
 - (id)initWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile;
 
-+ (CRDirection)directionForCityInTile:(CEIPoint)point form:(CRRailForm)form railroad:(CRRailroad *)railroad;
++ (CRDirection)directionForCityInTile:(CEIPoint)point form:(CRRailForm*)form railroad:(CRRailroad *)railroad;
 
-- (CRRailForm) form;
+- (CRRailForm*) form;
 
 - (CRRailType) railType;
 

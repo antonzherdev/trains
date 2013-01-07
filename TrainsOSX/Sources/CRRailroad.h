@@ -7,7 +7,7 @@
     CEMapLayer *_railsLayer;
     NSUInteger _th;
 
-    CECurve _curves[crRailFormTurn_X_Y + 1];
+    CECurve _curves[CR_RAIL_FORMS_COUNT + 1];
 }
 + (CRRailroad *)railroadForDim:(CEOrtoMapDim)dim;
 
@@ -21,5 +21,5 @@
 
 - (CRCity *)cityInTile:(CEIPoint)point;
 
-- (void)removeRailWithForm:(CRRailForm)form tile:(CEIPoint)tile;
+- (void)removeRailWithForm:(CRRailForm*)form tile:(CEIPoint)tile;
 @end

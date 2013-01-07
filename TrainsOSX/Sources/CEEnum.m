@@ -1,4 +1,4 @@
-#import "CEEnum.h"
+#import "CRRailForm.h"
 
 
 NSMutableDictionary * valuesDictionary;
@@ -35,6 +35,10 @@ NSMutableDictionary * valuesDictionary;
 
 + (NSArray *)values {
     return [valuesDictionary objectForKey:self.class];
+}
+
++ (id)valueWithOrdinal:(NSUInteger)ordinal {
+    return [[self values] objectAtIndex:ordinal];
 }
 
 - (BOOL)isEqual:(id)other {

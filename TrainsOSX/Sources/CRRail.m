@@ -2,16 +2,16 @@
 
 
 @implementation CRRail {
-    CRRailForm _form;
+    CRRailForm* _form;
 }
 @synthesize form = _form;
 
-+ (id)railWithForm:(CRRailForm)form {
++ (id)railWithForm:(CRRailForm*)form {
     return [[[CRRail alloc] initWithForm:form] autorelease];
 }
 
 
-- (id)initWithForm:(CRRailForm)form {
+- (id)initWithForm:(CRRailForm*)form {
     CGRect rect;
     if(form == crRailFormY || form == crRailFormX) {
         rect = CGRectMake(0, 0, 220, 110);

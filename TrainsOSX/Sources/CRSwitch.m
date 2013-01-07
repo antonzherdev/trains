@@ -2,8 +2,8 @@
 
 
 @implementation CRSwitch {
-    CRRailForm _form1;
-    CRRailForm _form2;
+    CRRailForm* _form1;
+    CRRailForm* _form2;
     CCSprite *_sprite;
     BOOL _composite;
     CCSprite *_stateSprite;
@@ -13,7 +13,7 @@
 @synthesize form1 = _form1;
 @synthesize form2 = _form2;
 
-- (id)initWithForm1:(CRRailForm)form1 form2:(CRRailForm)form2 {
+- (id)initWithForm1:(CRRailForm*)form1 form2:(CRRailForm*)form2 {
     self = [super init];
     if (self) {
         _form1 = form1;
@@ -64,31 +64,26 @@
     if(_form1 == crRailFormX && _form2 == crRailFormY) return;
 
     [_stateSprite removeFromParentAndCleanup:YES];
-    CRRailForm form = _state == 0 ? _form1 : _form2;
-    CRRailForm f2 = _state == 0 ? _form2 : _form1;
+    CRRailForm* form = _state == 0 ? _form1 : _form2;
+    CRRailForm* f2 = _state == 0 ? _form2 : _form1;
 
     int y = 330;
     int x = 0;
-    BOOL flipX = NO;
-    BOOL flipY = NO;
+    BOOL flipX;
+    BOOL flipY;
     int px = 0;
     int py = 0;
-    switch(form) {
-        case crRailFormNil:return;
-        case crRailFormX:
-            flipY = f2 == crRailFormTurnX_Y || f2 == crRailFormTurnXY;
-            flipX = flipY;
-            if(flipY) {px = 4; py = 1;}
-            break;
-        case crRailFormY:
-            flipY = f2 == crRailFormTurnX_Y || f2 == crRailFormTurn_X_Y;
-            flipX = !flipY;
-            if(flipY) {px = -4; py = 1;}
-            break;
-        case crRailFormTurnX_Y:return;
-        case crRailFormTurnXY:return;
-        case crRailFormTurn_XY:return;
-        case crRailFormTurn_X_Y:return;
+    if(form == crRailFormX) {
+        flipY = f2 == crRailFormTurnX_Y || f2 == crRailFormTurnXY;
+        flipX = flipY;
+        if(flipY) {px = 4; py = 1;}
+    } else if (form == crRailFormY) {
+
+        flipY = f2 == crRailFormTurnX_Y || f2 == crRailFormTurn_X_Y;
+        flipX = !flipY;
+        if(flipY) {px = -4; py = 1;}
+    } else {
+        return;
     }
     _stateSprite = [CCSprite spriteWithFile:@"Rails.png" rect:CGRectMake(x, y, 220, 110)];
     if(flipX) [_stateSprite setFlipX:YES];
@@ -98,7 +93,7 @@
 }
 
 
-+ (id)switchWithForm1:(CRRailForm)form1 form2:(CRRailForm)form2 {
++ (id)switchWithForm1:(CRRailForm*)form1 form2:(CRRailForm*)form2 {
     if((form1 == crRailFormTurn_X_Y && form2 == crRailFormTurnXY) ||
             (form1 == crRailFormTurn_XY && form2 == crRailFormTurnX_Y)) return nil;
     return [[[CRSwitch alloc] initWithForm1:form1 form2:form2] autorelease];

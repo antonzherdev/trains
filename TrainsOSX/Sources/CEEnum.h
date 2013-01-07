@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 
-#define CE_ENUM(cls, name) cr ## name = [[cls alloc] initWithName:@#name];
+@class CRRailForm;
+
+#define CE_ENUM(cls, name) name = [[cls alloc] initWithName:@#name];
 
 
 @interface CEEnum : NSObject
@@ -11,4 +13,6 @@
 - (id)initWithName:(NSString *)name;
 
 + (NSArray*) values;
+
++ (id)valueWithOrdinal:(NSUInteger)ordinal;
 @end

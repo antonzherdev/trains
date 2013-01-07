@@ -31,16 +31,16 @@
 
 
 - (BOOL)maybeJoinSwitch:(CRSwitch *)s {
-    BOOL* e = calloc(CR_RAIL_FORM_MAX, sizeof(BOOL));
+    BOOL* e = calloc(CR_RAIL_FORMS_COUNT, sizeof(BOOL));
     @try {
         if(_switch2 != nil) {
             if(_switch3 != nil) return NO;
 
-            e[_switch1.form1] = YES;
-            e[_switch1.form2] = YES;
-            e[_switch2.form1] = YES;
-            e[_switch2.form2] = YES;
-            if(e[s.form1] && e[s.form2]) {
+            e[_switch1.form1.ordinal] = YES;
+            e[_switch1.form2.ordinal] = YES;
+            e[_switch2.form1.ordinal] = YES;
+            e[_switch2.form2.ordinal] = YES;
+            if(e[s.form1.ordinal] && e[s.form2.ordinal]) {
                 _switch3 = s;
                 [_switch3 composite];
                 return YES;
@@ -49,21 +49,21 @@
         }
 
 
-        e[_switch1.form1] = YES;
-        e[_switch1.form2] = YES;
-        e[s.form1] = YES;
-        e[s.form2] = YES;
+        e[_switch1.form1.ordinal] = YES;
+        e[_switch1.form2.ordinal] = YES;
+        e[s.form1.ordinal] = YES;
+        e[s.form2.ordinal] = YES;
         int n = 0;
-        for (int i = 0; i <= CR_RAIL_FORM_MAX; i++) {
+        for (int i = 0; i <= CR_RAIL_FORMS_COUNT; i++) {
             if(e[i]) n++;
         }
         if(n != 3) return NO;
         
         int x;
         BOOL flipX= NO;
-        if (e[crRailFormX] && e[crRailFormY] && e[crRailFormTurn_X_Y]) {
+        if (e[crRailFormX.ordinal] && e[crRailFormY.ordinal] && e[crRailFormTurn_X_Y.ordinal]) {
             x = 0;
-        } else if (e[crRailFormX] && e[crRailFormY] && e[crRailFormTurnXY]) {
+        } else if (e[crRailFormX.ordinal] && e[crRailFormY.ordinal] && e[crRailFormTurnXY.ordinal]) {
             x = 0;
             flipX = YES;
         } else{

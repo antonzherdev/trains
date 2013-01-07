@@ -71,7 +71,7 @@
 //    CCLOG(@"CRRailroadBuilder.mouseDragged(%f, %f)", point.x, point.y);
     CGPoint tilePoint = [_railroad tilePointForPoint:point];
 
-    CRRailForm railForm = crRailFormNil;
+    CRRailForm* railForm = nil;
     CEIPoint railTile = _startTile;
 
     if(ccpDistance(_startTilePoint, tilePoint) > 0.5) {
@@ -135,7 +135,7 @@
         }
     }
 
-    if(railForm != crRailFormNil) {
+    if(railForm != nil) {
         if(_rail != nil) {
             if(_rail.form != railForm || !ceiEq(railTile, _railTile)) {
                 [self removeRail];
