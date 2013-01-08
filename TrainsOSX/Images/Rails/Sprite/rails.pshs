@@ -24,7 +24,7 @@
 			<key>MaxSheetSize</key>
 			<integer>4096</integer>
 			<key>NpotSize</key>
-			<string>{268, 504}</string>
+			<string>{192, 208}</string>
 			<key>Padding</key>
 			<integer>8</integer>
 			<key>PixelFormat</key>
@@ -32,7 +32,7 @@
 			<key>SheetImage</key>
 			<string>rails_rails.png</string>
 			<key>SheetImage-HD</key>
-			<string>rails_rails-hd.png</string>
+			<string>rails_rails.png</string>
 			<key>SheetName</key>
 			<string>rails</string>
 			<key>SheetSceneImageName</key>
@@ -43,19 +43,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1gFAAAAAAQQMAAAACV0a6kZKkeUzodD
-					Lp+NUfRvLrl7QdyZHBgmk3kaO0kpMAQAAK8B
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTM1
-					NjY2NTMxMzgzNTYyMzk2MTM2MzczNzM2MzI2
-					NDY1MzI2NjMwNjYzNDY0MzkzNzM5NjI2MTM2
-					NjMzNTM1MzMzMjYxMzkzOTMzMzQ2MjM5M2Iz
+					Ym9va1gFAAAAAAQQMAAAADevtS5vyq9N0q3P
+					Fq4Z3p4jFzzPv6F2rhCvMs/Q5P64MAQAAK8B
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTMx
+					MzI2MTM0MzkzNjYyMzQ2MTYyMzUzMjMxMzQz
+					MDM1MzgzMDYxMzMzMDY1MzIzNDMzMzMzMjMy
+					MzEzMTYzMzkzNzM0MzUzNzYxMzIzMzM5M2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjM2NjM1MzUzYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQzODM2NjQzYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -73,9 +73,9 @@
 					AAAACAAAAAQDAADz8Q8AAAAAAAgAAAAEAwAA
 					9vEPAAAAAAAIAAAABAMAAFrHFAAAAAAACAAA
 					AAQDAAAMZjMAAAAAAAgAAAAEAwAAXs4zAAAA
-					AAAIAAAABAMAAFXPMwAAAAAAJAAAAAEGAAB8
+					AAAIAAAABAMAAL2aNAAAAAAAJAAAAAEGAAB8
 					AgAAjAIAAJwCAACsAgAAvAIAAMwCAADcAgAA
-					7AIAAPwCAAAIAAAAAAQAAEG2msI1AAAAGAAA
+					7AIAAPwCAAAIAAAAAAQAAEG2nCKvAAAAGAAA
 					AAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAA
 					AAAAAAAAAQUAAAQAAAADAwAAAgAAAAgAAAAE
 					AwAABwAAAAAAAAAEAAAAAwMAAPUBAAAMAAAA
@@ -129,7 +129,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -149,19 +149,19 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 196}, {55.5, 65.5}}</string>
+						<string>{{136, 0}, {56, 67}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 392}, {111, 131}}</string>
+						<string>{{136, 0}, {56, 67}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
 						<true/>
 						<key>IsRotated</key>
-						<true/>
+						<false/>
 						<key>IsTrimmed</key>
 						<true/>
 						<key>Name</key>
@@ -173,11 +173,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/+x+y.png/</string>
 						<key>OriginalRect</key>
-						<string>{{239, 45}, {111, 131}}</string>
+						<string>{{119, 22}, {56, 67}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{0, 392}</string>
+						<string>{136, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -187,7 +187,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{37.25, -0.25}</string>
+						<string>{37, -0.5}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -198,19 +198,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1gFAAAAAAQQMAAAAAHPyhMXtA/0b3VS
-					7bMeBqS0Cleqnv2S9BSCWYV1mV5JMAQAAK8B
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTM4
-					MzI2MzMyMzYzNTMwNjQzNjY2NjMzMjYxMzkz
-					MjYxNjMzMDM2MzAzMjM2NjMzNTM3MzQzNTYy
-					NjEzMTM4MzAzODYzMzk2MzM5MzczNjM5M2Iz
+					Ym9va1gFAAAAAAQQMAAAANuP5lhA47WwPiU5
+					EFH6sHUkmpXxqGCLNwjKxKQKDVSsMAQAAK8B
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTY2
+					MzgzNjY2NjYzODM1MzgzNzMzMzM2MjYzMzIz
+					NjMwMzAzMzM5Mzc2MTMyNjQzNDMwMzU2MjYy
+					MzQ2NDY1MzkzMTYxMzAzMDYxMzUzNDM4M2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjQzMDMzMzIzYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQzODYxMzkzYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -228,9 +228,9 @@
 					AAAACAAAAAQDAADz8Q8AAAAAAAgAAAAEAwAA
 					9vEPAAAAAAAIAAAABAMAAFrHFAAAAAAACAAA
 					AAQDAAAMZjMAAAAAAAgAAAAEAwAAXs4zAAAA
-					AAAIAAAABAMAADLQMwAAAAAAJAAAAAEGAAB8
+					AAAIAAAABAMAAKmaNAAAAAAAJAAAAAEGAAB8
 					AgAAjAIAAJwCAACsAgAAvAIAAMwCAADcAgAA
-					7AIAAPwCAAAIAAAAAAQAAEG2msKRAAAAGAAA
+					7AIAAPwCAAAIAAAAAAQAAEG2nCKcAAAAGAAA
 					AAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAA
 					AAAAAAAAAQUAAAQAAAADAwAAAgAAAAgAAAAE
 					AwAABwAAAAAAAAAEAAAAAwMAAPUBAAAMAAAA
@@ -284,7 +284,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -304,13 +304,13 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 136}, {130, 28.5}}</string>
+						<string>{{0, 176}, {130, 29}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 272}, {260, 57}}</string>
+						<string>{{0, 176}, {130, 29}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
@@ -328,11 +328,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/+x-y.png/</string>
 						<key>OriginalRect</key>
-						<string>{{90, 119}, {260, 57}}</string>
+						<string>{{45, 59}, {130, 29}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{0, 272}</string>
+						<string>{0, 176}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -342,7 +342,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0, -18.75}</string>
+						<string>{0, -18.5}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -353,19 +353,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1gFAAAAAAQQMAAAAKSRHuC/5vA5kNoy
-					0e+9Q5+zqSeziHqdrCCNpo+yjJv2MAQAAK8B
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTMx
-					MzkzMzYyMzY2NTYzMzQ2NDM3MzgzNTMzMzQ2
-					MzMyMzE2NTYyMzUzNTMzMzk2NjY2NjM2NDY1
-					NjUzNjM1NjI2MTM1NjQzMTMwNjU2NjYxM2Iz
+					Ym9va1gFAAAAAAQQMAAAAITwit4675o4yVDw
+					JPFkZgUlipqDPeWHLxYi4OQvpyaVMAQAAK8B
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTY0
+					NjUzNjMyNjEzMjY2NjE2MjY0MzA2MTMzMzkz
+					MjMzMzkzODYzMzQzNjMzMzM2MjMzMzAzMTY2
+					MzMzMTYyMzU2NTYyMzczMjYyMzg2MjY1M2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjM2NjYxMzczYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQzODYyMzczYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -383,9 +383,9 @@
 					AAAACAAAAAQDAADz8Q8AAAAAAAgAAAAEAwAA
 					9vEPAAAAAAAIAAAABAMAAFrHFAAAAAAACAAA
 					AAQDAAAMZjMAAAAAAAgAAAAEAwAAXs4zAAAA
-					AAAIAAAABAMAAKfPMwAAAAAAJAAAAAEGAAB8
+					AAAIAAAABAMAAJiaNAAAAAAAJAAAAAEGAAB8
 					AgAAjAIAAJwCAACsAgAAvAIAAMwCAADcAgAA
-					7AIAAPwCAAAIAAAAAAQAAEG2msJTAAAAGAAA
+					7AIAAPwCAAAIAAAAAAQAAEG2nCKKAAAAGAAA
 					AAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAA
 					AAAAAAAAAQUAAAQAAAADAwAAAgAAAAgAAAAE
 					AwAABwAAAAAAAAAEAAAAAwMAAPUBAAAMAAAA
@@ -439,7 +439,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -459,13 +459,13 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 166}, {130, 28}}</string>
+						<string>{{0, 144}, {130, 29}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 332}, {260, 56}}</string>
+						<string>{{0, 144}, {130, 29}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
@@ -483,11 +483,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/-x+y.png/</string>
 						<key>OriginalRect</key>
-						<string>{{91, 45}, {260, 56}}</string>
+						<string>{{46, 22}, {130, 29}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{0, 332}</string>
+						<string>{0, 144}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -497,7 +497,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0.5, 18.5}</string>
+						<string>{1, 18.5}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -508,19 +508,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1gFAAAAAAQQMAAAAAZch/Rg/cXlSSV1
-					a4hpc+9mG/Jytt4aKWJaoD9LYDJhMAQAAK8B
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTMz
-					MzgzMDMwMzg2MjM3MzgzNzM0Mzk2NDMzNjUz
-					NjYxMzUzNTYyNjUzNjY2NjQzNjMwNjUzMjY2
-					NjY2NTY1NjIzNzM4MzUzMDY1MzIzNjY2M2Iz
+					Ym9va1gFAAAAAAQQMAAAAHCulY32yjKCsw6m
+					nKgnvWDwoTl+CY2zT9Ffmlpp+d68MAQAAK8B
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTYy
+					Mzg2MjM2MzkzODY2NjY2MzMwMzIzODMwMzkz
+					NzMxNjEzMzMxMzMzNDM4MzgzNjM1MzA2NTM0
+					MzkzMjMxMzY2NTMxNjM2NTY2Mzc2MTMwM2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjM2NjY0NjEzYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQzODM4NjUzYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -538,9 +538,9 @@
 					AAAACAAAAAQDAADz8Q8AAAAAAAgAAAAEAwAA
 					9vEPAAAAAAAIAAAABAMAAFrHFAAAAAAACAAA
 					AAQDAAAMZjMAAAAAAAgAAAAEAwAAXs4zAAAA
-					AAAIAAAABAMAANrPMwAAAAAAJAAAAAEGAAB8
+					AAAIAAAABAMAAIiaNAAAAAAAJAAAAAEGAAB8
 					AgAAjAIAAJwCAACsAgAAvAIAAMwCAADcAgAA
-					7AIAAPwCAAAIAAAAAAQAAEG2msJsAAAAGAAA
+					7AIAAPwCAAAIAAAAAAQAAEG2nCJ5AAAAGAAA
 					AAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAA
 					AAAAAAAAAQUAAAQAAAADAwAAAgAAAAgAAAAE
 					AwAABwAAAAAAAAAEAAAAAwMAAPUBAAAMAAAA
@@ -594,7 +594,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -614,19 +614,19 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{68, 196}, {55.5, 65.5}}</string>
+						<string>{{136, 72}, {56, 66}}</string>
 						<key>Frame-HD</key>
-						<string>{{136, 392}, {111, 131}}</string>
+						<string>{{136, 72}, {56, 66}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
 						<true/>
 						<key>IsRotated</key>
-						<true/>
+						<false/>
 						<key>IsTrimmed</key>
 						<true/>
 						<key>Name</key>
@@ -638,11 +638,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/-x-y.png/</string>
 						<key>OriginalRect</key>
-						<string>{{91, 44}, {111, 131}}</string>
+						<string>{{45, 22}, {56, 66}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{136, 392}</string>
+						<string>{136, 72}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -652,7 +652,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{-36.75, 0.25}</string>
+						<string>{-37, -0}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -663,19 +663,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1QFAAAAAAQQMAAAAK1Ct6JWBWcgdP7z
-					f8o6TJN9+kmkHvcwllqVcBG0yw2QLAQAAKkB
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTY1
-					MzQzNjM1MzYzNzMxMzk2NDMzMzAzMTMyMzYz
-					MTY0MzczMjMxNjIzNDM4MzI2MzM3MzkzNTYx
-					MzczNTMyNjMzMjM5NjIzMzYxNjUzNjM3M2Iz
+					Ym9va1QFAAAAAAQQMAAAAC0kODDqyG5IJ6Hl
+					DO4/Y0O+u2i8R50CVQvOEP1boJNELAQAAKkB
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTYx
+					NjY2MTM2NjUzMDYyNjY2NTY1NjQzNjY2Mzg2
+					MTM2MzgzOTM5MzA2MjM5Mzc2NjM4MzE2MTYx
+					MzA2MjY1MzM2NTM0MzA2MzMxNjUzMjM1M2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjM2NTM3MzQzYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQ2MTMwMzAzYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -693,9 +693,9 @@
 					AAAABAMAAPPxDwAAAAAACAAAAAQDAAD28Q8A
 					AAAAAAgAAAAEAwAAWscUAAAAAAAIAAAABAMA
 					AAxmMwAAAAAACAAAAAQDAABezjMAAAAAAAgA
-					AAAEAwAAdM4zAAAAAAAkAAAAAQYAAHgCAACI
+					AAAEAwAAQpg0AAAAAAAkAAAAAQYAAHgCAACI
 					AgAAmAIAAKgCAAC4AgAAyAIAANgCAADoAgAA
-					+AIAAAgAAAAABAAAQbaawWkAAAAYAAAAAQIA
+					+AIAAAgAAAAABAAAQbacHwUAAAAYAAAAAQIA
 					AAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAA
 					AAABBQAABAAAAAMDAAACAAAACAAAAAQDAAAH
 					AAAAAAAAAAQAAAADAwAA9QEAAAwAAAABAQAA
@@ -749,7 +749,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -769,13 +769,13 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 0}, {130, 65.5}}</string>
+						<string>{{0, 72}, {130, 67}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 0}, {260, 131}}</string>
+						<string>{{0, 72}, {130, 67}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
@@ -793,11 +793,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/x.png/</string>
 						<key>OriginalRect</key>
-						<string>{{90, 45}, {260, 131}}</string>
+						<string>{{45, 21}, {130, 67}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{0, 0}</string>
+						<string>{0, 72}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -807,7 +807,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0, -0.25}</string>
+						<string>{0, 0.5}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -818,19 +818,19 @@
 				<dict>
 					<key>DocumentSecurityImageBookmark</key>
 					<data>
-					Ym9va1QFAAAAAAQQMAAAADR4jvrNsA0XuGKQ
-					R3pSEaUfjOUwwKTRH3e1DKEI5iVALAQAAKkB
-					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTYy
-					NjEzMjMyMzE2NDMzMzkzNDYxMzg2MjM3MzUz
-					NjMwMzc2MTMyMzkzMTY2MzAzNDMwNjU2NTY2
-					MzIzMDM0Mzc2NTYxMzIzNjM3NjUzNjM4M2Iz
+					Ym9va1QFAAAAAAQQMAAAAF5aHMs/YrhSx3OU
+					SUTb37tE0ccLjqvaNCe3XPdzBQ4oLAQAAKkB
+					AAABAQAAYXBwbGVzZWN1cml0eXNjb3BlPTYz
+					NjYzNTYzMzczMDYzMzAzNDMwMzMzMzM4MzUz
+					ODMzMzEzNDM0MzI2NDM5MzUzMjYyNjU2NjMx
+					NjM2NjMzNjY2MjM4NjIzNjYzMzI2NDM4M2Iz
 					MDMwMzAzMDMwMzAzMDMwM2IzMDMwMzAzMDMw
 					MzAzMDMwMzAzMDMwMzAzMDMwMzIzMDNiNjM2
 					ZjZkMmU2MTcwNzA2YzY1MmU2MTcwNzAyZDcz
 					NjE2ZTY0NjI2Zjc4MmU3MjY1NjE2NDJkNzc3
 					MjY5NzQ2NTNiMzAzMDMwMzAzMDMwMzAzMTNi
 					MzAzMTMwMzAzMDMwMzAzMzNiMzAzMDMwMzAz
-					MDMwMzAzMDMwMzAzMzMzNjM2NTM2MzkzYjJm
+					MDMwMzAzMDMwMzAzMzM0MzQ2MTMxMzEzYjJm
 					NzU3MzY1NzI3MzJmNjE2ZTc0NmY2ZTdhNjg2
 					NTcyNjQ2NTc2MmY2NDY1NzYyZjc0NzI2MTY5
 					NmU3MzJmNzQ3MjYxNjk2ZTczNmY3Mzc4MmY2
@@ -848,9 +848,9 @@
 					AAAABAMAAPPxDwAAAAAACAAAAAQDAAD28Q8A
 					AAAAAAgAAAAEAwAAWscUAAAAAAAIAAAABAMA
 					AAxmMwAAAAAACAAAAAQDAABezjMAAAAAAAgA
-					AAAEAwAAac4zAAAAAAAkAAAAAQYAAHgCAACI
+					AAAEAwAAV5g0AAAAAAAkAAAAAQYAAHgCAACI
 					AgAAmAIAAKgCAAC4AgAAyAIAANgCAADoAgAA
-					+AIAAAgAAAAABAAAQbaawWEAAAAYAAAAAQIA
+					+AIAAAgAAAAABAAAQbacHxcAAAAYAAAAAQIA
 					AAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAA
 					AAABBQAABAAAAAMDAAACAAAACAAAAAQDAAAH
 					AAAAAAAAAAQAAAADAwAA9QEAAAwAAAABAQAA
@@ -904,7 +904,7 @@
 					<key>SheetImage</key>
 					<string>rails_rails.png</string>
 					<key>SheetImage-HD</key>
-					<string>rails_rails-hd.png</string>
+					<string>rails_rails.png</string>
 					<key>TextureProperties</key>
 					<dict>
 						<key>Angle</key>
@@ -924,13 +924,13 @@
 						<key>FlipY</key>
 						<false/>
 						<key>Frame</key>
-						<string>{{0, 68}, {130, 65}}</string>
+						<string>{{0, 0}, {131, 68}}</string>
 						<key>Frame-HD</key>
-						<string>{{0, 136}, {260, 130}}</string>
+						<string>{{0, 0}, {131, 68}}</string>
 						<key>Image</key>
 						<string>rails_rails.png</string>
 						<key>Image-HD</key>
-						<string>rails_rails-hd.png</string>
+						<string>rails_rails.png</string>
 						<key>IsCropped</key>
 						<false/>
 						<key>IsDrawable</key>
@@ -948,11 +948,11 @@
 						<key>OriginalImage_RelativePath</key>
 						<string>../Rendered/y.png/</string>
 						<key>OriginalRect</key>
-						<string>{{90, 45}, {260, 130}}</string>
+						<string>{{45, 20}, {131, 68}}</string>
 						<key>OriginalSize</key>
-						<string>{440, 220}</string>
+						<string>{220, 110}</string>
 						<key>Position</key>
-						<string>{0, 136}</string>
+						<string>{0, 0}</string>
 						<key>Scale</key>
 						<string>{1, 1}</string>
 						<key>SpriteSize</key>
@@ -962,7 +962,7 @@
 						<key>Tag</key>
 						<integer>0</integer>
 						<key>TextureOffset</key>
-						<string>{0, -0}</string>
+						<string>{0.5, 1}</string>
 						<key>UsesBatchRendering</key>
 						<true/>
 						<key>ZOrder</key>
@@ -971,7 +971,7 @@
 				</dict>
 			</dict>
 			<key>Size</key>
-			<string>{512, 512}</string>
+			<string>{256, 256}</string>
 			<key>Trim</key>
 			<true/>
 			<key>ZOrder</key>
@@ -999,9 +999,9 @@
 		<key>PvrRemoveParent</key>
 		<true/>
 		<key>ResamplingAlgorithm</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>ResizingOptions</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>SaveStyle</key>
 		<integer>0</integer>
 	</dict>
