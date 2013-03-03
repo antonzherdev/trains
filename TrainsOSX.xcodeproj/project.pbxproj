@@ -25,6 +25,7 @@
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
 		20DC87CEB3964AACA387D61E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8ACB03F5AB241CA9AB573A0 /* libPods.a */; };
 		6F3DF099F3A1D126D316CF6F /* CCSprite+CESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */; };
+		6F3DF0A78C3DC67C2634EF2A /* CNChainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF954D2E97F8964D50A7A /* CNChainItem.m */; };
 		6F3DF13C5422A063C38A1C07 /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFC2F6B7A6ABE2951509A /* City.png */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DF2A14065207E43079C03 /* Car1_Orange.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6666C3D9099AB966F87 /* Car1_Orange.plist */; };
@@ -43,6 +44,8 @@
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
 		6F3DF72CAD7F617448442CB4 /* CRSwitchesComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */; };
+		6F3DF79893ACFD543E0F188C /* CNYield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC444DAFEC082F442948 /* CNYield.m */; };
+		6F3DF7A6E778FE7E6718DC90 /* CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCECF9B68D3A6CE42049 /* CNChain.m */; };
 		6F3DF7AE28608C93F5D9A837 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF47D79CC526D20F29924 /* Podfile */; };
 		6F3DF7B3A639B7042608A8DD /* Car1_Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF1E856A58245EF3E6A17 /* Car1_Orange.png */; };
 		6F3DF805A9BFF0DD47BFB091 /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF73921F94975C2F02534 /* Rails.png */; };
@@ -52,7 +55,9 @@
 		6F3DF9FD84DFACCA42CFE909 /* CEMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF36A18CCC89D8594DEFB /* CEMap.m */; };
 		6F3DFA0938641A0099140508 /* CRRailroad+CRRailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5A965C94BF826D18AD5 /* CRRailroad+CRRailPoint.m */; };
 		6F3DFAB0237E6EEA3BA0AA6C /* CRCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF439E99063519D7F0D97 /* CRCar.m */; };
+		6F3DFC5CDE0C6942F05CC9B3 /* NSArray+CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF51536C06833E0501425 /* NSArray+CNChain.m */; };
 		6F3DFC75D1D5C46D0AA5DF41 /* Car1_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF9751EA8E12D8BADEB27 /* Car1_Green.png */; };
+		6F3DFCBEAFC1A5790C4F10F1 /* CNSourceLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF253CC7C4559042960F0 /* CNSourceLink.m */; };
 		6F3DFCD734D4F4C31813442B /* CRTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF745F457C41FE14A4F36 /* CRTrain.m */; };
 		6F3DFD0D54399F420F603AA3 /* CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF85165447D6B762B3D7B /* CRSwitch.m */; };
 		6F3DFD28A9F4E481565A3448 /* rails_rails-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */; };
@@ -89,6 +94,7 @@
 		6F3DF199403BB9EA79FF3E39 /* rails_rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rails_rails.png; path = Images/Rails/Sprite/rails_rails.png; sourceTree = "<group>"; };
 		6F3DF1E856A58245EF3E6A17 /* Car1_Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car1_Orange.png; path = Images/Car1/Sprite/Car1_Orange.png; sourceTree = "<group>"; };
 		6F3DF20B44B6ADF28431DB15 /* Car1_Orange-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "Car1_Orange-hd.plist"; path = "Images/Car1/Sprite/Car1_Orange-hd.plist"; sourceTree = "<group>"; };
+		6F3DF253CC7C4559042960F0 /* CNSourceLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSourceLink.m; sourceTree = "<group>"; };
 		6F3DF290C45847D4636C91B5 /* CRRailroad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRRailroad.m; path = Sources/CRRailroad.m; sourceTree = "<group>"; };
 		6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCNode+CENode.m"; path = "Sources/CCNode+CENode.m"; sourceTree = "<group>"; };
 		6F3DF2BE0BB2C87F4A6C6F0B /* CRRailroad+CRRailPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CRRailroad+CRRailPoint.h"; path = "Sources/CRRailroad+CRRailPoint.h"; sourceTree = "<group>"; };
@@ -102,7 +108,9 @@
 		6F3DF45371756DBD2C741507 /* CETileIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CETileIndex.h; path = Sources/CETileIndex.h; sourceTree = "<group>"; };
 		6F3DF462975CA05F835E0411 /* Car1_Green-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "Car1_Green-hd.plist"; path = "Images/Car1/Sprite/Car1_Green-hd.plist"; sourceTree = "<group>"; };
 		6F3DF47D79CC526D20F29924 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6F3DF4B08BFD2871D484BC46 /* CNSourceLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSourceLink.h; sourceTree = "<group>"; };
 		6F3DF4FE46DA237ACC5FA816 /* CRSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRSwitch.h; path = Sources/CRSwitch.h; sourceTree = "<group>"; };
+		6F3DF51536C06833E0501425 /* NSArray+CNChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CNChain.m"; sourceTree = "<group>"; };
 		6F3DF52BB88F00F60CEDE7E5 /* CRRailroad+CRSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CRRailroad+CRSwitch.h"; path = "Sources/CRRailroad+CRSwitch.h"; sourceTree = "<group>"; };
 		6F3DF5316F8ABD7B61E42262 /* CRRail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRail.h; path = Sources/CRRail.h; sourceTree = "<group>"; };
 		6F3DF5582429D099913A2E3C /* CRSwitchesComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRSwitchesComposition.h; path = Sources/CRSwitchesComposition.h; sourceTree = "<group>"; };
@@ -116,6 +124,8 @@
 		6F3DF6666C3D9099AB966F87 /* Car1_Orange.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Car1_Orange.plist; path = Images/Car1/Sprite/Car1_Orange.plist; sourceTree = "<group>"; };
 		6F3DF6C582BAC2EA2BAE5369 /* Car1_Green.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Car1_Green.plist; path = Images/Car1/Sprite/Car1_Green.plist; sourceTree = "<group>"; };
 		6F3DF6D28F729E2FB40BC627 /* rails_rails-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rails_rails-hd.png"; path = "Images/Rails/Sprite/rails_rails-hd.png"; sourceTree = "<group>"; };
+		6F3DF6D87AB6F610CD250608 /* CNYield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNYield.h; sourceTree = "<group>"; };
+		6F3DF6E6B038745B7A29913E /* CNChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNChain.h; sourceTree = "<group>"; };
 		6F3DF73921F94975C2F02534 /* Rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rails.png; path = Resources/Rails.png; sourceTree = "<group>"; };
 		6F3DF745F457C41FE14A4F36 /* CRTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRTrain.m; path = Sources/CRTrain.m; sourceTree = "<group>"; };
 		6F3DF75B6BF126F1D8316576 /* CECurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CECurve.h; path = Sources/CECurve.h; sourceTree = "<group>"; };
@@ -124,29 +134,35 @@
 		6F3DF892677A53681CAD6625 /* CEEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEEnum.m; path = Sources/CEEnum.m; sourceTree = "<group>"; };
 		6F3DF8A9C6304588F26BC837 /* CRRailroad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRailroad.h; path = Sources/CRRailroad.h; sourceTree = "<group>"; };
 		6F3DF9217AB05E7415DA2C99 /* cocoa-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cocoa-ex.h"; path = "Sources/cocoa-ex.h"; sourceTree = "<group>"; };
+		6F3DF954D2E97F8964D50A7A /* CNChainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNChainItem.m; sourceTree = "<group>"; };
 		6F3DF9751EA8E12D8BADEB27 /* Car1_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car1_Green.png; path = Images/Car1/Sprite/Car1_Green.png; sourceTree = "<group>"; };
 		6F3DF9FBBD580702B9AFE76A /* CRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRCity.m; path = Sources/CRCity.m; sourceTree = "<group>"; };
 		6F3DFA260DC71D424613434D /* NSArray+CocoaEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+CocoaEx.h"; path = "Sources/NSArray+CocoaEx.h"; sourceTree = "<group>"; };
 		6F3DFA265F42C0CAC2DD981B /* CECurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CECurve.m; path = Sources/CECurve.m; sourceTree = "<group>"; };
 		6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+CocoaEx.m"; path = "Sources/NSArray+CocoaEx.m"; sourceTree = "<group>"; };
 		6F3DFAB671F92568BE6DC7DC /* crBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crBase.h; sourceTree = "<group>"; };
+		6F3DFAC1A4DDCE46FB42707D /* cnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cnTypes.h; sourceTree = "<group>"; };
 		6F3DFB5016ED966D48D7CD2C /* CRRail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRRail.m; path = Sources/CRRail.m; sourceTree = "<group>"; };
 		6F3DFB7F31B3649C52404F77 /* CEBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEBezier.h; path = Sources/CEBezier.h; sourceTree = "<group>"; };
 		6F3DFB92CEF05392C19FFFFE /* CRCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRCar.h; path = Sources/CRCar.h; sourceTree = "<group>"; };
 		6F3DFBBA8ABBEDD55900EAE6 /* CRTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRTrain.h; path = Sources/CRTrain.h; sourceTree = "<group>"; };
 		6F3DFC2F6B7A6ABE2951509A /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = City.png; path = Resources/City.png; sourceTree = "<group>"; };
 		6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+CocoaEx.m"; path = "Sources/NSMutableArray+CocoaEx.m"; sourceTree = "<group>"; };
+		6F3DFC444DAFEC082F442948 /* CNYield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNYield.m; sourceTree = "<group>"; };
 		6F3DFC598C88B627956EA049 /* cocos2d-ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cocos2d-ex.h"; path = "Sources/cocos2d-ex.h"; sourceTree = "<group>"; };
 		6F3DFCAB236E8FCB3604B92D /* CRRailForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRailForm.m; sourceTree = "<group>"; };
 		6F3DFCB798DAF2C18877E904 /* CETileIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CETileIndex.m; path = Sources/CETileIndex.m; sourceTree = "<group>"; };
 		6F3DFCCCD563C1F49F317FB8 /* CEMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEMap.h; path = Sources/CEMap.h; sourceTree = "<group>"; };
+		6F3DFCECF9B68D3A6CE42049 /* CNChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNChain.m; sourceTree = "<group>"; };
 		6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEOrtoSprite.m; path = Sources/CEOrtoSprite.m; sourceTree = "<group>"; };
 		6F3DFD6424C6232A8ACA597D /* CRRailroadBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRailroadBuilder.h; path = Sources/CRRailroadBuilder.h; sourceTree = "<group>"; };
 		6F3DFDA903DBA378366693F2 /* CEBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEBezier.m; path = Sources/CEBezier.m; sourceTree = "<group>"; };
 		6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "rails_rails-hd.plist"; path = "Images/Rails/Sprite/rails_rails-hd.plist"; sourceTree = "<group>"; };
+		6F3DFE0C4C1D01E435635329 /* NSArray+CNChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CNChain.h"; sourceTree = "<group>"; };
 		6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEOrtoMap.m; path = Sources/CEOrtoMap.m; sourceTree = "<group>"; };
 		6F3DFE55268CAB885D0C4A01 /* Car1_Orange-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Car1_Orange-hd.png"; path = "Images/Car1/Sprite/Car1_Orange-hd.png"; sourceTree = "<group>"; };
 		6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CCSprite+CESprite.m"; path = "Sources/CCSprite+CESprite.m"; sourceTree = "<group>"; };
+		6F3DFF48F1E4DE0EE3E5BCCB /* CNChainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNChainItem.h; sourceTree = "<group>"; };
 		6F3DFF87623D8983EA6115F3 /* CEOrtoMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEOrtoMap.h; path = Sources/CEOrtoMap.h; sourceTree = "<group>"; };
 		6F3DFF9F7E122A314C289688 /* NSMutableArray+CocoaEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+CocoaEx.h"; path = "Sources/NSMutableArray+CocoaEx.h"; sourceTree = "<group>"; };
 		6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRSwitchesComposition.m; path = Sources/CRSwitchesComposition.m; sourceTree = "<group>"; };
@@ -259,6 +275,7 @@
 				0291C46D161B67990085AB91 /* Resources */,
 				6F3DF609C408525FE8B88180 /* CocoaEx */,
 				028F1C09161F660E002FE46D /* CocosEx */,
+				6F3DF3E5667B28255359A253 /* Chain */,
 			);
 			path = TrainsOSX;
 			sourceTree = "<group>";
@@ -325,6 +342,16 @@
 			name = Car1;
 			sourceTree = "<group>";
 		};
+		6F3DF3E5667B28255359A253 /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DFDE50D7D7B5CDCB8BB65 /* Core */,
+				6F3DF87C5BD7FB63ED4F8536 /* Categories */,
+				6F3DFE7E03B626686D949769 /* Links */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
 		6F3DF47CF721D1F8B2FBAE5C /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +392,15 @@
 			name = Railroad;
 			sourceTree = "<group>";
 		};
+		6F3DF87C5BD7FB63ED4F8536 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DFE0C4C1D01E435635329 /* NSArray+CNChain.h */,
+				6F3DF51536C06833E0501425 /* NSArray+CNChain.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		6F3DF9A39DB3362002A37EE9 /* Train */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +423,29 @@
 				6F3DF2DADBEBE79BD9AF35E4 /* Base */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		6F3DFDE50D7D7B5CDCB8BB65 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DF6E6B038745B7A29913E /* CNChain.h */,
+				6F3DFCECF9B68D3A6CE42049 /* CNChain.m */,
+				6F3DFF48F1E4DE0EE3E5BCCB /* CNChainItem.h */,
+				6F3DF954D2E97F8964D50A7A /* CNChainItem.m */,
+				6F3DFAC1A4DDCE46FB42707D /* cnTypes.h */,
+				6F3DFC444DAFEC082F442948 /* CNYield.m */,
+				6F3DF6D87AB6F610CD250608 /* CNYield.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6F3DFE7E03B626686D949769 /* Links */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DF253CC7C4559042960F0 /* CNSourceLink.m */,
+				6F3DF4B08BFD2871D484BC46 /* CNSourceLink.h */,
+			);
+			path = Links;
 			sourceTree = "<group>";
 		};
 		6F3DFF081BFA3C001DA2D931 /* Switch */ = {
@@ -528,6 +587,11 @@
 				6F3DF9A5F6E7E441601AD049 /* CRCityColor.m in Sources */,
 				6F3DF63DC472B1D54FF4383C /* CEEnum.m in Sources */,
 				6F3DF5B3EF0456D433E7F55F /* CRRailForm.m in Sources */,
+				6F3DF7A6E778FE7E6718DC90 /* CNChain.m in Sources */,
+				6F3DFC5CDE0C6942F05CC9B3 /* NSArray+CNChain.m in Sources */,
+				6F3DF0A78C3DC67C2634EF2A /* CNChainItem.m in Sources */,
+				6F3DFCBEAFC1A5790C4F10F1 /* CNSourceLink.m in Sources */,
+				6F3DF79893ACFD543E0F188C /* CNYield.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
