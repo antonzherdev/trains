@@ -1,9 +1,10 @@
 #import "CNYield.h"
 
 @class CNChain;
-typedef void (^cnChainBuildBlock)(CNChain *);
-
+typedef void (^cnChainBuildBlock)(CNChain * chain);
 
 @protocol CNChainLink <NSObject>
-- (void) applyYield:(id<CNYield>)yield;
+- (CNYield *)buildYield:(CNYield *)yield;
 @end
+
+

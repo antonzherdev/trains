@@ -5,14 +5,20 @@ typedef enum {
     cnYieldBreak,
 } CNYieldResult;
 
-@protocol CNYield <NSObject>
+typedef CNYieldResult (^cnYield)(id item);
+typedef CNYieldResult (^cnYieldBegin)(NSUInteger size);
+typedef CNYieldResult (^cnYieldEnd)(CNYieldResult result);
+typedef CNYieldResult (^cnYieldAll)(id<NSFastEnumeration> collection);
+
+@interface CNYield : NSObject
+- (id)initWithBegin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all;
+
++ (CNYield*)yieldWithBegin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all;
+
++ (CNYieldResult) yieldAll:(id<NSFastEnumeration>)collection byItemsTo:(CNYield *) yield;
+
 - (CNYieldResult) beginYieldWithSize:(NSUInteger)size;
 - (CNYieldResult) yieldItem:(id)item;
-- (void) endYieldWithResult:(CNYieldResult)result;
-@optional
+- (CNYieldResult) endYieldWithResult:(CNYieldResult)result;
 - (CNYieldResult) yieldAll:(id<NSFastEnumeration>)collection;
-@end
-
-@interface CNYield
-+ (void) yieldAll:(id<NSFastEnumeration>)collection in:(id<CNYield>)yield;
 @end

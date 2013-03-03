@@ -18,8 +18,15 @@
     [super dealloc];
 }
 
-- (void)applyYield:(id <CNYield>)yield {
-    [CNYield yieldAll:_collection in:yield];
+- (CNYield *)buildYield:(CNYield *)yield {
+    [yield retain];
+    return [CNYield yieldWithBegin:nil yield:nil end:^CNYieldResult(CNYieldResult result) {
+        if (result == cnYieldContinue) {
+            [yield yieldAll:_collection];
+        }
+        [yield release];
+        return cnYieldContinue;
+    } all:nil];
 }
 
 + (id)linkWithCollection:(NSObject<NSFastEnumeration>*)collection {

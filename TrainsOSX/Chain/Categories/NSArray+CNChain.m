@@ -6,7 +6,7 @@
 - (id)chain:(void (^)(CNChain *))block {
     CNChain *chain = [CNChain chainWithCollection:self];
     block(chain);
-    return [chain apply];
+    return [chain array];
 }
 
 - (CNChain *)chain {

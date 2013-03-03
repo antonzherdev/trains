@@ -14,6 +14,32 @@
     return [chain autorelease];
 }
 
+- (NSArray *)array {
+    __block id ret;
+    CNYield *yield = [CNYield yieldWithBegin:^CNYieldResult(NSUInteger size) {
+        ret = [NSMutableArray arrayWithCapacity:size];
+        return cnYieldContinue;
+    } yield:^CNYieldResult(id item) {
+        [ret addObject:item];
+        return cnYieldContinue;
+    } end:nil all:^CNYieldResult(id <NSFastEnumeration> collection) {
+        if([collection isKindOfClass:[NSArray class]]) {
+            ret = collection;
+            return cnYieldContinue;
+        }
+        return cnYieldBreak;
+        //return [CNYield yieldAll:collection byItemsTo:yield];
+    }];
+    [self apply:yield];
+    return ret;
+}
+
+- (CNYieldResult)apply:(CNYield *)yield {
+    CNYield *y = [_first buildYield:yield];
+    CNYieldResult result = [y beginYieldWithSize:0];
+    return [y endYieldWithResult:result];
+}
+
 - (CNChain*)link:(id <CNChainLink>)link {
     CNChainItem *next = [CNChainItem itemWithLink:link];
     if(_first == nil) {
@@ -24,10 +50,6 @@
         _last = next;
     }
     return self;
-}
-
-- (id)apply {
-    return nil;
 }
 
 - (void)dealloc {
