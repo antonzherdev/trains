@@ -116,7 +116,6 @@ kmVec3* const kmPlaneIntersectLine(kmVec3* pOut, const kmPlane* pP, const kmVec3
     kmVec3Subtract(&d, pV2, pV1); //Get the direction vector
 
 
-    //TODO: Continue here!
     /*if (fabs(kmVec3Dot(&pP->m_N, &d)) > kmEpsilon)
     {
 	    //If we get here then the plane and line are parallel (i.e. no intersection)

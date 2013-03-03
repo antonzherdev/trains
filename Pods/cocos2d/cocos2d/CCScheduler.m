@@ -425,7 +425,6 @@ typedef struct _hashSelectorEntry
 #if COCOS2D_DEBUG >= 1
         NSAssert( hashElement->entry->markedForDeletion, @"CCScheduler: You can't re-schedule an 'update' selector'. Unschedule it first");
 #endif
-        // TODO : check if priority has changed!
 
         hashElement->entry->markedForDeletion = NO;
         return;

@@ -113,8 +113,6 @@ void calculate_line_normal(kmVec2 p1, kmVec2 p2, kmVec2* normal_out) {
     normal_out->x = -tmp.y;
     normal_out->y = tmp.x;
     kmVec2Normalize(normal_out, normal_out);
-
-    //TODO: should check that the normal is pointing out of the triangle
 }
 
 kmBool kmRay2IntersectTriangle(const kmRay2* ray, const kmVec2* p1, const kmVec2* p2, const kmVec2* p3, kmVec2* intersection, kmVec2* normal_out) {

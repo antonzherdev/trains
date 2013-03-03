@@ -17,6 +17,7 @@
 }
 
 
+//TODO: Replace with recursion
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
     CGFloat error = 0;
     CRDirection dir = length < 0 ? crBackward : crForward;
