@@ -1,12 +1,22 @@
 #import "CNChain.h"
 #import "CNSourceLink.h"
 #import "CNChainItem.h"
+#import "CNFilterLink.h"
 
 
 @implementation CNChain {
     CNChainItem* _first;
     CNChainItem* _last;
 }
+- (BOOL)isEqual:(id)other {
+    if (other == self)
+        return YES;
+    if (!other || ![[other class] isEqual:[self class]])
+        return NO;
+
+    return [self isEqualToChain:other];
+}
+
 
 + (CNChain*)chainWithCollection:(NSObject<NSFastEnumeration>*)collection {
     CNChain *chain = [[CNChain alloc] init];
@@ -34,6 +44,15 @@
     return ret;
 }
 
+- (CNChain *)filter:(cnPredicate)predicate {
+    return [self link:[CNFilterLink linkWithPredicate:predicate selectivity:0]];
+}
+
+- (CNChain *)filter:(cnPredicate)predicate selectivity:(double)selectivity {
+    return [self link:[CNFilterLink linkWithPredicate:predicate selectivity:selectivity]];
+}
+
+
 - (CNYieldResult)apply:(CNYield *)yield {
     CNYield *y = [_first buildYield:yield];
     CNYieldResult result = [y beginYieldWithSize:0];
@@ -56,4 +75,5 @@
     [_first release];
     [super dealloc];
 }
+
 @end

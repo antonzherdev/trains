@@ -14,6 +14,7 @@ typedef CNYieldResult (^cnYieldAll)(id<NSFastEnumeration> collection);
 - (id)initWithBegin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all;
 
 + (CNYield*)yieldWithBegin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all;
++ (CNYield*)decorateYield:(CNYield*)base begin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all;
 
 + (CNYieldResult) yieldAll:(id<NSFastEnumeration>)collection byItemsTo:(CNYield *) yield;
 

@@ -13,5 +13,13 @@
     return [CNChain chainWithCollection:self];
 }
 
+- (CNChain *)filter:(cnPredicate)predicate {
+    return [[self chain] filter:predicate];
+}
+
+- (CNChain *)filter:(cnPredicate)predicate selectivity:(double)selectivity {
+    return [[self chain] filter:predicate selectivity:selectivity];
+}
+
 
 @end

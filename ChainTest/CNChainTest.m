@@ -9,4 +9,14 @@
     STAssertTrue(array == [[array chain] array], @"array == [[array chain] array]");
 }
 
+- (void)testFilter {
+    NSArray *array = [NSArray arrayWithObjects:@2, @3, @1, nil];
+    CNChain *chain = [array filter:^BOOL(id x) {
+        return [x intValue] <= 2;
+    }];
+    NSArray *exp = [NSArray arrayWithObjects:@2, @1, nil];
+    NSArray *result = [chain array];
+    STAssertEquals(exp, result, @"Arrays");
+}
+
 @end

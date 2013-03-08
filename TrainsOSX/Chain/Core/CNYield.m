@@ -23,6 +23,26 @@
     return [[[self alloc] initWithBegin:begin yield:yield end:end all:all] autorelease];
 }
 
++ (CNYield *)decorateYield:(CNYield *)base begin:(cnYieldBegin)begin yield:(cnYield)yield end:(cnYieldEnd)end all:(cnYieldAll)all {
+    if(begin == nil) {
+        begin = ^CNYieldResult(NSUInteger size) {
+            return [base beginYieldWithSize:size];
+        };
+    }
+    if(yield == nil) {
+        yield = ^CNYieldResult(id item) {
+            return [base yieldItem:item];
+        };
+    }
+    if(end == nil) {
+        end = ^CNYieldResult(CNYieldResult result) {
+            return [base endYieldWithResult:result];
+        };
+    }
+
+    return [CNYield yieldWithBegin:begin yield:yield end:end all:all];
+}
+
 
 + (CNYieldResult)yieldAll:(id <NSFastEnumeration>)collection byItemsTo:(CNYield *)yield {
     NSUInteger size = 0;//[collection count];
