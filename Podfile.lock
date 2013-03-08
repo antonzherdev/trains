@@ -1,14 +1,17 @@
 
 PODS:
 - BlocksKit (1.8.1)
+- Kiwi (2.0.5)
 - cocos2d (2.1.rc0)
 
 DEPENDENCIES:
 - BlocksKit
+- Kiwi
 - cocos2d
 
 SPEC CHECKSUMS:
   BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81
   cocos2d: c6d26b9c0abdbb26bed2e771baf94ce6fa7dd523
+  Kiwi: 89ade77eb49c889178cb2779e02514a7b9b9449e
 
 COCOAPODS: 0.16.4

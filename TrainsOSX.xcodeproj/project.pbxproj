@@ -33,6 +33,7 @@
 		0291C5E3161B679B0085AB91 /* CETextureBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */; };
 		0291C5EA161B680C0085AB91 /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291C5E9161B680C0085AB91 /* Grass.png */; };
 		20DC87CEB3964AACA387D61E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8ACB03F5AB241CA9AB573A0 /* libPods.a */; };
+		6254427F29694420A1C77A6F /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1288EEDB5A8147B58C71AFE5 /* libPods-test.a */; };
 		6F3DF099F3A1D126D316CF6F /* CCSprite+CESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */; };
 		6F3DF0A78C3DC67C2634EF2A /* CNChainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF954D2E97F8964D50A7A /* CNChainItem.m */; };
 		6F3DF13C5422A063C38A1C07 /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFC2F6B7A6ABE2951509A /* City.png */; };
@@ -112,6 +113,7 @@
 		0291C5E1161B679B0085AB91 /* CETextureBackgroundLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CETextureBackgroundLayer.h; path = Sources/CETextureBackgroundLayer.h; sourceTree = "<group>"; };
 		0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CETextureBackgroundLayer.m; path = Sources/CETextureBackgroundLayer.m; sourceTree = "<group>"; };
 		0291C5E9161B680C0085AB91 /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grass.png; path = Resources/Grass.png; sourceTree = "<group>"; };
+		1288EEDB5A8147B58C71AFE5 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CAF13C32E6472084F28C75 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		6F3DF199403BB9EA79FF3E39 /* rails_rails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rails_rails.png; path = Images/Rails/Sprite/rails_rails.png; sourceTree = "<group>"; };
 		6F3DF1E856A58245EF3E6A17 /* Car1_Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car1_Orange.png; path = Images/Car1/Sprite/Car1_Orange.png; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRSwitchesComposition.m; path = Sources/CRSwitchesComposition.m; sourceTree = "<group>"; };
 		6F3DFFC87FF30CC319AE0D68 /* CCSprite+CESprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCSprite+CESprite.h"; path = "Sources/CCSprite+CESprite.h"; sourceTree = "<group>"; };
 		B8ACB03F5AB241CA9AB573A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,7 @@
 			files = (
 				0287AEF416E357C200539ABF /* SenTestingKit.framework in Frameworks */,
 				0287AEF616E357C200539ABF /* Cocoa.framework in Frameworks */,
+				6254427F29694420A1C77A6F /* libPods-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 				0291C45D161B67990085AB91 /* Products */,
 				64CAF13C32E6472084F28C75 /* Pods.xcconfig */,
 				6F3DF47D79CC526D20F29924 /* Podfile */,
+				EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,6 +338,7 @@
 				0287AEF316E357C200539ABF /* SenTestingKit.framework */,
 				0287AEF516E357C200539ABF /* Cocoa.framework */,
 				0287AEF716E357C200539ABF /* Other Frameworks */,
+				1288EEDB5A8147B58C71AFE5 /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -544,6 +550,7 @@
 				0287AEEE16E357C200539ABF /* Frameworks */,
 				0287AEEF16E357C200539ABF /* Resources */,
 				0287AEF016E357C200539ABF /* ShellScript */,
+				57F333F9C17644628728E109 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -651,6 +658,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		57F333F9C17644628728E109 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
+		};
 		9472BD4321504D7EB8415AB6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -754,8 +775,8 @@
 /* Begin XCBuildConfiguration section */
 		0287AF0516E357C200539ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -765,7 +786,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -783,8 +803,8 @@
 		};
 		0287AF0616E357C200539ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -795,7 +815,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChainTest/ChainTest-Prefix.pch";

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>618478FC56BF451481C359E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>940A45CF7A8844A58ACEC10C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>994CFF7D16D74D689D672D26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
