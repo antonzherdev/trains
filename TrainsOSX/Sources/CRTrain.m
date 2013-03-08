@@ -45,7 +45,7 @@
 }
 
 - (void)setParent:(CCNode *)parent {
-    parent_ = parent;
+    _parent = parent;
     self.contentSize = parent.contentSize;
 }
 

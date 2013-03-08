@@ -81,7 +81,7 @@ void kmGLMatrixMode(kmGLEnum mode)
 			current_stack = &texture_matrix_stack;
 		break;
 		default:
-			assert(0 && "Invalid matrix mode specified");
+			assert(0 && "Invalid matrix mode specified"); //TODO: Proper error handling
 		break;
 	}
 }
@@ -152,7 +152,7 @@ void kmGLGetMatrix(kmGLEnum mode, kmMat4* pOut)
 			kmMat4Assign(pOut, texture_matrix_stack.top);
 		break;
 		default:
-			assert(1 && "Invalid matrix mode specified");
+			assert(1 && "Invalid matrix mode specified"); //TODO: Proper error handling
 		break;
 	}
 }

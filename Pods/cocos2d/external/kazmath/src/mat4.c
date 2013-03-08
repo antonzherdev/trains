@@ -513,6 +513,7 @@ kmMat4* const kmMat4Scaling(kmMat4* pOut, const kmScalar x, const kmScalar y,
 kmMat4* const kmMat4Translation(kmMat4* pOut, const kmScalar x,
                           const kmScalar y, const kmScalar z)
 {
+    //FIXME: Write a test for this
     memset(pOut->mat, 0, sizeof(float) * 16);
 
     pOut->mat[0] = 1.0f;
