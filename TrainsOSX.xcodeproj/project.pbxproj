@@ -89,7 +89,6 @@
 		0287AEFA16E357C200539ABF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0287AEFD16E357C200539ABF /* ChainTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChainTest-Info.plist"; sourceTree = "<group>"; };
 		0287AEFF16E357C200539ABF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0287AF0116E357C200539ABF /* CNChainTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNChainTest.h; sourceTree = "<group>"; };
 		0287AF0216E357C200539ABF /* CNChainTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNChainTest.m; sourceTree = "<group>"; };
 		0287AF0416E357C200539ABF /* ChainTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChainTest-Prefix.pch"; sourceTree = "<group>"; };
 		028F1C0A161F66FD002FE46D /* CRLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRLevel.h; path = Sources/CRLevel.h; sourceTree = "<group>"; };
@@ -239,7 +238,6 @@
 		0287AEFB16E357C200539ABF /* ChainTest */ = {
 			isa = PBXGroup;
 			children = (
-				0287AF0116E357C200539ABF /* CNChainTest.h */,
 				0287AF0216E357C200539ABF /* CNChainTest.m */,
 				0287AEFC16E357C200539ABF /* Supporting Files */,
 			);

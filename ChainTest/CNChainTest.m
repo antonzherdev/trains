@@ -1,22 +1,24 @@
 #import "CNChainTest.h"
 #import "chain.h"
+#import "Kiwi.h"
 
-@implementation CNChainTest
+SPEC_BEGIN(CNChainSpec)
 
-- (void)testSource {
-    NSArray *array = [NSArray arrayWithObjects:@1, @3, @2, nil];
-    STAssertTrue(array == [[CNChain chainWithCollection:array] array], @"array == [[CNChain chainWithCollection:array] array]");
-    STAssertTrue(array == [[array chain] array], @"array == [[array chain] array]");
-}
+  describe(@"The CNChain", ^{
+      NSArray *s = [NSArray arrayWithObjects:@1, @3, @2, nil];
+      it(@"should return the same array without any actions", ^{
+          NSArray *r = [[CNChain chainWithCollection:s] array];
+          [[r should] equal:s];
+          r = [[s chain] array];
+          [[r should] equal:s];
+      });
 
-- (void)testFilter {
-    NSArray *array = [NSArray arrayWithObjects:@2, @3, @1, nil];
-    CNChain *chain = [array filter:^BOOL(id x) {
-        return [x intValue] <= 2;
-    }];
-    NSArray *exp = [NSArray arrayWithObjects:@2, @1, nil];
-    NSArray *result = [chain array];
-    STAssertEquals(exp, result, @"Arrays");
-}
+      it(@"should filter items with condition", ^{
+          NSArray *r = [[s filter:^BOOL(NSNumber * x) {
+              return [x intValue] <= 2;
+          }] array];
+          [[r should] equal:@[@1, @2]];
+      });
+  });
 
-@end
+SPEC_END
