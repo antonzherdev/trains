@@ -2,22 +2,13 @@
 #import "CNSourceLink.h"
 #import "CNChainItem.h"
 #import "CNFilterLink.h"
+#import "CNMapLink.h"
 
 
 @implementation CNChain {
     CNChainItem* _first;
     CNChainItem* _last;
 }
-- (BOOL)isEqual:(id)other {
-    if (other == self)
-        return YES;
-    if (!other || ![[other class] isEqual:[self class]])
-        return NO;
-
-    return [self isEqualToChain:other];
-}
-
-
 + (CNChain*)chainWithCollection:(NSObject<NSFastEnumeration>*)collection {
     CNChain *chain = [[CNChain alloc] init];
     [chain link:[CNSourceLink linkWithCollection:collection]];
@@ -50,6 +41,10 @@
 
 - (CNChain *)filter:(cnPredicate)predicate selectivity:(double)selectivity {
     return [self link:[CNFilterLink linkWithPredicate:predicate selectivity:selectivity]];
+}
+
+- (CNChain *)map:(cnF)f {
+    return [self link:[CNMapLink linkWithF:f]];
 }
 
 

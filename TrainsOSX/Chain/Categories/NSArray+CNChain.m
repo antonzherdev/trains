@@ -21,5 +21,9 @@
     return [[self chain] filter:predicate selectivity:selectivity];
 }
 
+- (CNChain *)map:(cnF)f {
+    return [[self chain] map:f];
+}
+
 
 @end

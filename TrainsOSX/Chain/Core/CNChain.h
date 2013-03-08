@@ -10,9 +10,5 @@
 - (CNChain*)filter:(cnPredicate)predicate;
 - (CNChain*)filter:(cnPredicate)predicate selectivity:(double)selectivity;
 
-- (BOOL)isEqual:(id)other;
-
-- (BOOL)isEqualToChain:(CNChain *)chain;
-
-- (NSUInteger)hash;
+- (CNChain*)map:(cnF)f;
 @end

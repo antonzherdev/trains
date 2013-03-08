@@ -9,4 +9,5 @@
 - (CNChain*) chain;
 - (CNChain*)filter:(cnPredicate)predicate;
 - (CNChain*)filter:(cnPredicate)predicate selectivity:(double)selectivity;
+- (CNChain*)map:(cnF)f;
 @end

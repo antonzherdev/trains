@@ -14,10 +14,19 @@ SPEC_BEGIN(CNChainSpec)
       });
 
       it(@"should filter items with condition", ^{
-          NSArray *r = [[s filter:^BOOL(NSNumber * x) {
-              return [x intValue] <= 2;
-          }] array];
+          NSArray *r = [[s filter:^BOOL(id x) {return [x intValue] <= 2;}] array];
           [[r should] equal:@[@1, @2]];
+      });
+      it(@"should modify values with map function", ^{
+          NSArray *r = [[s map:^id(id x) {return [NSNumber numberWithInt:[x intValue] * 2];}] array];
+          [[r should] equal:@[@2, @6, @4]];
+      });
+      it(@"should perform several operations in one chain", ^{
+          NSArray *r = [[[s
+                        filter:^BOOL(id x) {return [x intValue] <= 2;}]
+                        map:^id(id x) {return [NSNumber numberWithInt:[x intValue] * 2];}]
+                    array];
+          [[r should] equal:@[@2, @4]];
       });
   });
 
