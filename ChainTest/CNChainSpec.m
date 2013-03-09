@@ -1,4 +1,3 @@
-#import "CNChainTest.h"
 #import "chain.h"
 #import "Kiwi.h"
 

@@ -69,7 +69,7 @@
     [self scheduleUpdate];
 }
 
-//TODO: Recreate with functional style
+//zTODO: Recreate with functional style
 - (void)updatePosition {
     CRRailVector v = _v1;
     CGPoint point = [_railroad calculateRailPoint:v.railPoint];
@@ -116,7 +116,7 @@
     [self move:_speed * deltaTime];
 }
 
-//TODO: Recreate with functional style
+//zTODO: Recreate with functional style
 - (void)move:(CGFloat)length {
     if(length < FLT_EPSILON) return;
 

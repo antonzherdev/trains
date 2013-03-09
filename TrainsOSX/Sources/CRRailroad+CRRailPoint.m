@@ -1,5 +1,8 @@
 #import "CRRailroad+CRRailPoint.h"
 #import "CRRail.h"
+#import "NSArray+CNChain.h"
+#import "CNChain.h"
+#import "CRCity.h"
 
 @implementation CRRailroad (CRRailPoint)
 
@@ -17,7 +20,7 @@
 }
 
 
-//TODO: Replace with recursion
+//zTODO: Replace with recursion
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
     CGFloat error = 0;
     CRDirection dir = length < 0 ? crBackward : crForward;
@@ -46,7 +49,9 @@
 
         CRDirection direction = railPoint.x == 0 ? crBackward : crForward;
         CEIPoint t = [railPoint.form nextTilePoint:railPoint.tile direction:direction];
-        
+
+        [[[_railsLayer objectsAtTile:t] chain]
+                filter:^BOOL(id rail) {return [railPoint.form couldBeNextForm:[rail form] direction:direction];}];
         NSArray *rails = [_railsLayer objectsAtTile:t];
         id nextRail = nil;
         for (id rail in rails) {

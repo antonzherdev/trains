@@ -4,6 +4,7 @@
 typedef void (^cnChainBuildBlock)(CNChain * chain);
 typedef BOOL (^cnPredicate)(id x);
 typedef id (^cnF)(id x);
+typedef void (^cnP)(id x);
 
 @protocol CNChainLink <NSObject>
 - (CNYield *)buildYield:(CNYield *)yield;
