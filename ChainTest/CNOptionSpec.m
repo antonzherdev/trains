@@ -1,31 +1,54 @@
 #import "chain.h"
 #import "Kiwi.h"
+#import "NSSet+BlocksKit.h"
 
 SPEC_BEGIN(CNOpionSpec)
     describe(@"CNOption", ^{
+        id some = [CNOption opt:@"test"];
+        id none = [CNOption none];
         it(@"should execute foreach one time for not null object and no one for null", ^{
             __block int ex = 0;
-            [@2 foreach:^(id o) {
+            [some foreach:^(id o) {
                 ex++;
-                [[o should] equal:@2];
+                [[o should] equal:@"test"];
             }];
             [[theValue(ex) should] equal:theValue(1)];
-            id null = [NSNull null];
             ex = 0;
-            [null foreach:^(id o) {
+            [none foreach:^(id o) {
                 ex++;
             }];
             [[theValue(ex) should] equal:theValue(0)];
         });
-        it(@"should behave like nil with selectors when it empty", ^{
-            [[[[CNOption opt:@"test"] substringFromIndex:3] should] equal:@"t"];
-            [[theValue([[CNOption opt:@"test"] length]) should] equal:theValue(4)];
 
-            [[[CNOption none] substringFromIndex:3] shouldBeNil];
-            [[theValue([[CNOption none] length]) should] equal:theValue(0)];
+        it(@"should behave like nil with selectors when it empty", ^{
+            [[[some substringFromIndex:3] should] equal:@"t"];
+            [[theValue([some length]) should] equal:theValue(4)];
+
+            [[none substringFromIndex:3] shouldBeNil];
+            [[theValue([none length]) should] equal:theValue(0)];
         });
         it(@"should return empty option with nil value", ^{
-            [[[CNOption opt:nil] should] equal:[CNOption none]];
+            [[[CNOption opt:nil] should] equal:none];
+        });
+        it(@".orValue and .or should return self if it's some or value if it's none", ^{
+            [[[some orValue:@"def"] should] equal:@"test"];
+            [[[none orValue:@"def"] should] equal:@"def"];
+            [[[some or:^id {
+                return @"def";
+            }] should] equal:@"test"];
+            [[[none or:^id {
+                return @"def";
+            }] should] equal:@"def"];
+        });
+        it(@"should be empty for none and defined for some", ^{
+            [[theValue([some isEmpty]) should] beNo];
+            [[theValue([none isEmpty]) should] beYes];
+            [[theValue([some isDefined]) should] beYes];
+            [[theValue([none isDefined]) should] beNo];
+        });
+        it(@".map should return f(self) for some or none", ^{
+            [[[some map:^id(id x) {return [x substringFromIndex:2];}] should] equal:@"st"];
+            [[[none map:^id(id x) {return [x substringFromIndex:2];}] should] equal:none];
         });
     });
 SPEC_END
