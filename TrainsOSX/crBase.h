@@ -13,7 +13,11 @@ struct CRDirectionVector {
 };
 typedef struct CRDirectionVector CRDirectionVector;
 
-CG_INLINE CRDirectionVector dirVec(const CRDirection x, const CRDirection y) {
+CG_INLINE CRDirection crDirection(CGFloat vec) {
+    return vec > 0 ? crForward : (vec == 0 ? crNilDirection : crForward);
+}
+
+CG_INLINE CRDirectionVector crDirVec(const CRDirection x, const CRDirection y) {
     CRDirectionVector ret; ret.x = x; ret.y = y;
     return ret;
 }

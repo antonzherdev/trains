@@ -20,70 +20,57 @@
 }
 
 
-//zTODO: Replace with recursion
+//zTODO: Create test
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
-    CGFloat error = 0;
-    CRDirection dir = length < 0 ? crBackward : crForward;
-    while (1) {
-        CGFloat fullLength = _th * railPoint.form.length;
-        CGFloat already;
-        already = railPoint.x * fullLength;
-        if(length < 0) {
-            if(already >= -length) {
-                railPoint.x -= -length/fullLength;
-                length = 0;
-            } else {
-                railPoint.x = 0;
-                length += already;
-            }
-        } else {
-            if(fullLength - already >= length) {
-                railPoint.x += length/fullLength;
-                length = 0;
-            } else {
-                railPoint.x = 1;
-                length -= fullLength - already;
-            }
-        }
-        if(length == 0) break;
-
-        CRDirection direction = railPoint.x == 0 ? crBackward : crForward;
-        CEIPoint t = [railPoint.form nextTilePoint:railPoint.tile direction:direction];
-
-        [[[_railsLayer objectsAtTile:t] chain]
-                filter:^BOOL(id rail) {return [railPoint.form couldBeNextForm:[rail form] direction:direction];}];
-        NSArray *rails = [_railsLayer objectsAtTile:t];
-        id nextRail = nil;
-        for (id rail in rails) {
-            CRRailForm* f = [rail form];
-            if(![railPoint.form couldBeNextForm:f direction:direction]) continue;
-            BOOL invertDirection = [railPoint.form shouldInvertDirectionForNextForm:f direction:direction];
-            if (invertDirection) {
-                if (railPoint.x == 0) railPoint.x = 0;
-                else railPoint.x = 2 - railPoint.x;
-
-                length = -length;
-                dir = -dir;
-            } else {
-                railPoint.x = 1 - railPoint.x;
-            }
-            nextRail = rail;
-            break;
-        }
-        if (nextRail == nil) {
-            error = ABS(length);
-            break;
-        } else {
-            railPoint.tile = t;
-            railPoint.form = [nextRail form];
-            railPoint.type = [nextRail railType];
-        }
+//    CRDirection dir = crDirection(length);
+    CGFloat fullLength = _th * railPoint.form.length;
+    CGFloat already = railPoint.x * fullLength;
+    railPoint.x += length/fullLength;
+    if(railPoint.x < 0) {
+        railPoint.x = 0;
+        return [self moveToNextRailRailPoint:railPoint length:length + already];
+    } else if(railPoint.x > 1) {
+        railPoint.x = 1;
+        return [self moveToNextRailRailPoint:railPoint length:length - (fullLength - already)];
+    } else {
+        CRMoveRailPointResult result;
+        result.railPoint = railPoint;
+        result.error = 0;
+        result.direction = crDirection(length);
+        return result;
     }
-    CRMoveRailPointResult result;
-    result.railPoint = railPoint;
-    result.error = error;
-    result.direction = dir;
-    return result;
+}
+
+- (CRMoveRailPointResult)moveToNextRailRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
+    CRDirection dir = railPoint.x == 0 ? crBackward : crForward;
+    CEIPoint t = [railPoint.form nextTilePoint:railPoint.tile direction:dir];
+    id nextRail = [[[_railsLayer objectsAtTile:t]
+            filter:^BOOL(id rail) {
+                return [railPoint.form couldBeNextForm:[rail form] direction:dir];
+            }] first];
+    if([nextRail isEmpty]) {
+        CRMoveRailPointResult result;
+        result.railPoint = railPoint;
+        result.error = ABS(length);
+        result.direction = dir;
+        return result;
+    } else {
+        BOOL invertDirection = [railPoint.form shouldInvertDirectionForNextForm:[nextRail form] direction:dir];
+        if (invertDirection) {
+            if (railPoint.x == 0) railPoint.x = 0;
+            else railPoint.x = 2 - railPoint.x;
+
+            length = -length;
+        } else {
+            railPoint.x = 1 - railPoint.x;
+        }
+        CRRailPoint p;
+        p.tile = t;
+        p.x = railPoint.x;
+        p.form = [nextRail form];
+        p.type = [nextRail railType];
+        return [self moveRailPoint:p length:length];
+    }
 }
 
 - (CGPoint)calculateRailPoint:(CRRailPoint)railPoint {

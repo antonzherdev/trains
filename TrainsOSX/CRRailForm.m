@@ -24,12 +24,12 @@ CRRailForm * crRailFormTurn_X_Y = nil;
 }
 
 + (void)load {
-    crRailFormX = [[CRRailForm alloc] initWithName:@"x" length:1.12 v1:dirVec(crBackward, crNilDirection) v2:dirVec(crForward, crNilDirection)];
-    crRailFormY = [[CRRailForm alloc] initWithName:@"y" length:1.12 v1:dirVec(crNilDirection, crBackward) v2:dirVec(crNilDirection, crForward)];
-    crRailFormTurnXY = [[CRRailForm alloc] initWithName:@"+x+y" length:0.9 v1:dirVec(crForward, crNilDirection) v2:dirVec(crNilDirection, crForward)];
-    crRailFormTurn_X_Y = [[CRRailForm alloc] initWithName:@"-x-y" length:0.9 v1:dirVec(crBackward, crNilDirection) v2:dirVec(crNilDirection, crBackward)];
-    crRailFormTurnX_Y = [[CRRailForm alloc] initWithName:@"+x-y" length:0.9 v1:dirVec(crForward, crNilDirection) v2:dirVec(crNilDirection, crBackward)];
-    crRailFormTurn_XY = [[CRRailForm alloc] initWithName:@"-x+y" length:0.82 v1:dirVec(crBackward, crNilDirection) v2:dirVec(crNilDirection, crForward)];
+    crRailFormX = [[CRRailForm alloc] initWithName:@"x" length:1.12 v1:crDirVec(crBackward, crNilDirection) v2:crDirVec(crForward, crNilDirection)];
+    crRailFormY = [[CRRailForm alloc] initWithName:@"y" length:1.12 v1:crDirVec(crNilDirection, crBackward) v2:crDirVec(crNilDirection, crForward)];
+    crRailFormTurnXY = [[CRRailForm alloc] initWithName:@"+x+y" length:0.9 v1:crDirVec(crForward, crNilDirection) v2:crDirVec(crNilDirection, crForward)];
+    crRailFormTurn_X_Y = [[CRRailForm alloc] initWithName:@"-x-y" length:0.9 v1:crDirVec(crBackward, crNilDirection) v2:crDirVec(crNilDirection, crBackward)];
+    crRailFormTurnX_Y = [[CRRailForm alloc] initWithName:@"+x-y" length:0.9 v1:crDirVec(crForward, crNilDirection) v2:crDirVec(crNilDirection, crBackward)];
+    crRailFormTurn_XY = [[CRRailForm alloc] initWithName:@"-x+y" length:0.82 v1:crDirVec(crBackward, crNilDirection) v2:crDirVec(crNilDirection, crForward)];
 }
 
 - (CEIPoint)nextTilePoint:(CEIPoint)point direction:(CRDirection)direction {
