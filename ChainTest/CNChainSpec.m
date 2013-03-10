@@ -1,6 +1,8 @@
 #import "chain.h"
 #import "Kiwi.h"
 
+static BOOL (^const LESS_THAN_3)(id) = ^BOOL(id x) {return [x intValue] < 3;};
+
 SPEC_BEGIN(CNChainSpec)
 
   describe(@"The CNChain", ^{
@@ -22,10 +24,16 @@ SPEC_BEGIN(CNChainSpec)
       });
       it(@"should perform several operations in one chain", ^{
           NSArray *r = [[[s
-                        filter:^BOOL(id x) {return [x intValue] <= 2;}]
-                        map:^id(id x) {return [NSNumber numberWithInt:[x intValue] * 2];}]
-                    array];
+                  filter:LESS_THAN_3]
+                     map:^id(id x) {return [NSNumber numberWithInt:[x intValue] * 2];}]
+                   array];
           [[r should] equal:@[@2, @4]];
+      });
+      it(@".first should return first value or none", ^{
+          [[[[s filter:LESS_THAN_3] first] should] equal:@1];
+          [[[[s filter:^BOOL(id x) {
+              return NO;
+          }] first] should] equal:[CNOption none]];
       });
   });
 

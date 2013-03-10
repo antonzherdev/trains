@@ -11,4 +11,6 @@
 - (CNChain*)filter:(cnPredicate)predicate selectivity:(double)selectivity;
 
 - (CNChain*)map:(cnF)f;
+
+- (id) first;
 @end

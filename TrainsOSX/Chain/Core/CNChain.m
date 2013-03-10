@@ -3,6 +3,7 @@
 #import "CNChainItem.h"
 #import "CNFilterLink.h"
 #import "CNMapLink.h"
+#import "CNOption.h"
 
 
 @implementation CNChain {
@@ -45,6 +46,15 @@
 
 - (CNChain *)map:(cnF)f {
     return [self link:[CNMapLink linkWithF:f]];
+}
+
+- (id)first {
+    __block id ret = [CNOption none];
+    [self apply:[CNYield yieldWithBegin:nil yield:^CNYieldResult(id item) {
+        ret = item;
+        return cnYieldBreak;
+    } end:nil all:nil]];
+    return ret;
 }
 
 
