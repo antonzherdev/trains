@@ -212,7 +212,7 @@
 		6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRSwitchesComposition.m; path = Sources/CRSwitchesComposition.m; sourceTree = "<group>"; };
 		6F3DFFC87FF30CC319AE0D68 /* CCSprite+CESprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCSprite+CESprite.h"; path = "Sources/CCSprite+CESprite.h"; sourceTree = "<group>"; };
 		B8ACB03F5AB241CA9AB573A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		EF01C7EE3DE44BDDB0343EF5 /* Pods-ChainTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainTest.xcconfig"; path = "Pods/Pods-ChainTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,7 +329,7 @@
 				0291C45D161B67990085AB91 /* Products */,
 				64CAF13C32E6472084F28C75 /* Pods.xcconfig */,
 				6F3DF47D79CC526D20F29924 /* Podfile */,
-				EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */,
+				EF01C7EE3DE44BDDB0343EF5 /* Pods-ChainTest.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -817,7 +817,7 @@
 /* Begin XCBuildConfiguration section */
 		0287AF0516E357C200539ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */;
+			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-ChainTest.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -845,7 +845,7 @@
 		};
 		0287AF0616E357C200539ABF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-test.xcconfig */;
+			baseConfigurationReference = EF01C7EE3DE44BDDB0343EF5 /* Pods-ChainTest.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

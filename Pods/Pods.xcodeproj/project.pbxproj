@@ -768,7 +768,7 @@
 		8FC715D1B3014D2097B387D9 /* pngwutil.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pngwutil.c; path = cocos2d/external/libpng/pngwutil.c; sourceTree = SOURCE_ROOT; };
 		902DF00D83E54635821F32B0 /* KWStringPrefixMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWStringPrefixMatcher.h; path = Kiwi/Classes/KWStringPrefixMatcher.h; sourceTree = SOURCE_ROOT; };
 		9198F23152E841C987EAC931 /* ccGLStateCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ccGLStateCache.h; path = cocos2d/cocos2d/ccGLStateCache.h; sourceTree = SOURCE_ROOT; };
-		91F219BE12374C5FB1DBD2C2 /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
+		91F219BE12374C5FB1DBD2C2 /* Pods-ChainTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainTest.xcconfig"; path = "Pods-ChainTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		925116C53BEF409E920BC34C /* KWBeNonNilMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeNonNilMatcher.h; path = Kiwi/Classes/KWBeNonNilMatcher.h; sourceTree = SOURCE_ROOT; };
 		92DD7F002C2449989488C695 /* NSObject+KiwiStubAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KiwiStubAdditions.h"; path = "Kiwi/Classes/NSObject+KiwiStubAdditions.h"; sourceTree = SOURCE_ROOT; };
 		93A8D919498D4A9196DF0DFC /* vec3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vec3.h; path = cocos2d/external/kazmath/include/kazmath/vec3.h; sourceTree = SOURCE_ROOT; };
@@ -1477,7 +1477,7 @@
 			children = (
 				A8273824F8A2468FBE7E8386 /* Pods-test-resources.sh */,
 				E62E501E4C35423CA57EA627 /* Pods-test-prefix.pch */,
-				91F219BE12374C5FB1DBD2C2 /* Pods-test.xcconfig */,
+				91F219BE12374C5FB1DBD2C2 /* Pods-ChainTest.xcconfig */,
 			);
 			name = "Pods-test";
 			sourceTree = "<group>";
@@ -2142,7 +2142,7 @@
 /* Begin XCBuildConfiguration section */
 		78C87062EDF74D33AC63EFFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91F219BE12374C5FB1DBD2C2 /* Pods-test.xcconfig */;
+			baseConfigurationReference = 91F219BE12374C5FB1DBD2C2 /* Pods-ChainTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -2183,7 +2183,7 @@
 		};
 		96F20EC25DA3427790E9D5C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91F219BE12374C5FB1DBD2C2 /* Pods-test.xcconfig */;
+			baseConfigurationReference = 91F219BE12374C5FB1DBD2C2 /* Pods-ChainTest.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";

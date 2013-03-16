@@ -1,4 +1,4 @@
-@interface PodsDummy_Pods_test : NSObject
+@interface PodsDummy_Pods_Test : NSObject
 @end
-@implementation PodsDummy_Pods_test
+@implementation PodsDummy_Pods_Test
 @end

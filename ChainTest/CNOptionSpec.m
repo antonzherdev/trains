@@ -1,6 +1,5 @@
 #import "chain.h"
 #import "Kiwi.h"
-#import "NSSet+BlocksKit.h"
 
 SPEC_BEGIN(CNOpionSpec)
     describe(@"CNOption", ^{

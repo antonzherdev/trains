@@ -24,7 +24,7 @@
     } yield:^CNYieldResult(id item) {
         [ret addObject:item];
         return cnYieldContinue;
-    } end:nil all:^CNYieldResult(id <NSFastEnumeration> collection) {
+    } end:nil all:^CNYieldResult(NSObject<NSFastEnumeration>* collection) {
         if([collection isKindOfClass:[NSArray class]]) {
             ret = collection;
             return cnYieldContinue;
