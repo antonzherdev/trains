@@ -28,27 +28,6 @@
         _builder = [CRRailroadBuilder builderForRailroad:self];
         _th = dim.tileHeight;
 
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 8)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 8)];
-        [self addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(3, 8)];
-        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(3, 7)];
-        [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(3, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormTurnXY] tile:cei(-1, 6)];
-        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-1, 7)];
-        [self addRail:[CRRail railWithForm:crRailFormTurnX_Y] tile:cei(-1, 8)];
-
-        [self addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
-//        [self addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(-4, 6)];
-//        [self addRail:[CRRail railWithForm:crRailFormY] tile:cei(-4, 7)];
-
-        [self addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
-        [self addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
-
         [self initRailPoint];
 
 //       self.drawMesh = YES;

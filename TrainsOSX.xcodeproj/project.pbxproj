@@ -35,20 +35,32 @@
 		0294D78216ECF66C008F5F85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0287AEF516E357C200539ABF /* Cocoa.framework */; };
 		0294D78816ECF66C008F5F85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0294D78616ECF66C008F5F85 /* InfoPlist.strings */; };
 		02EE937116ECF757009D1447 /* CRRailRoadSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EE937016ECF757009D1447 /* CRRailRoadSpec.m */; };
+		6F3DF0215D0E0A5BE5F8522F /* CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCECF9B68D3A6CE42049 /* CNChain.m */; };
+		6F3DF081DA8AB9A8B1B3878B /* CEOrtoMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */; };
 		6F3DF099F3A1D126D316CF6F /* CCSprite+CESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */; };
 		6F3DF0A78C3DC67C2634EF2A /* CNChainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF954D2E97F8964D50A7A /* CNChainItem.m */; };
+		6F3DF0B59860CBC91D50216D /* CECurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFA265F42C0CAC2DD981B /* CECurve.m */; };
+		6F3DF0D76452F1CD256E0164 /* CRRailForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCAB236E8FCB3604B92D /* CRRailForm.m */; };
 		6F3DF13C5422A063C38A1C07 /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFC2F6B7A6ABE2951509A /* City.png */; };
+		6F3DF1556A1132EB5F669EEF /* CCSprite+CESprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFF02A479E0134E38EEE9 /* CCSprite+CESprite.m */; };
 		6F3DF1B6959DB707BF028767 /* NSObject+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF650E8B4D1F6C60F3D1E /* NSObject+CNOption.m */; };
 		6F3DF1C2F3F81C7FCEB6B245 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
+		6F3DF1FEB4726C5DF9981A67 /* NSMutableArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */; };
+		6F3DF25BF821C298C6A486C0 /* CETextureBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0291C5E2161B679B0085AB91 /* CETextureBackgroundLayer.m */; };
 		6F3DF2A14065207E43079C03 /* Car1_Orange.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6666C3D9099AB966F87 /* Car1_Orange.plist */; };
 		6F3DF2E05D88DB4A0FCB7F1B /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
 		6F3DF361841A9DC1DAA562A5 /* rails_rails.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF810811FC56D99AB555F /* rails_rails.plist */; };
 		6F3DF3B1534D612C4D75148F /* CEOrtoMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFE2F91024045053DD4B1 /* CEOrtoMap.m */; };
 		6F3DF3C133D5B3718826DFE1 /* Car1_Green-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF462975CA05F835E0411 /* Car1_Green-hd.plist */; };
+		6F3DF3CF62992E786EE4E013 /* CNMapLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2BB040D09F87A322A91 /* CNMapLink.m */; };
+		6F3DF3D72B63534F95FBC4C8 /* CRCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF439E99063519D7F0D97 /* CRCar.m */; };
+		6F3DF3DEA5B8573278B7B290 /* NSNull+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB554208270EF79F06D3 /* NSNull+CNOption.m */; };
 		6F3DF3E6137BD9A8061A4171 /* CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF87385EDAF217F407060 /* CNOption.m */; };
 		6F3DF42782BF5B40CAC00293 /* Car1_Green.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6C582BAC2EA2BAE5369 /* Car1_Green.plist */; };
+		6F3DF48BE7683B763CACF245 /* CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF87385EDAF217F407060 /* CNOption.m */; };
 		6F3DF4AAAF8D0AB924BD6E30 /* CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF87385EDAF217F407060 /* CNOption.m */; };
 		6F3DF4B77D00078E6F6B32DC /* NSArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */; };
+		6F3DF516119533CB4E52E5C3 /* CRLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C0B161F66FD002FE46D /* CRLevel.m */; };
 		6F3DF569B98ED9F453C829D2 /* CNFilterLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF448E7EB7A5F4D7BBC66 /* CNFilterLink.m */; };
 		6F3DF5949E6109FA0C483A0E /* NSMutableArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC305919B5B882C7DB89 /* NSMutableArray+CocoaEx.m */; };
 		6F3DF5998F1C8FCEF8C5EAAF /* rails_rails-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF6D28F729E2FB40BC627 /* rails_rails-hd.png */; };
@@ -56,38 +68,61 @@
 		6F3DF5BBA960AACAE03F8F87 /* CNFilterLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF448E7EB7A5F4D7BBC66 /* CNFilterLink.m */; };
 		6F3DF63DC472B1D54FF4383C /* CEEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF892677A53681CAD6625 /* CEEnum.m */; };
 		6F3DF640A36210EF23369B35 /* rails_rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF199403BB9EA79FF3E39 /* rails_rails.png */; };
+		6F3DF64C3493320F6C78C27B /* CEEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF892677A53681CAD6625 /* CEEnum.m */; };
+		6F3DF657F4FB59ACF302C584 /* CRCityColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2ED53658866984A13E1 /* CRCityColor.m */; };
+		6F3DF693C302BF3A27774DB6 /* NSObject+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF650E8B4D1F6C60F3D1E /* NSObject+CNOption.m */; };
 		6F3DF6C26D6964C7CA523252 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DF6D4ACA4E91E33B357B0 /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF6DB7CF2544BF506D0B4 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
+		6F3DF70F00F72A49F122B0D1 /* CEBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFDA903DBA378366693F2 /* CEBezier.m */; };
 		6F3DF72CAD7F617448442CB4 /* CRSwitchesComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */; };
 		6F3DF77306CB9FAC80036311 /* CNMapLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2BB040D09F87A322A91 /* CNMapLink.m */; };
+		6F3DF7932087B3301E8931EC /* CRRailroad+CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5E01CB9B1768FC94E92 /* CRRailroad+CRSwitch.m */; };
 		6F3DF79893ACFD543E0F188C /* CNYield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC444DAFEC082F442948 /* CNYield.m */; };
 		6F3DF7A6E778FE7E6718DC90 /* CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCECF9B68D3A6CE42049 /* CNChain.m */; };
+		6F3DF7ACAE3D4D7556FD90B3 /* CNFilterLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF448E7EB7A5F4D7BBC66 /* CNFilterLink.m */; };
 		6F3DF7AE28608C93F5D9A837 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF47D79CC526D20F29924 /* Podfile */; };
 		6F3DF7B3A639B7042608A8DD /* Car1_Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF1E856A58245EF3E6A17 /* Car1_Orange.png */; };
 		6F3DF805A9BFF0DD47BFB091 /* Rails.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF73921F94975C2F02534 /* Rails.png */; };
 		6F3DF86A1C5B32EA136FAE66 /* CECurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFA265F42C0CAC2DD981B /* CECurve.m */; };
 		6F3DF896357A47EAA97AF183 /* NSObject+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF650E8B4D1F6C60F3D1E /* NSObject+CNOption.m */; };
+		6F3DF8C577CC89310D3ACAC7 /* CNSourceLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF253CC7C4559042960F0 /* CNSourceLink.m */; };
+		6F3DF90DCB363D1CEC51B009 /* CRSwitchesComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFFBF2D0EBEC1D1CCE5DF /* CRSwitchesComposition.m */; };
 		6F3DF91BFD8C1B18F6D421CC /* CNChainSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0287AF0216E357C200539ABF /* CNChainSpec.m */; };
 		6F3DF968E8D542E865D0A492 /* NSNull+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB554208270EF79F06D3 /* NSNull+CNOption.m */; };
 		6F3DF98B7ABA25D650E3D01B /* CNMapLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2BB040D09F87A322A91 /* CNMapLink.m */; };
 		6F3DF9A5F6E7E441601AD049 /* CRCityColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2ED53658866984A13E1 /* CRCityColor.m */; };
+		6F3DF9BF302A339EEB5769FE /* CRRailroadBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF3D8543B57C7CBE4C969 /* CRRailroadBuilder.m */; };
 		6F3DF9C2F963F30BC33AC3A4 /* Car1_Orange-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF20B44B6ADF28431DB15 /* Car1_Orange-hd.plist */; };
 		6F3DF9FD84DFACCA42CFE909 /* CEMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF36A18CCC89D8594DEFB /* CEMap.m */; };
 		6F3DFA0938641A0099140508 /* CRRailroad+CRRailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5A965C94BF826D18AD5 /* CRRailroad+CRRailPoint.m */; };
+		6F3DFA0B91347D384F457982 /* CETileIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCB798DAF2C18877E904 /* CETileIndex.m */; };
 		6F3DFA10CB0A8F74A3CE6D29 /* NSNull+CNOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB554208270EF79F06D3 /* NSNull+CNOption.m */; };
+		6F3DFA34DC060113A14A1592 /* CEMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF36A18CCC89D8594DEFB /* CEMap.m */; };
+		6F3DFA66DEC19181ACFE9801 /* CRRailroad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF290C45847D4636C91B5 /* CRRailroad.m */; };
 		6F3DFAB0237E6EEA3BA0AA6C /* CRCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF439E99063519D7F0D97 /* CRCar.m */; };
+		6F3DFB7AB85C784EB9C7F124 /* NSArray+CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF51536C06833E0501425 /* NSArray+CNChain.m */; };
+		6F3DFBE819A674ACD2BF41F8 /* CRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9FBBD580702B9AFE76A /* CRCity.m */; };
+		6F3DFBFD061D14995093DC87 /* CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF85165447D6B762B3D7B /* CRSwitch.m */; };
+		6F3DFC12D28BEC8A7E08E799 /* CEOrtoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */; };
+		6F3DFC52FEEDC793C043FEC5 /* CNChainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF954D2E97F8964D50A7A /* CNChainItem.m */; };
 		6F3DFC5CDE0C6942F05CC9B3 /* NSArray+CNChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF51536C06833E0501425 /* NSArray+CNChain.m */; };
 		6F3DFC75D1D5C46D0AA5DF41 /* Car1_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF9751EA8E12D8BADEB27 /* Car1_Green.png */; };
 		6F3DFCBEAFC1A5790C4F10F1 /* CNSourceLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF253CC7C4559042960F0 /* CNSourceLink.m */; };
 		6F3DFCD734D4F4C31813442B /* CRTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF745F457C41FE14A4F36 /* CRTrain.m */; };
 		6F3DFD0D54399F420F603AA3 /* CRSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF85165447D6B762B3D7B /* CRSwitch.m */; };
 		6F3DFD28A9F4E481565A3448 /* rails_rails-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFDCE9BF1251078C65FA1 /* rails_rails-hd.plist */; };
+		6F3DFDB8CCB1AE5DA25195C8 /* CCNode+CENode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF2B59F36D9E48B1FBBF3 /* CCNode+CENode.m */; };
 		6F3DFDB990B1FFC01FE89092 /* Car1_Green-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DF353225181D2D09AB785 /* Car1_Green-hd.png */; };
 		6F3DFDDAC7C9278F62FA5A4A /* Car1_Orange-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFE55268CAB885D0C4A01 /* Car1_Orange-hd.png */; };
+		6F3DFE04ED9B12D4CDDF4C3E /* CRTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF745F457C41FE14A4F36 /* CRTrain.m */; };
+		6F3DFED7447C88459B8A36FF /* CRRail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB5016ED966D48D7CD2C /* CRRail.m */; };
+		6F3DFF1013ED0AFDE7B90304 /* CNYield.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFC444DAFEC082F442948 /* CNYield.m */; };
 		6F3DFF3770913B4B25C8A123 /* CEOrtoSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFD11FF58D6AF3F466B08 /* CEOrtoSprite.m */; };
+		6F3DFF3E1E598822EB59C03D /* CRRailroad+CRRailPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF5A965C94BF826D18AD5 /* CRRailroad+CRRailPoint.m */; };
 		6F3DFF5433CDC5BEB3F26954 /* CRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DF9FBBD580702B9AFE76A /* CRCity.m */; };
 		6F3DFFDF4981BC81C1ED8575 /* CEBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFDA903DBA378366693F2 /* CEBezier.m */; };
+		6F3DFFE3370A64B052D51374 /* NSArray+CocoaEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAB0765F2571447BCCDC /* NSArray+CocoaEx.m */; };
 		6F3DFFFD78151B55391C2308 /* CNOptionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFCD5CA282AA096C95B2C /* CNOptionSpec.m */; };
 		893AFCBE2E2E4BE3987FC7A9 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C0116E8B684C208DAE4168 /* libPods-Test.a */; };
 		8A7205973D6F4ED4A663484E /* libPods-ChainTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD739457B05141C98571364E /* libPods-ChainTest.a */; };
@@ -970,6 +1005,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				02EE937116ECF757009D1447 /* CRRailRoadSpec.m in Sources */,
+				6F3DFBE819A674ACD2BF41F8 /* CRCity.m in Sources */,
+				6F3DFED7447C88459B8A36FF /* CRRail.m in Sources */,
+				6F3DFF3E1E598822EB59C03D /* CRRailroad+CRRailPoint.m in Sources */,
+				6F3DFA66DEC19181ACFE9801 /* CRRailroad.m in Sources */,
+				6F3DF9BF302A339EEB5769FE /* CRRailroadBuilder.m in Sources */,
+				6F3DF516119533CB4E52E5C3 /* CRLevel.m in Sources */,
+				6F3DF657F4FB59ACF302C584 /* CRCityColor.m in Sources */,
+				6F3DF0D76452F1CD256E0164 /* CRRailForm.m in Sources */,
+				6F3DF7932087B3301E8931EC /* CRRailroad+CRSwitch.m in Sources */,
+				6F3DFBFD061D14995093DC87 /* CRSwitch.m in Sources */,
+				6F3DF90DCB363D1CEC51B009 /* CRSwitchesComposition.m in Sources */,
+				6F3DF3D72B63534F95FBC4C8 /* CRCar.m in Sources */,
+				6F3DFE04ED9B12D4CDDF4C3E /* CRTrain.m in Sources */,
+				6F3DFB7AB85C784EB9C7F124 /* NSArray+CNChain.m in Sources */,
+				6F3DF0215D0E0A5BE5F8522F /* CNChain.m in Sources */,
+				6F3DFC52FEEDC793C043FEC5 /* CNChainItem.m in Sources */,
+				6F3DFF1013ED0AFDE7B90304 /* CNYield.m in Sources */,
+				6F3DF7ACAE3D4D7556FD90B3 /* CNFilterLink.m in Sources */,
+				6F3DF3CF62992E786EE4E013 /* CNMapLink.m in Sources */,
+				6F3DF8C577CC89310D3ACAC7 /* CNSourceLink.m in Sources */,
+				6F3DF48BE7683B763CACF245 /* CNOption.m in Sources */,
+				6F3DF3DEA5B8573278B7B290 /* NSNull+CNOption.m in Sources */,
+				6F3DF693C302BF3A27774DB6 /* NSObject+CNOption.m in Sources */,
+				6F3DFFE3370A64B052D51374 /* NSArray+CocoaEx.m in Sources */,
+				6F3DF1FEB4726C5DF9981A67 /* NSMutableArray+CocoaEx.m in Sources */,
+				6F3DFDB8CCB1AE5DA25195C8 /* CCNode+CENode.m in Sources */,
+				6F3DF1556A1132EB5F669EEF /* CCSprite+CESprite.m in Sources */,
+				6F3DF70F00F72A49F122B0D1 /* CEBezier.m in Sources */,
+				6F3DF0B59860CBC91D50216D /* CECurve.m in Sources */,
+				6F3DF64C3493320F6C78C27B /* CEEnum.m in Sources */,
+				6F3DFA34DC060113A14A1592 /* CEMap.m in Sources */,
+				6F3DF081DA8AB9A8B1B3878B /* CEOrtoMap.m in Sources */,
+				6F3DFC12D28BEC8A7E08E799 /* CEOrtoSprite.m in Sources */,
+				6F3DF25BF821C298C6A486C0 /* CETextureBackgroundLayer.m in Sources */,
+				6F3DFA0B91347D384F457982 /* CETileIndex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
