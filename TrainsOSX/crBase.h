@@ -14,7 +14,7 @@ struct CRDirectionVector {
 typedef struct CRDirectionVector CRDirectionVector;
 
 CG_INLINE CRDirection crDirection(CGFloat vec) {
-    return vec > 0 ? crForward : (vec == 0 ? crNilDirection : crForward);
+    return vec > 0 ? crForward : (vec == 0 ? crNilDirection : crBackward);
 }
 
 CG_INLINE CRDirectionVector crDirVec(const CRDirection x, const CRDirection y) {
