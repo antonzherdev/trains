@@ -13,13 +13,18 @@
 @property(nonatomic, readonly) CRCityColor* color;
 @property(nonatomic) CGFloat speed;
 @property(nonatomic, assign) id<CRTrainDelegate> delegate;
-+ (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color;
 
-- (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color;
++ (id)trainWithRailroad:(CRRailroad *)railroad color:(CRCityColor *)color;
+
+- (id)initWithRailroad:(CRRailroad *)railroad color:(CRCityColor *)color;
 
 - (void)addCarWithType:(CRCarType)type;
 
+- (void)addCar:(CRCar *)car;
+
 - (void)startFromCityWithColor:(CRCityColor*)color;
+
+- (void)startFromVector:(CRRailVector)vector;
 
 - (void)move:(CGFloat)length;
 

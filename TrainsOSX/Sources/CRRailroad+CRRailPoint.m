@@ -20,9 +20,7 @@
 }
 
 
-//zTODO: Create test
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length {
-//    CRDirection dir = crDirection(length);
     CGFloat fullLength = _th * railPoint.form.length;
     CGFloat already = railPoint.x * fullLength;
     railPoint.x += length/fullLength;

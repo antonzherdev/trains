@@ -1,7 +1,6 @@
 #import "CRTrain.h"
 #import "CRRailroad.h"
 #import "CRCar.h"
-#import "CRLevel.h"
 #import "CRCity.h"
 #import "CRRailroad+CRRailPoint.h"
 #import "NSMutableArray+CocoaEx.h"
@@ -11,7 +10,6 @@
     CRRailroad *_railroad;
     CRCityColor* _color;
     NSMutableArray* _cars;
-    CRLevel *_level;
 
     CRRailVector _v1;
     CRRailVector _v2;
@@ -26,17 +24,16 @@
 @synthesize delegate;
 
 
-+ (id)trainWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color {
-    return [[[CRTrain alloc] initWithLevel:level railroad:railroad color:color] autorelease];
++ (id)trainWithRailroad:(CRRailroad *)railroad color:(CRCityColor *)color {
+    return [[[CRTrain alloc] initWithRailroad:railroad color:color] autorelease];
 }
 
-- (id)initWithLevel:(CRLevel *)level railroad:(CRRailroad *)railroad color:(CRCityColor*)color {
+- (id)initWithRailroad:(CRRailroad *)railroad color:(CRCityColor *)color {
     self = [super init];
     if(self) {
         _speed = 30;
         _length = 0;
         _cityError = 0;
-        _level = level;
         _railroad = railroad;
         _color = color;
         _cars = [[NSMutableArray alloc] init];
@@ -52,6 +49,10 @@
 
 - (void)addCarWithType:(CRCarType)type {
     CRCar *car = [CRCar carWithType:type color:_color];
+    [self addCar:car];
+}
+
+- (void)addCar:(CRCar *)car {
     [_cars addObject:car];
     _length += car.length;
     [self addChild:car];
@@ -64,7 +65,12 @@
 
 - (void)startFromCityWithColor:(CRCityColor*)color {
     CRCity * city = [_railroad cityForColor:color];
-    _v1 = [city startRailVectorForRailroad:_railroad];
+    CRRailVector v = [city startRailVectorForRailroad:_railroad];
+    [self startFromVector:v];
+}
+
+- (void)startFromVector:(CRRailVector)vector {
+    _v1 = vector;
     [self updatePosition];
     [self scheduleUpdate];
 }

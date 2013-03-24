@@ -57,14 +57,14 @@
     _trainsLayer.contentSize = _railroad.contentSize;
     [_railroad addChild:_trainsLayer];
 
-    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crGreen];
+    _train = [CRTrain trainWithRailroad:_railroad color:crGreen];
 //    _train.speed = 0;
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [self addTrain:_train];
     [_train startFromCityWithColor:crOrange];
 
-    _train = [CRTrain trainWithLevel:self railroad:_railroad color:crOrange];
+    _train = [CRTrain trainWithRailroad:_railroad color:crOrange];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
