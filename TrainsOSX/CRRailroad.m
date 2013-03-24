@@ -48,10 +48,10 @@
     }] first];
 }
 
-- (void)addRail:(CRRail *)rail tile:(CEIPoint)tile {
+- (void)addRailWithForm:(CRRailForm *)form tile:(CEIPoint)tile {
+    CRRail *rail = [CRRail railWithForm:form tile:tile];
     _rails = [[[_rails autorelease] arrayByAddingObject:rail] retain];
-    CRRailForm *form = rail.form;
-
+    
     _switches = [[[[[[_tileIndex objectsAtTile:tile] filter:^BOOL(CRRail *x) {
         return !crDirVecEq(x.form.v1, crDirVecInvert(form.v1))
                 || !crDirVecEq(x.form.v2, crDirVecInvert(form.v2));
@@ -93,9 +93,17 @@
     [_tileIndex release];
     [super dealloc];
 }
+
 @end
 
 @implementation CRRailroad (CRRailPoint)
+- (CGPoint)tilePointForPoint:(CGPoint)point {
+    return [CEOrtoMap tilePointForPoint:point dim:_dim];
+}
+
+- (CGPoint)pointForTile:(CEIPoint)point {
+    return [CEOrtoMap pointForTile:point dim:_dim];
+}
 
 - (void)initRailPoint {
     CGPoint x = ccp(0.5 * _th, -0.25 * _th);

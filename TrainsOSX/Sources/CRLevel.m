@@ -3,7 +3,6 @@
 #import "CRRailroadView.h"
 #import "CRTrain.h"
 #import "CRCity.h"
-#import "CRRail.h"
 #import "CRRailroad.h"
 
 
@@ -38,24 +37,24 @@
     [_railroad.ctrl atomic:^{
         CRRailroad *ctrl = _railroad.ctrl;
 
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 8)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 8)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(3, 8)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormY] tile:cei(3, 7)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(3, 6)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 6)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 6)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 6)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormTurnXY] tile:cei(-1, 6)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormY] tile:cei(-1, 7)];
-        [ctrl addRail:[CRRail railWithForm:crRailFormTurnX_Y] tile:cei(-1, 8)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(0, 8)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(1, 8)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(2, 8)];
+        [ctrl addRailWithForm:crRailFormTurn_X_Y tile:cei(3, 8)];
+        [ctrl addRailWithForm:crRailFormY tile:cei(3, 7)];
+        [ctrl addRailWithForm:crRailFormTurn_XY tile:cei(3, 6)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(2, 6)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(1, 6)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(0, 6)];
+        [ctrl addRailWithForm:crRailFormTurnXY tile:cei(-1, 6)];
+        [ctrl addRailWithForm:crRailFormY tile:cei(-1, 7)];
+        [ctrl addRailWithForm:crRailFormTurnX_Y tile:cei(-1, 8)];
 
         [ctrl addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(-5, 6)];
 
         [ctrl addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
-        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
+        [ctrl addRailWithForm:crRailFormX tile:cei(0, 12)];
     }];
     
     [self addChild:_railroad];

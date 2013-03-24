@@ -58,6 +58,8 @@
 }
 
 - (void)clear {
-    [_index removeAllObjects];
+    for(NSUInteger i = 0; i < _index.count; i++) {
+        [[_index objectAtIndex:i] removeAllObjects];
+    }
 }
 @end

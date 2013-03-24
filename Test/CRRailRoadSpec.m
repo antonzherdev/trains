@@ -1,6 +1,5 @@
 #import "Kiwi.h"
 #import "cr.h"
-#import "CRRail.h"
 #import "CRRailroad.h"
 
 static const int TH = 110;
@@ -11,21 +10,13 @@ describe(@"CRailRoad", ^{
     dim.size = ceISize(14, 17);
     CRRailroad * road = [CRRailroad ctrlWithView:nil dim:dim];
 
-    void (^addRail)(CRRailForm*, CEIPoint) = ^(CRRailForm *form, CEIPoint tile) {
-        id rail = [CRRail nullMock];
-        [rail stub:@selector(form) andReturn:form];
-
-        [road addRail:rail tile:tile];
-    };
-
-
     context(@"+CRRailPoint", ^{
         CGFloat (^xLen)(CGFloat) = ^CGFloat(CGFloat x) {
             return TH*[crRailFormX length]*x;
         };
-        addRail(crRailFormTurnXY, cei(-1, 8));
-        addRail(crRailFormX, cei(0, 8));
-        addRail(crRailFormX, cei(1, 8));
+        [road addRailWithForm:crRailFormTurnXY tile:cei(-1, 8)];
+        [road addRailWithForm:crRailFormX tile:cei(0, 8)];
+        [road addRailWithForm:crRailFormX tile:cei(1, 8)];
 
         it(@"should appends length to point", ^{
             CRRailPoint p;

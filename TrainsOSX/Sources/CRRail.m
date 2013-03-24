@@ -9,15 +9,16 @@
 @synthesize tile = _tile;
 
 
-+ (id)railWithForm:(CRRailForm*)form {
-    return [[[CRRail alloc] initWithForm:form] autorelease];
++ (id)railWithForm:(CRRailForm *)form tile:(CEIPoint)tile {
+    return [[[CRRail alloc] initWithForm:form tile:tile] autorelease];
 }
 
 
-- (id)initWithForm:(CRRailForm*)form {
+- (id)initWithForm:(CRRailForm *)form tile:(CEIPoint)tile {
     self = [super init];
     if (self) {
         _form = form;
+        _tile=tile;
     }
 
     return self;

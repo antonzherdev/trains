@@ -18,13 +18,15 @@
 - (CRCity *)cityForColor:(CRCityColor*)color;
 - (CRCity *)cityInTile:(CEIPoint)point;
 
-- (void)addRail:(CRRail *)rail tile:(CEIPoint)tile;
+- (void)addRailWithForm:(CRRailForm *)form tile:(CEIPoint)tile;
 - (void)removeRailWithForm:(CRRailForm*)form tile:(CEIPoint)tile;
-
 
 @end
 
 @interface  CRRailroad(CRRailPoint)
+- (CGPoint)tilePointForPoint:(CGPoint)point;
+- (CGPoint)pointForTile:(CEIPoint)point;
+
 - (void)initRailPoint;
 - (CRMoveRailPointResult)moveRailPoint:(CRRailPoint)railPoint length:(CGFloat)length;
 - (CGPoint)calculateRailPoint:(CRRailPoint)point;

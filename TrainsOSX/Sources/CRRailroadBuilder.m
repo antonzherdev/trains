@@ -1,5 +1,5 @@
 #import "CRRailroadBuilder.h"
-#import "CRRail.h"
+#import "CRRailroad.h"
 
 
 @implementation CRRailroadBuilder {
@@ -8,7 +8,7 @@
     CEIPoint _startTile;
     CGPoint _startInTileSpace;
     
-    CRRail* _rail;
+    CRRailForm* _railForm;
     CEIPoint _railTile;
     CEIPoint _startQuarter;
 
@@ -133,16 +133,15 @@
     }
 
     if(railForm != nil) {
-        if(_rail != nil) {
-            if(_rail.form != railForm || !ceiEq(railTile, _railTile)) {
+        if(_railForm != nil) {
+            if(_railForm != railForm || !ceiEq(railTile, _railTile)) {
                 [self removeRail];
             }
         }
-        if(_rail == nil) {
+        if(_railForm == nil) {
             if([_railroad canBuildRailWithForm:railForm tile:railTile]) {
 //                CCLOG(@"Going to build rail in tile %dx%d with form %d", railTile.x, railTile.y, railForm);
-                _rail = [CRRail railWithForm:railForm];
-                [_railroad addRail:_rail tile:railTile];
+                [_railroad addRailWithForm:railForm tile:railTile];
                 _railTile = railTile;
             }
         }
@@ -152,8 +151,10 @@
 }
 
 - (void)removeRail {
-    if(_rail != nil) [_railroad removeRailWithForm:_rail.form tile:_railTile];
-    _rail = nil;
+    if(_railForm != nil) {
+        [_railroad removeRailWithForm:_railForm tile:_railTile];
+        _railForm = nil;
+    }
 }
 
 
@@ -164,8 +165,8 @@
 
 - (void)mouseUp {
 //    CCLOG(@"CRRailroadBuilder.mouseUp");
-    if(_rail != nil) {
-        _rail = nil;
+    if(_railForm != nil) {
+        _railForm = nil;
     }
 }
 
