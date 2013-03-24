@@ -2,6 +2,7 @@
 #import "crBase.h"
 #import "CRCityColor.h"
 #import "CRRailForm.h"
+#import "chain.h"
 
 typedef enum {
     crCityOrientationX,

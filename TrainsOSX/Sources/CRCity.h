@@ -1,11 +1,9 @@
 #import "cr.h"
 
-@class CRRailroad;
-
-@interface CRCity : CCSprite
+@interface CRCity : NSObject
 @property(nonatomic, readonly) CRCityColor* cityColor;
 @property(nonatomic, readonly) CEIPoint tile;
-
+@property(nonatomic, readonly) CRCityOrientation orientation;
 
 + (id)cityWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile;
 

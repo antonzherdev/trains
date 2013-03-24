@@ -1,9 +1,8 @@
 #import "CRTrain.h"
-#import "CRRailroad.h"
 #import "CRCar.h"
 #import "CRCity.h"
-#import "CRRailroad+CRRailPoint.h"
 #import "NSMutableArray+CocoaEx.h"
+#import "CRRailroad.h"
 
 
 @implementation CRTrain {

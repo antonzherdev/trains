@@ -1,16 +1,17 @@
 #import "CRLevel.h"
 #import "CETextureBackgroundLayer.h"
-#import "CRRailroad.h"
+#import "CRRailroadView.h"
 #import "CRTrain.h"
 #import "CRCity.h"
 #import "CRRail.h"
+#import "CRRailroad.h"
 
 
 @interface CRLevel () <CRTrainDelegate>
 @end
 
 @implementation CRLevel {
-    CRRailroad *_railroad;
+    CRRailroadView *_railroad;
     CCNode *_trainsLayer;
     CRTrain *_train;
 }
@@ -29,42 +30,48 @@
     CEOrtoMapDim dim;
     dim.tileHeight = 110;
     dim.size = ceISize(14, 17);
-    _railroad = [CRRailroad railroadForDim:dim];
+    _railroad = [CRRailroadView railroadForDim:dim];
+    
     _railroad.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
     _railroad.anchorPoint = ccp(0.5, 0.5);
 
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 8)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 8)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(3, 8)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormY] tile:cei(3, 7)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(3, 6)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 6)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 6)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 6)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormTurnXY] tile:cei(-1, 6)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormY] tile:cei(-1, 7)];
-    [_railroad addRail:[CRRail railWithForm:crRailFormTurnX_Y] tile:cei(-1, 8)];
+    [_railroad.ctrl atomic:^{
+        CRRailroad *ctrl = _railroad.ctrl;
 
-    [_railroad addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 8)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 8)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 8)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormTurn_X_Y] tile:cei(3, 8)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormY] tile:cei(3, 7)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormTurn_XY] tile:cei(3, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(2, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(1, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormTurnXY] tile:cei(-1, 6)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormY] tile:cei(-1, 7)];
+        [ctrl addRail:[CRRail railWithForm:crRailFormTurnX_Y] tile:cei(-1, 8)];
 
-    [_railroad addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
-    [_railroad addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
+        [ctrl addCity:[CRCity cityWithColor:crOrange orientation:crCityOrientationX tile:cei(-6, 6)]];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(-5, 6)];
+
+        [ctrl addCity:[CRCity cityWithColor:crGreen orientation:crCityOrientationY tile:cei(1, 12)]];
+        [ctrl addRail:[CRRail railWithForm:crRailFormX] tile:cei(0, 12)];
+    }];
+    
     [self addChild:_railroad];
 
     _trainsLayer = [CCNode node];
     _trainsLayer.contentSize = _railroad.contentSize;
     [_railroad addChild:_trainsLayer];
 
-    _train = [CRTrain trainWithRailroad:_railroad color:crGreen];
+    _train = [CRTrain trainWithRailroad:_railroad.ctrl color:crGreen];
 //    _train.speed = 0;
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [self addTrain:_train];
     [_train startFromCityWithColor:crOrange];
 
-    _train = [CRTrain trainWithRailroad:_railroad color:crOrange];
+    _train = [CRTrain trainWithRailroad:_railroad.ctrl color:crOrange];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];
     [_train addCarWithType:crCarType1];

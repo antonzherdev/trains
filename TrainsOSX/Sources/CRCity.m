@@ -9,6 +9,7 @@
 }
 @synthesize cityColor = _cityColor;
 @synthesize tile = _tile;
+@synthesize orientation = _orientation;
 
 
 + (id)cityWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
@@ -16,22 +17,11 @@
 }
 
 - (id)initWithColor:(CRCityColor*)color orientation:(CRCityOrientation)orientation tile:(CEIPoint)tile {
-    CGRect rect;
-    if(color == crOrange) {
-        rect = CGRectMake(0, 0, 220, 110);
-    } else if(color == crGreen) {
-        rect = CGRectMake(220, 0, 220, 110);
-    } else {
-        @throw @"Unknown city color";
-    }
-    self = [super initWithFile:@"City.png" rect:rect];
+    self = [super init];
     if(self) {
         _cityColor = color;
         _orientation = orientation;
         _tile = tile;
-        if(orientation == crCityOrientationY) {
-            [self setFlipX:YES];
-        }
     }
     return self;
 }
@@ -44,7 +34,7 @@
 }
 
 - (CRRailForm*)form {
-    return (_orientation == crCityOrientationX ? crRailFormX : crRailFormY);
+    return (self.orientation == crCityOrientationX ? crRailFormX : crRailFormY);
 }
 
 - (CRRailType)railType {

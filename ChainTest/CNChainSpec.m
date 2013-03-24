@@ -35,6 +35,18 @@ SPEC_BEGIN(CNChainSpec)
               return NO;
           }] first] should] equal:[CNOption none]];
       });
+      it(@".set should return set", ^{
+          NSSet *set = [[[NSArray arrayWithObjects:@2, @3, @2, nil] chain] set];
+          [[set should] equal:[NSSet setWithObjects:@2, @3, nil]];
+      });
+      it(@".append should append collection", ^{
+          NSArray *r = [[[s chain] append:@[@3, @1]] array];
+          [[r should] equal:@[@1, @3, @2, @3, @1]];
+      });
+      it(@".prepend should append collection", ^{
+          NSArray *r = [[[s chain] prepend:@[@3, @1]] array];
+          [[r should] equal:@[@3, @1, @1, @3, @2]];
+      });
   });
 
 SPEC_END

@@ -1,8 +1,7 @@
 #import "Kiwi.h"
 #import "cr.h"
-#import "CRRailroad.h"
 #import "CRRail.h"
-#import "CRRailroad+CRRailPoint.h"
+#import "CRRailroad.h"
 
 static const int TH = 110;
 SPEC_BEGIN(CRRailRoadSpec)
@@ -10,7 +9,7 @@ describe(@"CRailRoad", ^{
     CEOrtoMapDim dim;
     dim.tileHeight = TH;
     dim.size = ceISize(14, 17);
-    CRRailroad* road = [CRRailroad railroadForDim:dim];
+    CRRailroad * road = [CRRailroad ctrlWithView:nil dim:dim];
 
     void (^addRail)(CRRailForm*, CEIPoint) = ^(CRRailForm *form, CEIPoint tile) {
         id rail = [CRRail nullMock];

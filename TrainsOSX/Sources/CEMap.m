@@ -146,6 +146,11 @@
         [object removeFromParentAndCleanup:YES];
     }
 }
+
+- (void)clear {
+    [_node removeAllChildren];
+    [_tileIndex clear];
+}
 @end
 
 

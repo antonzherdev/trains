@@ -4,6 +4,8 @@
 #import "CNFilterLink.h"
 #import "CNMapLink.h"
 #import "CNOption.h"
+#import "CNAppendLink.h"
+#import "CNPrependLink.h"
 
 
 @implementation CNChain {
@@ -18,23 +20,46 @@
 
 - (NSArray *)array {
     __block id ret;
-    CNYield *yield = [CNYield yieldWithBegin:^CNYieldResult(NSUInteger size) {
+    CNYield *yield = [CNYield alloc];
+    [yield initWithBegin:^CNYieldResult(NSUInteger size) {
         ret = [NSMutableArray arrayWithCapacity:size];
         return cnYieldContinue;
     } yield:^CNYieldResult(id item) {
         [ret addObject:item];
         return cnYieldContinue;
-    } end:nil all:^CNYieldResult(NSObject<NSFastEnumeration>* collection) {
+    } end:nil all:^CNYieldResult(id<NSFastEnumeration> collection) {
         if([collection isKindOfClass:[NSArray class]]) {
             ret = collection;
             return cnYieldContinue;
         }
-        return cnYieldBreak;
-        //return [CNYield yieldAll:collection byItemsTo:yield];
+        return [CNYield yieldAll:collection byItemsTo:yield];
     }];
+    [yield autorelease];
     [self apply:yield];
     return ret;
 }
+
+- (NSSet *)set {
+    __block id ret;
+    CNYield *yield = [CNYield alloc];
+    [yield initWithBegin:^CNYieldResult(NSUInteger size) {
+        ret = [NSMutableSet setWithCapacity:size];
+        return cnYieldContinue;
+    } yield:^CNYieldResult(id item) {
+        [ret addObject:item];
+        return cnYieldContinue;
+    } end:nil all:^CNYieldResult(id <NSFastEnumeration> collection) {
+        if ([collection isKindOfClass:[NSSet class]]) {
+            ret = collection;
+            return cnYieldContinue;
+        }
+        return [CNYield yieldAll:collection byItemsTo:yield];
+    }];
+    [yield autorelease];
+    [self apply:yield];
+    return ret;
+}
+
 
 - (CNChain *)filter:(cnPredicate)predicate {
     return [self link:[CNFilterLink linkWithPredicate:predicate selectivity:0]];
@@ -47,6 +72,15 @@
 - (CNChain *)map:(cnF)f {
     return [self link:[CNMapLink linkWithF:f]];
 }
+
+- (CNChain *)append:(NSObject <NSFastEnumeration> *)collection {
+    return [self link:[CNAppendLink linkWithCollection:collection]];
+}
+
+- (CNChain *)prepend:(NSObject <NSFastEnumeration> *)collection {
+    return [self link:[CNPrependLink linkWithCollection:collection]];
+}
+
 
 - (id)first {
     __block id ret = [CNOption none];

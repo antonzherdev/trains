@@ -26,7 +26,7 @@
     self = [super init];
     if(self) {
         _size = size;
-        _block = block;
+        _block = [block copy];
         NSUInteger n = (NSUInteger) (size.width * size.height);
         _index = [[NSMutableArray alloc] initWithCapacity:n];
         for(int i = 0; i < n; i++) {
@@ -47,6 +47,7 @@
 
 - (void)dealloc {
     [_index release];
+    [_block release];
     [super dealloc];
 }
 
@@ -54,5 +55,9 @@
 - (void)removeObject:(CCNode *)node tile:(CEIPoint)tile {
     NSMutableArray * array = (NSMutableArray *) [self objectsAtTile:tile];
     [array removeObject:node];
+}
+
+- (void)clear {
+    [_index removeAllObjects];
 }
 @end

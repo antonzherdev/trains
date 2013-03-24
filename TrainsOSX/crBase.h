@@ -21,3 +21,11 @@ CG_INLINE CRDirectionVector crDirVec(const CRDirection x, const CRDirection y) {
     CRDirectionVector ret; ret.x = x; ret.y = y;
     return ret;
 }
+
+CG_INLINE bool crDirVecEq(CRDirectionVector v1, CRDirectionVector v2) {
+    return v1.x == v2.x && v1.y == v2.y;
+}
+
+CG_INLINE CRDirectionVector crDirVecInvert(CRDirectionVector v) {
+    return crDirVec(-v.x, -v.y);
+}

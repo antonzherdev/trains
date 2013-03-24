@@ -41,6 +41,8 @@
 - (void)addChild:(CCNode *)node tile:(CEIPoint)tile z:(NSInteger)z;
 
 - (void)clearTile:(CEIPoint)tile;
+
+- (void)clear;
 @end
 
 CEIPoint ceConvertTilePointToTile(CGPoint tilePoint);

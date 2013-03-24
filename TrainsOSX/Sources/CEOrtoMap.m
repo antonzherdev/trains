@@ -7,16 +7,25 @@
 
 
 - (CGPoint)pointForTile:(CEIPoint)tile {
+    CEOrtoMapDim dim = _dim;
+    return [CEOrtoMap pointForTile:tile dim:dim];
+}
+
++ (CGPoint)pointForTile:(CEIPoint)tile dim:(CEOrtoMapDim)dim {
     return ccp(
-    (tile.y + tile.x + 1)* (int)(_dim.tileHeight),
-    (tile.y - tile.x)* (int)(_dim.tileHeight/2));
+    (tile.y + tile.x + 1)* (int)(dim.tileHeight),
+    (tile.y - tile.x)* (int)(dim.tileHeight/2));
 }
 
 
 - (CGPoint)tilePointForPoint:(CGPoint)point {
+    return [CEOrtoMap tilePointForPoint:point dim:_dim];
+}
+
++ (CGPoint)tilePointForPoint:(CGPoint)point dim:(CEOrtoMapDim)dim {
     return ccp(
-            (point.x - 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight)),
-            (point.x + 2*point.y - _dim.tileHeight)/((double)(2*_dim.tileHeight)));
+            (point.x - 2*point.y - dim.tileHeight)/((double)(2* dim.tileHeight)),
+            (point.x + 2*point.y - dim.tileHeight)/((double)(2* dim.tileHeight)));
 }
 
 

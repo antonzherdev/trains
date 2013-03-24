@@ -3,8 +3,11 @@
 
 @implementation CRRail {
     CRRailForm* _form;
+    CEIPoint _tile;
 }
 @synthesize form = _form;
+@synthesize tile = _tile;
+
 
 + (id)railWithForm:(CRRailForm*)form {
     return [[[CRRail alloc] initWithForm:form] autorelease];
@@ -12,8 +15,7 @@
 
 
 - (id)initWithForm:(CRRailForm*)form {
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"rails_rails.plist"];
-    self = [self initWithSpriteFrameName:form.name];
+    self = [super init];
     if (self) {
         _form = form;
     }

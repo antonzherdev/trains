@@ -45,7 +45,7 @@
 
 
 + (CNYieldResult)yieldAll:(id <NSFastEnumeration>)collection byItemsTo:(CNYield *)yield {
-    NSUInteger size = 0;//[collection count];
+    NSUInteger size = [collection count];
     CNYieldResult result = [yield beginYieldWithSize:size];
     if (result == cnYieldContinue) {
         for (id item in collection) {

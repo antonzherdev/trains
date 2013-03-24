@@ -1,7 +1,8 @@
 #import "cr.h"
 
-@interface CRRail : CCSprite
+@interface CRRail : NSObject
 @property(nonatomic, readonly) CRRailForm* form;
+@property(nonatomic, readonly) CEIPoint tile;
 
 + (id)railWithForm:(CRRailForm*)form;
 

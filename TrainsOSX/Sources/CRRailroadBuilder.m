@@ -1,7 +1,5 @@
 #import "CRRailroadBuilder.h"
-#import "CRRailroad.h"
 #import "CRRail.h"
-#import "CRRailroad+CRSwitch.h"
 
 
 @implementation CRRailroadBuilder {
@@ -28,7 +26,6 @@
     self = [super init];
     if(self) {
         _railroad = railroad;
-        [railroad addLayerWithNode:self];
         self.isMouseEnabled = YES;
         self.isTouchEnabled = YES;
         self.isKeyboardEnabled = YES;

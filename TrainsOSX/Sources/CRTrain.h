@@ -1,8 +1,8 @@
 #import "cr.h"
 
-@class CRRailroad;
 @class CRLevel;
 @class CRCity;
+@class CRRailroad;
 
 @protocol CRTrainDelegate
 - (void)train:(CRTrain*) train goingToCity:(CRCity*)city;
